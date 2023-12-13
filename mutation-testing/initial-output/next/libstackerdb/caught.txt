@@ -1,0 +1,10 @@
+libstackerdb/src/libstackerdb.rs:243:5: replace stackerdb_get_metadata_path -> String with "xyzzy".into()
+libstackerdb/src/libstackerdb.rs:256:5: replace stackerdb_get_chunk_path -> String with String::new()
+libstackerdb/src/libstackerdb.rs:276:5: replace stackerdb_post_chunk_path -> String with String::new()
+libstackerdb/src/libstackerdb.rs:243:5: replace stackerdb_get_metadata_path -> String with String::new()
+libstackerdb/src/libstackerdb.rs:137:9: replace SlotMetadata::sign -> Result<(), Error> with Ok(())
+libstackerdb/src/libstackerdb.rs:149:9: replace SlotMetadata::verify -> Result<bool, Error> with Ok(true)
+libstackerdb/src/libstackerdb.rs:154:18: replace == with != in SlotMetadata::verify
+libstackerdb/src/libstackerdb.rs:149:9: replace SlotMetadata::verify -> Result<bool, Error> with Ok(false)
+libstackerdb/src/libstackerdb.rs:256:5: replace stackerdb_get_chunk_path -> String with "xyzzy".into()
+libstackerdb/src/libstackerdb.rs:276:5: replace stackerdb_post_chunk_path -> String with "xyzzy".into()

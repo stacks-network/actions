@@ -1,0 +1,28 @@
+stacks-signer/src/main.rs:175:5: replace handle_put_chunk with ()
+stacks-signer/src/main.rs:76:18: replace < with > in write_chunk_to_stdout
+stacks-signer/src/runloop.rs:278:9: replace <impl SignerRunLoop for RunLoop<C>>::run_one_pass -> Option<Vec<OperationResult>> with Some(vec![])
+stacks-signer/src/runloop.rs:285:23: replace == with != in <impl SignerRunLoop for RunLoop<C>>::run_one_pass
+stacks-signer/src/runloop.rs:265:9: replace <impl SignerRunLoop for RunLoop<C>>::set_event_timeout with ()
+stacks-signer/src/runloop.rs:343:5: replace verify_msg -> bool with true
+stacks-signer/src/main.rs:193:5: replace handle_sign with ()
+stacks-signer/src/main.rs:154:5: replace handle_get_chunk with ()
+stacks-signer/src/cli.rs:162:5: replace parse_private_key -> Result<StacksPrivateKey, String> with Ok(Default::default())
+stacks-signer/src/utils.rs:32:18: replace == with != in build_signer_config_tomls
+stacks-signer/src/main.rs:168:5: replace handle_list_chunks with ()
+stacks-signer/src/runloop.rs:343:5: replace verify_msg -> bool with false
+stacks-signer/src/main.rs:209:5: replace handle_dkg_sign with ()
+stacks-signer/src/main.rs:74:5: replace write_chunk_to_stdout with ()
+stacks-signer/src/runloop.rs:79:31: replace == with != in RunLoop<C>::initialize
+stacks-signer/src/stacks_client.rs:153:27: replace == with != in StacksClient::send_message_with_retry
+stacks-signer/src/config.rs:81:9: replace Network::to_address_version -> u8 with 1
+stacks-signer/src/stacks_client.rs:185:9: replace StacksClient::slots_per_user -> u32 with 0
+stacks-signer/src/utils.rs:109:5: replace build_stackerdb_contract -> String with String::new()
+stacks-signer/src/runloop.rs:80:42: replace != with == in RunLoop<C>::initialize
+stacks-signer/src/main.rs:161:5: replace handle_get_latest_chunk with ()
+stacks-signer/src/cli.rs:167:32: replace == with != in parse_data
+stacks-signer/src/runloop.rs:80:17: replace && with || in RunLoop<C>::initialize
+stacks-signer/src/utils.rs:58:14: replace != with == in build_signer_config_tomls
+stacks-signer/src/runloop.rs:92:9: replace RunLoop<C>::execute_command -> bool with true
+stacks-signer/src/runloop.rs:73:9: replace RunLoop<C>::initialize -> Result<(), ClientError> with Ok(())
+stacks-signer/src/stacks_client.rs:445:5: replace slot_id -> u32 with 1
+stacks-signer/src/runloop.rs:172:9: replace RunLoop<C>::process_event -> (Vec<Packet>, Vec<OperationResult>) with (vec![], vec![])
