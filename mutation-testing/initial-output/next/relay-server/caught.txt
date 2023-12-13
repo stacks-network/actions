@@ -1,0 +1,10 @@
+contrib/tools/relay-server/src/server.rs:29:9: replace ServerEx::update_state -> Result<(), Error> with Ok(())
+contrib/tools/relay-server/src/state.rs:17:19: replace != with == in State::get
+contrib/tools/relay-server/src/state.rs:23:9: replace State::post with ()
+contrib/tools/relay-server/src/url.rs:9:9: replace <impl QueryEx for str>::url_query -> HashMap<&str, &str> with HashMap::from_iter([("", "")])
+contrib/tools/relay-server/src/http.rs:27:22: replace == with != in RequestEx::read_http_request
+contrib/tools/relay-server/src/url.rs:9:9: replace <impl QueryEx for str>::url_query -> HashMap<&str, &str> with HashMap::new()
+contrib/tools/relay-server/src/state.rs:12:9: replace State::get -> Option<&Vec<u8>> with None
+contrib/tools/relay-server/src/url.rs:9:9: replace <impl QueryEx for str>::url_query -> HashMap<&str, &str> with HashMap::from_iter([("", "xyzzy")])
+contrib/tools/relay-server/src/url.rs:9:9: replace <impl QueryEx for str>::url_query -> HashMap<&str, &str> with HashMap::from_iter([("xyzzy", "")])
+contrib/tools/relay-server/src/url.rs:9:9: replace <impl QueryEx for str>::url_query -> HashMap<&str, &str> with HashMap::from_iter([("xyzzy", "xyzzy")])

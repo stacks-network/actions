@@ -1,0 +1,39 @@
+name: Upload initial cache
+
+runs:
+  using: 'composite'
+
+  steps:
+    # Checkout the stacks-core code
+    - name: Checkout the stacks core repo
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Checkout the actions code
+    - name: Get the action repo code
+      id: git_checkout_actions
+      uses: actions/checkout@v3
+      with:
+        repository: stacks-network/actions
+        ref: main
+        path: ./actions-repo
+
+    - name: Create file with current commit hash if it doesn't exist
+      shell: bash
+      run: |
+        if [ ! -f last_commit_hash.txt ]; then
+          echo "${{ github.sha }}" > last_commit_hash.txt
+        fi
+      working-directory: ./actions-repo/mutation-testing/initial-output/${{ github.ref_name }}
+
+    - name: Print old commit hash
+      shell: bash
+      run: cat ./actions-repo/mutation-testing/initial-output/${{ github.ref_name }}/last_commit_hash.txt
+
+    # TODO: feature for retrying the save in case it fails for any reason (in order not to lose the cache)
+    - name: Save Cache
+      uses: actions/cache/save@v3
+      with:
+        path: ./actions-repo/mutation-testing/initial-output/${{ github.ref_name }}
+        key: mutants-output-${{ github.ref_name }}
