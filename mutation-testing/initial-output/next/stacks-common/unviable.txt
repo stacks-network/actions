@@ -1,0 +1,36 @@
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:353:13: replace && with != in Script::is_p2pk
+stacks-common/src/util/log.rs:264:5: replace get_loglevel -> slog::Level with Default::default()
+stacks-common/src/util/hash.rs:221:9: replace <impl MerkleHashFunc for Hash160>::from_tagged_data -> Hash160 with Default::default()
+stacks-common/src/codec/mod.rs:52:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with Some(&Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:342:13: replace && with != in Script::is_p2pkh
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:591:13: replace || with == in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:492:31: replace && with == in Transaction::is_coin_base
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:601:58: replace && with != in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:567:13: replace || with != in All::classify
+stacks-common/src/deps_common/httparse/mod.rs:830:5: replace parse_chunk_size -> result::Result<Status<(usize, u64)>, Error> with Ok(Status::from_iter([(0, 0)]))
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:592:13: replace || with == in All::classify
+stacks-common/src/address/b58.rs:227:27: replace && with == in encode_iter_utf8
+stacks-common/src/util/pipe.rs:161:36: replace && with != in PipeRead::fill_buf
+stacks-common/src/deps_common/httparse/mod.rs:527:9: replace Response<'h, 'b>::parse -> Result<usize> with Ok(0)
+stacks-common/src/util/pipe.rs:161:36: replace && with == in PipeRead::fill_buf
+stacks-common/src/deps_common/ctrlc/error.rs:42:9: replace <impl Error for Error>::cause -> Option<&dyn std::error::Error> with Some(&Default::default())
+stacks-common/src/util/vrf.rs:180:9: replace VRFPublicKey::from_private -> VRFPublicKey with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:569:13: replace || with != in All::classify
+stacks-common/src/deps_common/httparse/mod.rs:699:5: replace parse_headers -> Result<(usize, &'h[Header<'b>])> with Ok((0, Vec::leak(vec![Default::default()])))
+stacks-common/src/types/net.rs:60:9: replace <impl Serialize for PeerAddress>::serialize -> Result<S::Ok, S::Error> with Ok(Default::default())
+stacks-common/src/util/chunked_encoding.rs:100:9: replace HttpChunkedTransferReader<'a, R>::from_reader -> HttpChunkedTransferReader<'a, R> with HttpChunkedTransferReader::from_iter([Default::default()])
+stacks-common/src/types/net.rs:215:39: replace && with == in PeerAddress::is_in_private_range
+stacks-common/src/address/b58.rs:227:27: replace && with != in encode_iter_utf8
+stacks-common/src/deps_common/httparse/mod.rs:477:5: replace skip_empty_lines -> Result<()> with Ok(())
+stacks-common/src/types/net.rs:365:9: replace PeerHost::from_socketaddr -> PeerHost with Default::default()
+stacks-common/src/util/vrf.rs:238:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with Some(&Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:574:13: replace || with == in All::classify
+stacks-common/src/deps_common/httparse/mod.rs:830:5: replace parse_chunk_size -> result::Result<Status<(usize, u64)>, Error> with Ok(Status::new((0, 0)))
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:585:13: replace || with != in All::classify
+stacks-common/src/util/chunked_encoding.rs:110:9: replace HttpChunkedTransferReader<'a, R>::from_state -> HttpChunkedTransferReader<'a, R> with HttpChunkedTransferReader::new(Default::default())
+stacks-common/src/util/vrf.rs:522:9: replace VRF::prove -> VRFProof with Default::default()
+stacks-common/src/deps_common/httparse/mod.rs:587:5: replace parse_version -> Result<u8> with Ok(1)
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:348:9: replace <impl ConsensusDecodable for CheckedData>::consensus_decode -> Result<CheckedData, serialize::Error> with Ok(Default::default())
+stacks-common/src/util/secp256k1.rs:73:9: replace MessageSignature::empty -> MessageSignature with Default::default()
+stacks-common/src/deps_common/bech32/mod.rs:365:5: replace check_hrp -> Result<Case, Error> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:566:13: replace || with != in All::classify

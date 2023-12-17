@@ -1,0 +1,89 @@
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::new(), 0))
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([(String::new(), String::new())]), 1))
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::new(), 0)
+libsigner/src/session.rs:189:9: replace <impl SignerSession for StackerDBSession>::get_latest_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![None])
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 0))
+libsigner/src/session.rs:163:9: replace <impl SignerSession for StackerDBSession>::get_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![None])
+libsigner/src/events.rs:73:9: replace EventReceiver::main_loop with ()
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::new(), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([(String::new(), String::new())]), 0)
+libsigner/src/events.rs:255:9: replace <impl EventReceiver for StackerDBEventReceiver>::forward_event -> bool with true
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), String::new())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([(String::new(), String::new())]), 1)
+libsigner/src/http.rs:233:5: replace run_http_request -> Result<Vec<u8>, RPCError> with Ok(vec![0])
+libsigner/src/runloop.rs:142:9: replace RunningSigner<EV, R>::join -> Option<R> with None
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::new(), 0)
+libsigner/src/runloop.rs:134:9: replace RunningSigner<EV, R>::stop -> Option<R> with None
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::new(), 1)
+libsigner/src/http.rs:154:28: replace != with == in decode_http_response
+libsigner/src/http.rs:145:25: replace != with == in decode_http_response
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([(String::new(), "xyzzy".into())]), 0))
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), String::new())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::new(), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([("xyzzy".into(), String::new())]), 0)
+libsigner/src/session.rs:62:9: replace SignerSession::get_latest_chunk -> Result<Option<Vec<u8>>, RPCError> with Ok(Some(vec![0]))
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::new(), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([(String::new(), String::new())]), 1)
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([(String::new(), "xyzzy".into())]), 1))
+libsigner/src/events.rs:259:43: replace == with != in <impl EventReceiver for StackerDBEventReceiver>::forward_event
+libsigner/src/http.rs:203:13: replace == with != in decode_http_body
+libsigner/src/runloop.rs:72:9: replace SignerRunLoop::main_loop -> Option<R> with None
+libsigner/src/http.rs:260:20: replace >= with < in run_http_request
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), String::new())]), 0)
+libsigner/src/events.rs:206:33: replace != with == in <impl EventReceiver for StackerDBEventReceiver>::next_event
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 1)
+libsigner/src/http.rs:202:5: replace decode_http_body -> io::Result<Vec<u8>> with Ok(vec![0])
+libsigner/src/session.rs:54:9: replace SignerSession::get_chunk -> Result<Option<Vec<u8>>, RPCError> with Ok(Some(vec![]))
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 0)
+libsigner/src/session.rs:173:29: replace != with == in <impl SignerSession for StackerDBSession>::get_chunks
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([(String::new(), String::new())]), 0)
+libsigner/src/session.rs:163:9: replace <impl SignerSession for StackerDBSession>::get_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![Some(vec![])])
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::new(), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 0)
+libsigner/src/session.rs:189:9: replace <impl SignerSession for StackerDBSession>::get_latest_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![Some(vec![])])
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 1))
+libsigner/src/events.rs:248:9: replace <impl EventReceiver for StackerDBEventReceiver>::is_stopped -> bool with false
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([("xyzzy".into(), String::new())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([("xyzzy".into(), String::new())]), 1)
+libsigner/src/http.rs:154:33: replace && with || in decode_http_response
+libsigner/src/runloop.rs:170:5: replace async_safe_write_stderr with ()
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 1)
+libsigner/src/session.rs:163:9: replace <impl SignerSession for StackerDBSession>::get_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![Some(vec![0])])
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([(String::new(), String::new())]), 0))
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([("xyzzy".into(), String::new())]), 1))
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::from_iter([("xyzzy".into(), String::new())]), 0))
+libsigner/src/events.rs:279:9: replace <impl EventReceiver for StackerDBEventReceiver>::add_consumer with ()
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::new(), 1)
+libsigner/src/http.rs:138:5: replace decode_http_response -> Result<(HashMap<String, String>, usize), RPCError> with Ok((HashMap::new(), 1))
+libsigner/src/http.rs:175:32: replace > with == in decode_http_response
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([(String::new(), String::new())]), 0)
+libsigner/src/events.rs:212:30: replace != with == in <impl EventReceiver for StackerDBEventReceiver>::next_event
+libsigner/src/http.rs:202:5: replace decode_http_body -> io::Result<Vec<u8>> with Ok(vec![1])
+libsigner/src/events.rs:248:9: replace <impl EventReceiver for StackerDBEventReceiver>::is_stopped -> bool with true
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([("xyzzy".into(), String::new())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 0)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 1)
+libsigner/src/session.rs:195:29: replace != with == in <impl SignerSession for StackerDBSession>::get_latest_chunks
+libsigner/src/http.rs:233:5: replace run_http_request -> Result<Vec<u8>, RPCError> with Ok(vec![1])
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([(String::new(), String::new())]), 1)
+libsigner/src/http.rs:154:44: replace != with == in decode_http_response
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([(String::new(), String::new())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([(String::new(), String::new())]), 0)
+libsigner/src/http.rs:102:32: replace > with < in decode_http_request
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 0)
+libsigner/src/session.rs:54:9: replace SignerSession::get_chunk -> Result<Option<Vec<u8>>, RPCError> with Ok(Some(vec![1]))
+libsigner/src/http.rs:202:5: replace decode_http_body -> io::Result<Vec<u8>> with Ok(vec![])
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), String::new(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 1)
+libsigner/src/events.rs:255:9: replace <impl EventReceiver for StackerDBEventReceiver>::forward_event -> bool with false
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([("xyzzy".into(), "xyzzy".into())]), 0)
+libsigner/src/session.rs:189:9: replace <impl SignerSession for StackerDBSession>::get_latest_chunks -> Result<Vec<Option<Vec<u8>>>, RPCError> with Ok(vec![Some(vec![1])])
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with (String::new(), String::new(), HashMap::from_iter([(String::new(), "xyzzy".into())]), 1)
+libsigner/src/http.rs:57:9: replace SignerHttpRequest::destruct -> (String, String, HashMap<String, String>, usize) with ("xyzzy".into(), "xyzzy".into(), HashMap::from_iter([("xyzzy".into(), String::new())]), 1)
+libsigner/src/http.rs:233:5: replace run_http_request -> Result<Vec<u8>, RPCError> with Ok(vec![])
+libsigner/src/http.rs:175:32: replace > with < in decode_http_response

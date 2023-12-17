@@ -1,0 +1,2 @@
+stacks-signer/src/config.rs:265:28: replace == with != in <impl TryFrom for Config>::try_from
+stacks-signer/src/stacks_client.rs:251:42: replace != with == in StacksClient::parse_aggregate_public_key
