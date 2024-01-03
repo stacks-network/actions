@@ -71,6 +71,7 @@ runs:
         cargo nextest archive \
           --build-jobs 8 \
           --workspace \
+          --features monitoring_prom \
           --tests \
           --locked \
           --archive-file ~/test_archive.tar.zst
@@ -88,6 +89,7 @@ runs:
         cd testnet/stacks-node && cargo nextest archive \
           --build-jobs 8 \
           --workspace \
+          --features monitoring_prom \
           --tests \
           --locked \
           --features prod-genesis-chainstate \

@@ -44,6 +44,7 @@ runs:
           --retries ${{ inputs.retries }} \
           --final-status-level ${{ inputs.status-level }} \
           --fail-fast \
+          --features monitoring_prom \
           --success-output ${{ inputs.success-output }} \
           --status-level ${{ inputs.status-level }} \
           --archive-file ${{ inputs.archive-file }} \

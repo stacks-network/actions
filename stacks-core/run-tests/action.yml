@@ -40,6 +40,7 @@ runs:
           --verbose \
           --archive-file ${{ inputs.archive-file }} \
           --test-threads ${{ inputs.threads }} \
+          --features monitoring_prom \
           --retries ${{ inputs.retries }} \
           --run-ignored all \
           --fail-fast \
