@@ -1,0 +1,127 @@
+name: PR Differences Mutants
+
+inputs:
+  shard:
+    description: "The number of the shard to run (`-1` if ran without shards)"
+    required: false
+    default: -1
+  package-dimension:
+    description: "The dimension of the package. `big` for `stacks-node` and `stackslib`, `small` for others"
+    required: true
+
+runs:
+  using: "composite"
+
+  steps:
+    # Cleanup Runner
+    - name: Cleanup Runner action repo
+      id: runner_cleanup
+      uses: stacks-network/actions/cleanup/disk@main
+
+    # Checkout the stacks-core code
+    - name: Checkout the stacks core repo
+      id: git_checkout_stacks_core
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Relative diff
+      shell: bash
+      run: |
+        git diff origin/${{ github.base_ref }}.. > git.diff
+
+    # Checkout the actions code
+    - name: Get the action repo code
+      id: git_checkout_actions
+      uses: actions/checkout@v3
+      with:
+        repository: stacks-network/actions
+        ref: feat/mutation-testing
+        path: ./actions-repo
+
+    - name: Copy the git diff file to scripts folder
+      shell: bash
+      run: |
+        mv git.diff ./actions-repo/mutation-testing/shell-scripts/
+
+    - name: Install cargo mutants crate
+      shell: bash
+      run: cargo install --version 23.12.2 cargo-mutants
+
+    - name: Remove deleted file lines from git.diff file
+      shell: bash
+      run: ./remove-deleted-file-lines.sh
+      working-directory: actions-repo/mutation-testing/shell-scripts
+
+    - name: Split diffs into big and small packages and create regex patterns for them
+      shell: bash
+      run: |
+        cargo mutants --in-diff git.diff --list > all_mutants.txt
+        mkdir -p mutants_by_packages
+
+        # Split the differences from git into 2 parts, big packages ('stacks-node' and 'stackslib') and small packages (all others) and put them into separate files
+        while IFS= read -r line; do
+          package=$(echo "$line" | cut -d'/' -f1)
+          if [[ $package == "testnet" || $package == "stackslib" ]]; then
+            echo "$line" >> "mutants_by_packages/big_packages.txt"
+          else
+            echo "$line" >> "mutants_by_packages/small_packages.txt"
+          fi
+        done < all_mutants.txt
+
+        # Create regex patterns of the mutants to be ran for `cargo mutants` -F flag and output them to files to be used later
+        for package in mutants_by_packages/*; do
+          regex_pattern=""
+
+          while IFS= read -r line; do
+            escaped_line=$(echo "$line" | sed 's/[][()\.^$*+?{}|]/\\&/g')
+            regex_pattern+="($escaped_line)|"
+          done < "$package"
+
+          regex_pattern="${regex_pattern%|}"
+
+          if [[ "$package" == "mutants_by_packages/big_packages.txt" ]]; then
+            echo "$regex_pattern" > mutants_by_packages/regex_big.txt
+          else
+            echo "$regex_pattern" > mutants_by_packages/regex_small.txt
+          fi
+        done
+      working-directory: actions-repo/mutation-testing/shell-scripts
+
+    - name: Run mutants and check the exit code of the command, fail the workflow if mutations are not caught
+      shell: bash
+      run: |
+        set +e  # Disable immediate exit on error
+        if [[ ${{ inputs.shard }} == -1 ]]; then
+          if [[ ${{ inputs.package-dimension }} == big ]]; then
+            echo "Running mutants without shards on big packages"
+            cargo mutants --no-shuffle -vV -F "$(<mutants_by_packages/regex_big.txt)" --output ./ -- --all-targets -- --test-threads 1
+            exit_code=$?
+          else
+            echo "Running mutants without shards on small packages"
+            cargo mutants --no-shuffle -vV -F "$(<mutants_by_packages/regex_small.txt)" --output ./ -- --all-targets
+            exit_code=$?
+          fi
+        else
+          if [[ ${{ inputs.package-dimension }} == big ]]; then
+            echo "Running mutants with shard ${{ inputs.shard }} on big packages"
+            cargo mutants --no-shuffle -vV -F "$(<mutants_by_packages/regex_big.txt)" --shard ${{ inputs.shard }}/8 --output ./ -- --all-targets -- --test-threads 1
+            exit_code=$?
+          else
+            echo "Running mutants with shard ${{ inputs.shard }} on small packages"
+            cargo mutants --no-shuffle -vV -F "$(<mutants_by_packages/regex_small.txt)" --shard ${{ inputs.shard }}/4 --output ./ -- --all-targets
+            exit_code=$?
+          fi
+        fi
+        mkdir mutants-shard-${{ inputs.package-dimension }}-${{ inputs.shard }}
+        echo "$exit_code" > ./mutants-shard-${{ inputs.package-dimension }}-${{ inputs.shard }}/exit_code.txt
+        mv ./mutants.out/*.txt mutants-shard-${{ inputs.package-dimension }}-${{ inputs.shard }}/
+        set -e  # Enable immediate exit on error again
+      working-directory: actions-repo/mutation-testing/shell-scripts
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: mutants-shard-${{ inputs.package-dimension }}-${{ inputs.shard }}
+        path: actions-repo/mutation-testing/shell-scripts/mutants-shard-${{ inputs.package-dimension }}-${{ inputs.shard }}
