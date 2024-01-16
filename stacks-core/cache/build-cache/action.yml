@@ -73,6 +73,7 @@ runs:
           --workspace \
           --tests \
           --locked \
+          --features monitoring_prom \
           --archive-file ~/test_archive.tar.zst
 
     - name: Build and Archive Genesis Tests
@@ -90,7 +91,7 @@ runs:
           --workspace \
           --tests \
           --locked \
-          --features prod-genesis-chainstate \
+          --features prod-genesis-chainstate,monitoring_prom \
           --archive-file ~/genesis_archive.tar.zst
 
     ## Save Caches
