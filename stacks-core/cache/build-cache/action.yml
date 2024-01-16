@@ -91,7 +91,7 @@ runs:
           --workspace \
           --tests \
           --locked \
-          --features prod-genesis-chainstate,monitoring_prom \
+          --features prod-genesis-chainstate \
           --archive-file ~/genesis_archive.tar.zst
 
     ## Save Caches
