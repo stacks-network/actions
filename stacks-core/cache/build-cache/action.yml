@@ -73,7 +73,6 @@ runs:
           --workspace \
           --tests \
           --locked \
-          --features monitoring_prom \
           --archive-file ~/test_archive.tar.zst
 
     - name: Build and Archive Genesis Tests
