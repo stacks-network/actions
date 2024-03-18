@@ -6,19 +6,23 @@ inputs:
     description: "The name of the generated checksum file"
     required: false
     default: "CHECKSUMS.txt"
+  artifact_name:
+    description: "Download artifacts starting with this name"
+    required: false
+    default: "*"
 
 runs:
   using: "composite"
   steps:
-    ## Downloads the artifacts built in `create-source-binary.yml`
+    ## Downloads the artifacts from the workflow starting with 'artifact_name' input
     - name: Download Artifacts
       id: download_artifacts
-      uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3.0.2
+      uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427 # v4.1.4
       with:
-        name: artifact
-        path: release
+        name: ${{ inputs.artifact_name }}
+        path: artifacts
 
-    ## Generate a checksums file to be added to the release page
+    ## Generate a checksums file
     - name: Generate Checksums
       id: generate_checksum
       shell: bash
@@ -30,7 +34,7 @@ runs:
         fi
 
         # Generate the hashes and exit if the variable is empty
-        shasum="$(sha512sum release/*)"
+        shasum="$(sha512sum artifacts/*)"
         if [[ -z "$shasum" ]]; then
           echo "Checksum could not be generated!";
           exit 1;
