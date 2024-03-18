@@ -41,7 +41,7 @@ runs:
       run: |
         cargo install --version 24.2.1 cargo-mutants --locked # v24.2.1
 
-    - uses: taiki-e/install-action@ac89944b5b150d78567ab6c02badfbe48b0b55aa # v2.20.16
+    - uses: taiki-e/install-action@ffad14352befc011a07601bbf501b672acbc18e6 # v2.29.0
       name: Install cargo-nextest
       id: install_cargo_nextest
       with:
@@ -254,7 +254,7 @@ runs:
 
     - name: Upload artifact
       id: upload_artifact
-      uses: actions/upload-artifact@1eb3cb2b3e0f29609092a73eb033bb759a334595 # v4.1.0
+      uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
       with:
         name: mutants-shard-${{ inputs.package }}-${{ inputs.shard }}
         path: mutants-shard-${{ inputs.package }}-${{ inputs.shard }}
