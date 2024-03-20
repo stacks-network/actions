@@ -39,7 +39,7 @@ runs:
       if: |
         inputs.action == 'check' ||
         inputs.action == 'save'
-      uses: actions/cache@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+      uses: actions/cache@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
       id: check_cache
       with:
         lookup-only: true
@@ -52,9 +52,9 @@ runs:
       if: |
         inputs.action == 'restore'
       id: restore_cache
-      uses: Wandalen/wretry.action@a163f62ae554a8f3cbe27b23db15b60c0ae2e93c # v1.3.0
+      uses: Wandalen/wretry.action@1a10d4835a1506f513ad8e7488aeb474ab20055c # v1.4.10
       with:
-        action: actions/cache/restore@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3.3.1
+        action: actions/cache/restore@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
         with: |
           fail-on-cache-miss: ${{ inputs.fail-on-cache-miss }}
           path: ~/genesis_archive.tar.zst
@@ -69,9 +69,9 @@ runs:
         inputs.action == 'save' &&
         steps.check_cache.outputs.cache-hit != 'true'
       id: save_cache
-      uses: Wandalen/wretry.action@a163f62ae554a8f3cbe27b23db15b60c0ae2e93c # v1.3.0
+      uses: Wandalen/wretry.action@1a10d4835a1506f513ad8e7488aeb474ab20055c # v1.4.10
       with:
-        action: actions/cache/save@704facf57e6136b1bc63b828d79edcd491f0ee84 # v3.3.2
+        action: actions/cache/save@ab5e6d0c87105b4c9c2047343972218f562e4319 # v4.0.1
         with: |
           path: ~/genesis_archive.tar.zst
           key: ${{ inputs.cache-key }}
