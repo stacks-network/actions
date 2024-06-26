@@ -1,0 +1,131 @@
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:171:31: replace != with == in <impl ConsensusDecodable for bool>::consensus_decode
+stacks-common/src/util/chunked_encoding.rs:279:23: replace < with == in HttpChunkedTransferReaderState::do_read
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:341:22: replace == with != in Script::is_p2pkh
+stacks-common/src/util/secp256k1.rs:327:9: replace Secp256k1PrivateKey::compress_public -> bool with false
+stacks-common/src/deps_common/bech32/mod.rs:365:23: replace || with && in check_hrp
+stacks-common/src/deps_common/httparse/mod.rs:112:9: replace Bytes<'a>::pos -> usize with 1
+stacks-common/src/util/pipe.rs:74:50: replace < with == in PipeRead::drain_buf
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:312:9: replace Script::to_p2sh -> Script with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:343:13: replace && with || in Script::is_p2pkh
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:580:22: replace == with != in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:375:28: replace && with == in Script::is_op_return
+stacks-common/src/util/vrf.rs:349:9: replace VRFProof::from_bytes -> Option<VRFProof> with None
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:282:16: replace > with < in <impl ConsensusDecodable for Box<[T]>>::consensus_decode
+stacks-common/src/util/secp256k1.rs:133:40: replace == with != in Secp256k1PublicKey::from_slice
+stacks-common/src/address/c32.rs:203:19: replace > with < in c32_encode
+stacks-common/src/deps_common/bech32/mod.rs:541:5: replace split_and_decode -> Result<(String, Vec<u5>), Error> with Ok(("xyzzy".into(), vec![]))
+stacks-common/src/util/pipe.rs:71:19: replace < with > in PipeRead::drain_buf
+stacks-common/src/deps_common/httparse/mod.rs:840:26: replace > with < in parse_chunk_size
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:577:22: replace == with != in All::classify
+stacks-common/src/util/retry.rs:66:9: replace <impl Read for RetryReader<'a, R>>::read -> io::Result<usize> with Ok(1)
+stacks-common/src/util/pipe.rs:191:9: replace PipeWrite::write_or_buffer -> io::Result<usize> with Ok(0)
+stacks-common/src/deps_common/bitcoin/network/constants.rs:76:9: replace Network::from_magic -> Option<Network> with None
+stacks-common/src/address/c32.rs:317:5: replace c32_check_decode -> Result<(u8, Vec<u8>), Error> with Ok((1, vec![]))
+stacks-common/src/util/pipe.rs:161:47: replace < with > in PipeRead::fill_buf
+stacks-common/src/util/chunked_encoding.rs:197:62: replace <= with > in HttpChunkedTransferReaderState::read_chunk_bytes
+stacks-common/src/util/pipe.rs:296:9: replace <impl Write for PipeWrite>::write -> io::Result<usize> with Ok(0)
+stacks-common/src/deps_common/bech32/mod.rs:749:17: replace > with == in convert_bits
+stacks-common/src/address/c32.rs:321:37: replace < with > in c32_check_decode
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:179:9: replace <impl ConsensusEncodable for String>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bech32/mod.rs:728:27: replace || with && in convert_bits
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:516:9: replace <impl ConsensusDecodable for OutPoint>::consensus_decode -> Result<OutPoint, serialize::Error> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:202:17: replace < with > in build_scriptint
+stacks-common/src/deps_common/bech32/mod.rs:305:24: replace >= with < in <impl ToBase32 for T>::write_base32
+stacks-common/src/util/secp256k1.rs:170:9: replace Secp256k1PublicKey::recover_to_pubkey -> Result<Secp256k1PublicKey, &'static str> with Ok(Default::default())
+stacks-common/src/util/pipe.rs:171:40: replace && with || in PipeRead::fill_buf
+stacks-common/src/deps_common/bech32/mod.rs:728:5: replace convert_bits -> Result<Vec<u8>, Error> with Ok(vec![])
+stacks-common/src/deps_common/bitcoin/network/constants.rs:97:9: replace Network::magic -> u32 with 0
+stacks-common/src/address/c32.rs:237:5: replace c32_decode_ascii -> Result<Vec<u8>, Error> with Ok(vec![0])
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:571:22: replace == with != in All::classify
+stacks-common/src/address/b58.rs:272:5: replace encode_slice -> String with "xyzzy".into()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:268:5: replace read_uint -> Result<usize, Error> with Ok(0)
+stacks-common/src/address/b58.rs:186:54: replace == with != in from
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:171:9: replace <impl ConsensusDecodable for bool>::consensus_decode -> Result<bool, serialize::Error> with Ok(true)
+stacks-common/src/util/vrf.rs:167:9: replace VRFPrivateKey::from_bytes -> Option<VRFPrivateKey> with Some(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:567:22: replace == with != in All::classify
+stacks-common/src/deps_common/httparse/mod.rs:135:9: replace Bytes<'a>::len -> usize with 0
+stacks-common/src/util/hash.rs:629:14: replace != with == in bin_bytes
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:380:9: replace Script::is_provably_unspendable -> bool with true
+stacks-common/src/util/chunked_encoding.rs:277:9: replace HttpChunkedTransferReaderState::do_read -> io::Result<(usize, usize)> with Ok((0, 0))
+stacks-common/src/util/secp256k1.rs:150:9: replace Secp256k1PublicKey::to_hex -> String with "xyzzy".into()
+stacks-common/src/deps_common/httparse/mod.rs:263:19: replace < with > in is_token
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:403:9: replace Transaction::segwit_signature_hash -> Sha256dHash with Default::default()
+stacks-common/src/util/hash.rs:327:9: replace DoubleSha256::into_le -> Uint256 with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:375:28: replace && with != in Script::is_op_return
+stacks-common/src/util/pipe.rs:270:31: replace > with == in <impl Read for PipeRead>::read
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:440:21: replace && with || in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/httparse/mod.rs:809:91: replace != with == in parse_headers_iter
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:250:26: replace != with == in read_scriptint
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:141:22: replace < with == in <impl ConsensusDecodable for VarInt>::consensus_decode
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:335:13: replace && with || in Script::is_p2sh
+stacks-common/src/deps_common/bech32/mod.rs:383:22: replace && with || in check_hrp
+stacks-common/src/address/c32.rs:230:5: replace c32_decode -> Result<Vec<u8>, Error> with Ok(vec![0])
+stacks-common/src/util/uint.rs:489:27: replace == with != in Uint256::increment
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:108:9: replace <impl ConsensusEncodable for VarInt>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bech32/mod.rs:541:5: replace split_and_decode -> Result<(String, Vec<u5>), Error> with Ok((String::new(), vec![]))
+stacks-common/src/util/retry.rs:66:32: replace < with == in <impl Read for RetryReader<'a, R>>::read
+stacks-common/src/util/chunked_encoding.rs:119:9: replace HttpChunkedTransferReaderState::read_chunk_boundary -> io::Result<usize> with Ok(0)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:287:9: replace Script::len -> usize with 0
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:268:19: replace < with > in read_uint
+stacks-common/src/util/hash.rs:277:9: replace <impl MerkleHashFunc for DoubleSha256>::bits -> &[u8] with Vec::leak(vec![1])
+stacks-common/src/util/hash.rs:605:5: replace hex_bytes -> Result<Vec<u8>, HexError> with Ok(vec![])
+stacks-common/src/deps_common/bech32/mod.rs:737:24: replace != with == in convert_bits
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:105:9: replace BlockHeader::compact_target_from_u256 -> u32 with 1
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:327:31: replace == with != in Transaction::segwit_script_pubkey_bytes
+stacks-common/src/address/c32.rs:358:5: replace c32_address_decode -> Result<(u8, Vec<u8>), Error> with Ok((1, vec![1]))
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:570:22: replace == with != in All::classify
+stacks-common/src/deps_common/bitcoin/util/hash.rs:79:9: replace <impl SimpleEncoder for Sha256dEncoder>::emit_u64 -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/httparse/mod.rs:263:7: replace > with < in is_token
+stacks-common/src/address/b58.rs:205:17: replace != with == in from_check
+stacks-common/src/util/secp256k1.rs:238:36: replace != with == in <impl PublicKey for Secp256k1PublicKey>::verify
+stacks-common/src/util/chunked_encoding.rs:435:23: replace > with == in <impl Write for HttpChunkedTransferWriter<'a, 'state, W>>::flush
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:79:9: replace OutPoint::is_null -> bool with true
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:164:5: replace serialize -> Result<Vec<u8>, Error> with Ok(vec![])
+stacks-common/src/util/chunked_encoding.rs:283:30: replace == with != in HttpChunkedTransferReaderState::do_read
+stacks-common/src/deps_common/bitcoin/util/hash.rs:107:9: replace <impl SimpleEncoder for Sha256dEncoder>::emit_i32 -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bech32/mod.rs:728:13: replace > with == in convert_bits
+stacks-common/src/deps_common/bitcoin/network/address.rs:87:9: replace <impl ConsensusEncodable for Address>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:434:36: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:106:35: replace <= with > in BlockHeader::compact_target_from_u256
+stacks-common/src/util/secp256k1.rs:205:9: replace <impl PublicKey for Secp256k1PublicKey>::to_bytes -> Vec<u8> with vec![0]
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:164:9: replace <impl ConsensusEncodable for bool>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/address/c32.rs:183:5: replace c32_encode -> String with "xyzzy".into()
+stacks-common/src/util/chunked_encoding.rs:433:9: replace <impl Write for HttpChunkedTransferWriter<'a, 'state, W>>::flush -> io::Result<()> with Ok(())
+stacks-common/src/util/secp256k1.rs:213:9: replace <impl PublicKey for Secp256k1PublicKey>::verify -> Result<bool, &'static str> with Ok(false)
+stacks-common/src/util/chunked_encoding.rs:277:9: replace HttpChunkedTransferReaderState::do_read -> io::Result<(usize, usize)> with Ok((1, 0))
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:45:9: replace <impl Debug for Script>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/secp256k1.rs:140:9: replace Secp256k1PublicKey::from_private -> Secp256k1PublicKey with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:243:38: replace == with != in Transaction::signature_hash
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:198:5: replace build_scriptint -> Vec<u8> with vec![0]
+stacks-common/src/util/chunked_encoding.rs:407:23: replace < with == in <impl Write for HttpChunkedTransferWriter<'a, 'state, W>>::write
+stacks-common/src/deps_common/httparse/mod.rs:646:48: replace || with && in parse_reason
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:342:26: replace == with != in Script::is_p2pkh
+stacks-common/src/deps_common/bech32/mod.rs:493:5: replace encode -> Result<String, Error> with Ok("xyzzy".into())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:307:9: replace Script::into_bytes -> Vec<u8> with vec![]
+stacks-common/src/util/chunked_encoding.rs:323:9: replace <impl Read for HttpChunkedTransferReader<'a, R>>::read -> io::Result<usize> with Ok(0)
+stacks-common/src/util/secp256k1.rs:308:45: replace == with != in Secp256k1PrivateKey::from_slice
+stacks-common/src/deps_common/bech32/mod.rs:383:22: replace && with != in check_hrp
+stacks-common/src/util/chunked_encoding.rs:502:9: replace test::vec_u8 -> Vec<Vec<u8>> with vec![vec![]]
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:188:40: replace == with != in deserialize
+stacks-common/src/deps_common/httparse/mod.rs:639:14: replace == with != in parse_reason
+stacks-common/src/util/vrf.rs:157:9: replace VRFPrivateKey::from_hex -> Option<VRFPrivateKey> with Some(Default::default())
+stacks-common/src/util/hash.rs:462:22: replace >= with < in MerkleTree<H>::find_hash_index
+stacks-common/src/util/chunked_encoding.rs:160:22: replace > with == in HttpChunkedTransferReaderState::read_chunk_boundary
+stacks-common/src/address/c32.rs:317:5: replace c32_check_decode -> Result<(u8, Vec<u8>), Error> with Ok((1, vec![1]))
+stacks-common/src/deps_common/bech32/mod.rs:728:23: replace > with == in convert_bits
+stacks-common/src/deps_common/httparse/mod.rs:263:5: replace is_token -> bool with false
+stacks-common/src/deps_common/httparse/mod.rs:716:18: replace == with != in parse_headers_iter
+stacks-common/src/deps_common/bech32/mod.rs:535:5: replace decode_without_checksum -> Result<(String, Vec<u5>), Error> with Ok((String::new(), vec![Default::default()]))
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:565:22: replace == with != in All::classify
+stacks-common/src/util/retry.rs:66:32: replace < with > in <impl Read for RetryReader<'a, R>>::read
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:317:19: replace != with == in <impl ConsensusDecodable for Option<T>>::consensus_decode
+stacks-common/src/util/chunked_encoding.rs:502:9: replace test::vec_u8 -> Vec<Vec<u8>> with vec![vec![1]]
+stacks-common/src/types/chainstate.rs:414:9: replace VRFSeed::is_from_proof -> bool with true
+stacks-common/src/util/chunked_encoding.rs:502:9: replace test::vec_u8 -> Vec<Vec<u8>> with vec![]
+stacks-common/src/deps_common/ctrlc/platform/unix/mod.rs:50:5: replace os_handler with ()
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:574:22: replace == with != in All::classify
+stacks-common/src/util/secp256k1.rs:327:9: replace Secp256k1PrivateKey::compress_public -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:342:13: replace && with || in Script::is_p2pkh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:382:17: replace || with && in Script::is_provably_unspendable
+stacks-common/src/address/c32.rs:296:16: replace >= with < in c32_check_encode
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:341:9: replace Script::is_p2pkh -> bool with false

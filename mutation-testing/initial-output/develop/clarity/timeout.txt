@@ -1,0 +1,54 @@
+clarity/src/vm/database/clarity_db.rs:1291:9: replace ClarityDatabase<'a>::make_key_for_data_map_entry -> String with "xyzzy".into()
+clarity/src/vm/types/signatures.rs:536:9: replace TypeSignature::admits_type_v2_0 -> Result<bool> with Ok(true)
+clarity/src/vm/ast/parser/v1.rs:206:21: replace && with || in inner_lex
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:129:25: replace != with == in Lexer<'a>::skip_whitespace
+clarity/src/vm/database/clarity_db.rs:660:9: replace ClarityDatabase<'a>::get_contract_size -> Result<u64> with Ok(0)
+clarity/src/vm/test_util/mod.rs:183:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(1)
+clarity/src/vm/contexts.rs:1890:23: replace >= with < in LocalContext<'a>::extend
+clarity/src/vm/types/signatures.rs:1728:23: replace > with == in ListTypeData::inner_size
+clarity/src/vm/coverage.rs:105:9: replace CoverageReporter::executable_lines -> Vec<u32> with vec![0]
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:44:5: replace is_string_terminator -> bool with false
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:37:5: replace is_separator -> bool with false
+clarity/src/vm/types/signatures.rs:377:17: replace > with == in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/functions/boolean.rs:28:5: replace type_force_bool -> Result<bool> with Ok(false)
+clarity/src/vm/costs/mod.rs:833:9: replace LimitedCostTracker::get_memory_limit -> u64 with 1
+clarity/src/vm/analysis/analysis_db.rs:67:9: replace AnalysisDatabase<'a>::roll_back with ()
+clarity/src/vm/docs/mod.rs:2627:5: replace make_json_api_reference -> String with "xyzzy".into()
+clarity/src/vm/costs/mod.rs:143:9: replace <impl CostTracker for ()>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/test_util/mod.rs:237:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_prepare_length -> u32 with 0
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:187:9: replace ContractContext::get_map_type -> Option<&(TypeSignature, TypeSignature)> with None
+clarity/src/vm/database/clarity_db.rs:182:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with None
+clarity/src/vm/types/mod.rs:248:9: replace SequenceData::atom_values -> Vec<SymbolicExpression> with vec![]
+clarity/src/vm/database/clarity_store.rs:324:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_current_block_height -> u32 with 0
+clarity/src/vm/types/mod.rs:960:72: replace && with || in Value::string_ascii_from_bytes
+clarity/src/vm/errors.rs:152:9: replace <impl Display for RuntimeErrorType>::fmt -> std::fmt::Result with Ok(Default::default())
+clarity/src/vm/events.rs:333:9: replace FTBurnEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/database/clarity_db.rs:161:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_header_hash_for_block -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/version.rs:16:9: replace <impl Display for ClarityVersion>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/database/clarity_db.rs:944:9: replace ClarityDatabase<'a>::get_burnchain_block_height -> Option<u32> with Some(1)
+clarity/src/vm/tests/contracts.rs:248:5: replace tx_sponsor_contract_asserts with ()
+clarity/src/vm/types/mod.rs:380:47: replace != with == in SequenceData::contains
+clarity/src/vm/ast/types.rs:64:9: replace ContractAST::add_implemented_trait with ()
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:64:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:1291:9: replace ClarityDatabase<'a>::make_key_for_data_map_entry -> String with String::new()
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:165:35: replace == with != in ContractContext::is_contract
+clarity/src/vm/database/clarity_store.rs:320:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_open_chain_tip_height -> u32 with 0
+clarity/src/vm/representations.rs:381:9: replace PreSymbolicExpression::match_field_identifier -> Option<&TraitIdentifier> with None
+clarity/src/vm/costs/mod.rs:1054:9: replace <impl CostTracker for &mut LimitedCostTracker>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/tests/traits.rs:1398:14: replace < with == in test_pass_trait_to_subtrait
+clarity/src/vm/tests/contracts.rs:686:5: replace test_simple_contract_call with ()
+clarity/src/vm/database/clarity_db.rs:377:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_3_activation_height -> u32 with 0
+clarity/src/vm/types/mod.rs:266:9: replace SequenceData::len -> usize with 0
+clarity/src/vm/types/serialization.rs:397:9: replace TypeSignature::max_serialized_size -> Result<u32, CheckErrors> with Ok(0)
+clarity/src/vm/database/clarity_db.rs:974:9: replace ClarityDatabase<'a>::get_miner_spend_total -> u128 with 1
+clarity/src/vm/ast/definition_sorter/mod.rs:422:9: replace Graph::get_node_descendants -> Vec<usize> with vec![]
+clarity/src/vm/types/signatures.rs:854:9: replace TupleTypeSignature::is_empty -> bool with false
+clarity/src/vm/types/mod.rs:1269:9: replace <impl Debug for BuffData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:113:9: replace <impl CostTracker for TypeChecker<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(false)
+clarity/src/vm/database/structures.rs:1110:9: replace STXBalance::can_transfer_at_burn_block -> bool with true
+clarity/src/vm/database/clarity_db.rs:534:9: replace ClarityDatabase<'a>::make_key_for_trip -> String with "xyzzy".into()
+clarity/src/vm/docs/mod.rs:729:5: replace get_input_type_string -> String with String::new()
+clarity/src/vm/types/signatures.rs:1767:9: replace TupleTypeSignature::size -> u32 with 1
+clarity/src/vm/contexts.rs:1826:9: replace ContractContext::lookup_trait_definition -> Option<BTreeMap<ClarityName, FunctionSignature>> with None
+clarity/src/vm/ast/parser/v1.rs:638:27: replace > with < in parse_lexed
+clarity/src/vm/costs/mod.rs:833:9: replace LimitedCostTracker::get_memory_limit -> u64 with 0

@@ -1,0 +1,14 @@
+libsigner/src/events.rs:198:9: replace <impl EventReceiver for StackerDBEventReceiver>::next_event -> Result<StackerDBChunksEvent, EventError> with Ok(Default::default())
+libsigner/src/runloop.rs:142:9: replace RunningSigner<EV, R>::join -> Option<R> with Some(Default::default())
+libsigner/src/runloop.rs:239:9: replace Signer<CMD, R, SL, EV>::spawn -> Result<RunningSigner<EV, R>, EventError> with Ok(Default::default())
+libsigner/src/session.rs:147:9: replace <impl SignerSession for StackerDBSession>::list_chunks -> Result<Vec<SlotMetadata>, RPCError> with Ok(vec![Default::default()])
+libsigner/src/http.rs:154:33: replace && with == in decode_http_response
+libsigner/src/runloop.rs:72:9: replace SignerRunLoop::main_loop -> Option<R> with Some(Default::default())
+libsigner/src/events.rs:135:9: replace StackerDBEventReceiver::with_server -> Result<R, EventError> with Ok(Default::default())
+libsigner/src/http.rs:65:5: replace decode_http_request -> Result<SignerHttpRequest, EventError> with Ok(Default::default())
+libsigner/src/session.rs:211:9: replace <impl SignerSession for StackerDBSession>::put_chunk -> Result<StackerDBChunkAckData, RPCError> with Ok(Default::default())
+libsigner/src/events.rs:189:9: replace <impl EventReceiver for StackerDBEventReceiver>::bind -> Result<SocketAddr, EventError> with Ok(Default::default())
+libsigner/src/http.rs:154:33: replace && with != in decode_http_response
+libsigner/src/session.rs:104:9: replace StackerDBSession::with_socket -> Result<R, RPCError> with Ok(Default::default())
+libsigner/src/runloop.rs:134:9: replace RunningSigner<EV, R>::stop -> Option<R> with Some(Default::default())
+libsigner/src/events.rs:285:9: replace <impl EventReceiver for StackerDBEventReceiver>::get_stop_signaler -> Result<StackerDBStopSignaler, EventError> with Ok(Default::default())

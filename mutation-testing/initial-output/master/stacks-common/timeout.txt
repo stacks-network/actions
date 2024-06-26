@@ -1,0 +1,11 @@
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:58:9: replace OutPoint::null -> OutPoint with Default::default()
+stacks-common/src/deps_common/bech32/mod.rs:730:46: replace == with != in convert_bits
+stacks-common/src/util/vrf.rs:432:28: replace > with < in VRF::hash_to_curve
+stacks-common/src/util/pipe.rs:115:34: replace && with || in PipeRead::fill_buf
+stacks-common/src/address/b58.rs:238:21: replace > with == in encode_iter_utf8
+stacks-common/src/util/vrf.rs:426:20: replace == with != in VRF::hash_to_curve
+stacks-common/src/util/pipe.rs:71:9: replace PipeRead::set_nonblocking -> () with ()
+stacks-common/src/util/retry.rs:103:9: replace <impl Read for BoundReader<'a, R>>::read -> io::Result<usize> with Ok(1)
+stacks-common/src/util/vrf.rs:432:28: replace > with == in VRF::hash_to_curve
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:209:15: replace > with < in build_scriptint
+stacks-common/src/util/pipe.rs:115:51: replace && with || in PipeRead::fill_buf

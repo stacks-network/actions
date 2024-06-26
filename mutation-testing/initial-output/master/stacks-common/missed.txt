@@ -1,0 +1,422 @@
+stacks-common/src/types/mod.rs:279:9: replace StacksEpoch<L>::find_epoch_by_id -> Option<usize> with None
+stacks-common/src/util/vrf.rs:177:9: replace VRFPrivateKey::to_hex -> String with "xyzzy".into()
+stacks-common/src/types/mod.rs:268:35: replace <= with > in StacksEpoch<L>::find_epoch
+stacks-common/src/util/log.rs:39:5: replace print_msg_header -> io::Result<bool> with Ok(true)
+stacks-common/src/util/log.rs:328:5: replace color_if_tty -> &str with "xyzzy"
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:464:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:547:9: replace Builder::is_empty -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:266:13: replace && with != in read_scriptbool
+stacks-common/src/util/vrf.rs:177:9: replace VRFPrivateKey::to_hex -> String with String::new()
+stacks-common/src/util/mod.rs:105:9: replace db_common::tx_busy_handler -> bool with true
+stacks-common/src/codec/mod.rs:82:9: replace StacksMessageCodec::serialize_to_vec -> Vec<u8> with vec![0]
+stacks-common/src/util/log.rs:352:5: replace isatty -> bool with true
+stacks-common/src/types/chainstate.rs:179:26: replace != with == in PoxId::has_prefix
+stacks-common/src/util/mod.rs:88:5: replace slice_partialeq -> bool with true
+stacks-common/src/util/secp256k1.rs:377:5: replace secp256k1_recover -> Result<[u8; 33], LibSecp256k1Error> with Ok([0; 33])
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:580:13: replace || with && in All::classify
+stacks-common/src/util/vrf.rs:101:9: replace <impl PartialEq for VRFPublicKey>::eq -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:60:41: replace < with == in <impl Debug for Script>::fmt
+stacks-common/src/address/mod.rs:145:20: replace == with != in <impl TryFrom for AddressHashMode>::try_from
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:592:20: replace < with > in Builder::push_slice
+stacks-common/src/address/mod.rs:82:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/util/vrf.rs:364:9: replace VRFProof::from_hex -> Option<VRFProof> with None
+stacks-common/src/util/pair.rs:60:9: replace Pair<I>::remainder -> Option<I::Item> with None
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:356:26: replace == with != in Script::is_p2pk
+stacks-common/src/util/vrf.rs:394:9: replace VRFProof::to_hex -> String with "xyzzy".into()
+stacks-common/src/types/chainstate.rs:428:9: replace VRFSeed::is_from_proof -> bool with false
+stacks-common/src/util/mod.rs:44:5: replace get_epoch_time_ms -> u128 with 0
+stacks-common/src/deps_common/bech32/mod.rs:324:21: replace == with != in <impl Base32Len for T>::base32_len
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:183:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:547:9: replace Builder::is_empty -> bool with false
+stacks-common/src/util/hash.rs:257:9: replace <impl MerkleHashFunc for Sha256Sum>::bits -> &[u8] with Vec::leak(vec![0])
+stacks-common/src/address/mod.rs:149:20: replace == with != in <impl TryFrom for AddressHashMode>::try_from
+stacks-common/src/util/macros.rs:21:5: replace is_big_endian -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:566:13: replace || with && in All::classify
+stacks-common/src/util/mod.rs:106:22: replace > with == in db_common::tx_busy_handler
+stacks-common/src/types/mod.rs:217:9: replace <impl Display for StacksAddress>::fmt -> std::fmt::Result with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:174:23: replace < with == in PoxId::has_prefix
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:271:19: replace < with == in read_uint
+stacks-common/src/util/retry.rs:53:9: replace RetryReader<'a, R>::position -> usize with 0
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:305:9: replace Script::to_bytes -> Vec<u8> with vec![]
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![1], 1)
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:590:13: replace || with && in All::classify
+stacks-common/src/util/pipe.rs:115:51: replace && with == in PipeRead::fill_buf
+stacks-common/src/types/mod.rs:191:29: replace != with == in StacksAddress::from_public_keys
+stacks-common/src/types/chainstate.rs:371:9: replace BurnchainHeaderHash::to_bitcoin_hash -> Sha256dHash with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:136:17: replace <= with > in BlockHeader::spv_validate
+stacks-common/src/deps_common/bech32/mod.rs:682:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:152:20: replace >= with < in PoxId::bit_slice
+stacks-common/src/types/mod.rs:268:55: replace < with == in StacksEpoch<L>::find_epoch
+stacks-common/src/util/macros.rs:21:5: replace is_big_endian -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:587:20: replace < with == in Builder::push_slice
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:355:9: replace Script::is_p2pk -> bool with true
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:418:9: replace <impl ConsensusEncodable for HashMap<K, V>>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:177:5: replace serialize_hex -> Result<String, Error> with Ok("xyzzy".into())
+stacks-common/src/util/vrf.rs:241:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:266:13: replace && with || in read_scriptbool
+stacks-common/src/util/secp256k1.rs:152:9: replace Secp256k1PublicKey::to_hex -> String with "xyzzy".into()
+stacks-common/src/util/mod.rs:111:24: replace > with < in db_common::tx_busy_handler
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:372:13: replace && with || in Script::is_v0_p2wpkh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:355:22: replace == with != in Script::is_p2pk
+stacks-common/src/deps_common/bitcoin/util/hash.rs:367:9: replace <impl Debug for Hash160>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:572:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/util/hash.rs:317:17: replace <impl Deserialize for Sha256dHash>::deserialize::<impl Visitor for Visitor>::visit_string -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/util/mod.rs:111:24: replace > with == in db_common::tx_busy_handler
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:355:9: replace Script::is_p2pk -> bool with false
+stacks-common/src/util/mod.rs:79:9: replace <impl Error for HexError>::description -> &str with "xyzzy"
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:542:9: replace Builder::len -> usize with 1
+stacks-common/src/util/retry.rs:53:9: replace RetryReader<'a, R>::position -> usize with 1
+stacks-common/src/util/secp256k1.rs:152:9: replace Secp256k1PublicKey::to_hex -> String with String::new()
+stacks-common/src/deps_common/bitcoin/util/hash.rs:208:20: replace != with == in Sha256dHash::from_hex
+stacks-common/src/codec/mod.rs:126:18: replace > with == in read_next_vec
+stacks-common/src/util/hash.rs:366:9: replace DoubleSha256::be_hex_string -> String with "xyzzy".into()
+stacks-common/src/util/log.rs:39:5: replace print_msg_header -> io::Result<bool> with Ok(false)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:583:20: replace < with == in Builder::push_slice
+stacks-common/src/address/c32.rs:322:37: replace < with == in c32_check_decode
+stacks-common/src/address/b58.rs:162:25: replace > with == in from
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:579:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:570:13: replace || with && in All::classify
+stacks-common/src/types/mod.rs:183:26: replace < with > in StacksAddress::from_public_keys
+stacks-common/src/types/chainstate.rs:434:9: replace <impl StacksMessageCodec for (ConsensusHash, BurnchainHeaderHash)>::consensus_serialize -> Result<(), CodecError> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:264:5: replace read_scriptbool -> bool with true
+stacks-common/src/util/hash.rs:366:9: replace DoubleSha256::be_hex_string -> String with String::new()
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:574:13: replace || with && in All::classify
+stacks-common/src/util/vrf.rs:218:9: replace VRFPublicKey::to_hex -> String with String::new()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:372:26: replace == with != in Script::is_v0_p2wpkh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:266:13: replace && with == in read_scriptbool
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:305:9: replace Script::to_bytes -> Vec<u8> with vec![1]
+stacks-common/src/types/chainstate.rs:313:9: replace <impl StacksMessageCodec for StacksWorkScore>::consensus_serialize -> Result<(), CodecError> with Ok(())
+stacks-common/src/types/chainstate.rs:137:9: replace PoxId::has_ith_anchor_block -> bool with false
+stacks-common/src/deps_common/bitcoin/network/message.rs:46:27: replace > with == in <impl ConsensusEncodable for CommandString>::consensus_encode
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:92:17: replace > with == in BlockHeader::compact_target_to_u256
+stacks-common/src/util/mod.rs:105:9: replace db_common::tx_busy_handler -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:309:13: replace || with && in Transaction::segwit_sequence_hash
+stacks-common/src/types/mod.rs:267:9: replace StacksEpoch<L>::find_epoch -> Option<usize> with None
+stacks-common/src/deps_common/bitcoin/network/address.rs:130:9: replace <impl PartialEq for Address>::eq -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:643:9: replace <impl Serialize for All>::serialize -> Result<S::Ok, S::Error> with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:188:9: replace PoxId::into_inner -> Vec<bool> with vec![]
+stacks-common/src/util/retry.rs:142:9: replace <impl Read for LogReader<'a, R>>::read -> io::Result<usize> with Ok(0)
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:368:32: replace == with != in Transaction::segwit_outputs_hash
+stacks-common/src/deps_common/bitcoin/network/mod.rs:47:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (1, Some(1))
+stacks-common/src/types/chainstate.rs:170:9: replace PoxId::num_inventory_reward_cycles -> usize with 1
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:501:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/util/hash.rs:246:9: replace <impl MerkleHashFunc for Sha256Sum>::from_tagged_data -> Sha256Sum with Default::default()
+stacks-common/src/util/log.rs:86:5: replace pretty_print_msg_header -> io::Result<bool> with Ok(false)
+stacks-common/src/deps_common/bitcoin/util/hash.rs:194:9: replace Sha256dHash::into_be -> Uint256 with Default::default()
+stacks-common/src/util/vrf.rs:101:9: replace <impl PartialEq for VRFPublicKey>::eq -> bool with true
+stacks-common/src/util/vrf.rs:121:9: replace <impl Hash for VRFPublicKey>::hash with ()
+stacks-common/src/util/mod.rs:92:18: replace != with == in slice_partialeq
+stacks-common/src/address/mod.rs:121:9: replace AddressHashMode::to_version_testnet -> u8 with 0
+stacks-common/src/types/mod.rs:133:9: replace <impl PartialOrd for StacksAddress>::partial_cmp -> Option<Ordering> with None
+stacks-common/src/util/secp256k1.rs:377:5: replace secp256k1_recover -> Result<[u8; 33], LibSecp256k1Error> with Ok([1; 33])
+stacks-common/src/util/hash.rs:242:9: replace <impl MerkleHashFunc for Sha256Sum>::empty -> Sha256Sum with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:52: replace == with != in read_scriptbool
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:670:9: replace SigHashType::as_u32 -> u32 with 1
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:593:13: replace || with && in All::classify
+stacks-common/src/codec/mod.rs:127:16: replace > with == in read_next_vec
+stacks-common/src/deps_common/bitcoin/util/hash.rs:339:9: replace <impl Serialize for Sha256dHash>::serialize -> Result<S::Ok, S::Error> with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:226:9: replace <impl StacksMessageCodec for StacksAddress>::consensus_serialize -> Result<(), CodecError> with Ok(())
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:328:9: replace <impl SimpleDecoder for RawDecoder<R>>::read_bool -> Result<bool, Error> with Ok(true)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:516:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/util/mod.rs:88:17: replace != with == in slice_partialeq
+stacks-common/src/types/mod.rs:119:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/pipe.rs:84:24: replace > with < in PipeRead::drain_buf
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:587:20: replace < with > in Builder::push_slice
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:77:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/log.rs:238:50: replace == with != in make_logger
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:512:46: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/address/c32.rs:329:29: replace < with == in c32_check_decode
+stacks-common/src/deps_common/bitcoin/network/address.rs:108:9: replace <impl Debug for Address>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/hash.rs:257:9: replace <impl MerkleHashFunc for Sha256Sum>::bits -> &[u8] with Vec::leak(Vec::new())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:654:17: replace <impl Deserialize for Script>::deserialize::<impl Visitor for Visitor>::visit_str -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/util/hash.rs:303:17: replace <impl Deserialize for Sha256dHash>::deserialize::<impl Visitor for Visitor>::visit_str -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:131:9: replace BlockHeader::spv_validate -> Result<(), Error> with Ok(())
+stacks-common/src/deps_common/bitcoin/network/address.rs:130:23: replace == with != in <impl PartialEq for Address>::eq
+stacks-common/src/util/macros.rs:21:27: replace == with != in is_big_endian
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:442:56: replace || with && in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/types/chainstate.rs:145:9: replace PoxId::len -> usize with 1
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:373:26: replace == with != in Script::is_v0_p2wpkh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:592:20: replace < with == in Builder::push_slice
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:295:9: replace Script::is_empty -> bool with false
+stacks-common/src/util/hash.rs:344:9: replace DoubleSha256::into_be -> Uint256 with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:492:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/types/mod.rs:191:51: replace != with == in StacksAddress::from_public_keys
+stacks-common/src/util/vrf.rs:140:9: replace <impl Debug for VRFPrivateKey>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/log.rs:235:36: replace == with != in make_logger
+stacks-common/src/types/chainstate.rs:188:9: replace PoxId::into_inner -> Vec<bool> with vec![true]
+stacks-common/src/types/chainstate.rs:199:25: replace == with != in <impl FromStr for PoxId>::from_str
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:368:55: replace && with || in Transaction::segwit_outputs_hash
+stacks-common/src/util/vrf.rs:263:9: replace <impl Debug for VRFProof>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:488:46: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/types/chainstate.rs:137:9: replace PoxId::has_ith_anchor_block -> bool with true
+stacks-common/src/util/mod.rs:36:5: replace get_epoch_time_secs -> u64 with 1
+stacks-common/src/address/mod.rs:85:9: replace <impl Error for Error>::description -> &'static str with "xyzzy"
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:601:73: replace <= with > in All::classify
+stacks-common/src/util/mod.rs:106:22: replace > with < in db_common::tx_busy_handler
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:576:13: replace || with && in All::classify
+stacks-common/src/util/mod.rs:88:5: replace slice_partialeq -> bool with false
+stacks-common/src/deps_common/bitcoin/util/mod.rs:67:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/hash.rs:236:9: replace <impl MerkleHashFunc for Hash160>::bits -> &[u8] with Vec::leak(vec![1])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:488:46: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/types/mod.rs:225:9: replace <impl Address for StacksAddress>::to_bytes -> Vec<u8> with vec![]
+stacks-common/src/deps_common/bitcoin/network/address.rs:132:13: replace && with || in <impl PartialEq for Address>::eq
+stacks-common/src/util/log.rs:352:5: replace isatty -> bool with false
+stacks-common/src/address/mod.rs:121:9: replace AddressHashMode::to_version_testnet -> u8 with 1
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:96:9: replace VarInt::encoded_length -> u64 with 1
+stacks-common/src/address/b58.rs:193:18: replace < with == in from_check
+stacks-common/src/util/secp256k1.rs:164:9: replace Secp256k1PublicKey::set_compressed with ()
+stacks-common/src/types/mod.rs:120:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/vrf.rs:231:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/mod.rs:44:5: replace get_epoch_time_ms -> u128 with 1
+stacks-common/src/types/mod.rs:225:9: replace <impl Address for StacksAddress>::to_bytes -> Vec<u8> with vec![1]
+stacks-common/src/types/mod.rs:291:9: replace <impl PartialOrd for StacksEpoch<L>>::partial_cmp -> Option<Ordering> with None
+stacks-common/src/util/log.rs:223:50: replace == with != in make_logger
+stacks-common/src/types/mod.rs:225:9: replace <impl Address for StacksAddress>::to_bytes -> Vec<u8> with vec![0]
+stacks-common/src/util/secp256k1.rs:160:9: replace Secp256k1PublicKey::compressed -> bool with false
+stacks-common/src/codec/mod.rs:36:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/codec/mod.rs:124:5: replace read_next_vec -> Result<Vec<T>, Error> with Ok(vec![])
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (1, Some(0))
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:585:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:647:17: replace <impl Deserialize for Script>::deserialize::<impl Visitor for Visitor>::expecting -> fmt::Result with Ok(Default::default())
+stacks-common/src/address/mod.rs:85:9: replace <impl Error for Error>::description -> &'static str with ""
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:9: replace || with == in read_scriptbool
+stacks-common/src/deps_common/bitcoin/network/mod.rs:57:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:155:9: replace <impl UpperHex for Script>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/retry.rs:142:9: replace <impl Read for LogReader<'a, R>>::read -> io::Result<usize> with Ok(1)
+stacks-common/src/codec/mod.rs:127:16: replace > with < in read_next_vec
+stacks-common/src/types/chainstate.rs:296:9: replace <impl StacksMessageCodec for VRFProof>::consensus_serialize -> Result<(), CodecError> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:512:46: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:578:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:569:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:266:50: replace == with != in read_scriptbool
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:305:9: replace Script::to_bytes -> Vec<u8> with vec![0]
+stacks-common/src/util/macros.rs:585:5: replace is_trace -> bool with false
+stacks-common/src/deps_common/bech32/mod.rs:697:9: replace <impl Error for Error>::description -> &str with ""
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:9: replace || with && in read_scriptbool
+stacks-common/src/types/mod.rs:102:9: replace <impl Display for StacksEpochId>::fmt -> std::fmt::Result with Ok(Default::default())
+stacks-common/src/types/mod.rs:268:55: replace < with > in StacksEpoch<L>::find_epoch
+stacks-common/src/util/log.rs:342:5: replace isatty -> bool with false
+stacks-common/src/address/mod.rs:63:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/network/address.rs:131:34: replace == with != in <impl PartialEq for Address>::eq
+stacks-common/src/deps_common/bitcoin/network/address.rs:132:26: replace == with != in <impl PartialEq for Address>::eq
+stacks-common/src/util/mod.rs:52:5: replace sleep_ms -> () with ()
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:177:5: replace serialize_hex -> Result<String, Error> with Ok(String::new())
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (0, None)
+stacks-common/src/types/mod.rs:155:9: replace StacksAddress::is_mainnet -> bool with false
+stacks-common/src/types/mod.rs:121:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/vrf.rs:269:9: replace <impl Hash for VRFProof>::hash -> () with ()
+stacks-common/src/deps_common/bech32/mod.rs:184:9: replace Bech32Writer<'a>::finalize -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:565:13: replace || with && in All::classify
+stacks-common/src/util/vrf.rs:290:9: replace VRFProof::check_c -> bool with true
+stacks-common/src/util/log.rs:194:5: replace make_json_logger -> Logger with Default::default()
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:328:9: replace <impl SimpleDecoder for RawDecoder<R>>::read_bool -> Result<bool, Error> with Ok(false)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:363:9: replace Script::is_v0_p2wsh -> bool with true
+stacks-common/src/deps_common/bitcoin/util/hash.rs:208:9: replace Sha256dHash::from_hex -> Result<Sha256dHash, HexError> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:34: replace || with && in read_scriptbool
+stacks-common/src/address/b58.rs:287:5: replace check_encode_slice_to_fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:364:13: replace && with || in Script::is_v0_p2wsh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:501:36: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:328:38: replace != with == in <impl SimpleDecoder for RawDecoder<R>>::read_bool
+stacks-common/src/deps_common/bitcoin/util/hash.rs:289:9: replace <impl Deserialize for Sha256dHash>::deserialize -> Result<Self, D::Error> with Ok(Default::default())
+stacks-common/src/util/secp256k1.rs:320:9: replace <impl PrivateKey for Secp256k1PrivateKey>::to_bytes -> Vec<u8> with vec![]
+stacks-common/src/util/hash.rs:320:9: replace Sha256Sum::zero -> Sha256Sum with Default::default()
+stacks-common/src/util/secp256k1.rs:160:9: replace Secp256k1PublicKey::compressed -> bool with true
+stacks-common/src/util/hash.rs:593:9: replace MerkleTree<H>::path_verify -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:353:48: replace && with || in Transaction::segwit_outputs_hash
+stacks-common/src/codec/mod.rs:104:9: replace <impl StacksMessageCodec for [u8; 32]>::consensus_deserialize -> Result<[u8; 32], Error> with Ok([1; 32])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:628:9: replace <impl From for Builder>::from -> Builder with Default::default()
+stacks-common/src/codec/mod.rs:104:9: replace <impl StacksMessageCodec for [u8; 32]>::consensus_deserialize -> Result<[u8; 32], Error> with Ok([0; 32])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:684:9: replace <impl Serialize for Script>::serialize -> Result<S::Ok, S::Error> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:681:9: replace <impl Serialize for Class>::serialize -> Result<S::Ok, S::Error> with Ok(Default::default())
+stacks-common/src/types/mod.rs:249:9: replace <impl Address for StacksAddress>::is_burn -> bool with false
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (1, None)
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:158:9: replace <impl BitcoinHash for Vec<u8>>::bitcoin_hash -> Sha256dHash with Default::default()
+stacks-common/src/util/log.rs:220:36: replace == with != in make_logger
+stacks-common/src/util/log.rs:250:44: replace == with != in inner_get_loglevel
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:132:19: replace != with == in BlockHeader::spv_validate
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![1], 0)
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:577:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/network/message_blockdata.rs:107:9: replace <impl ConsensusEncodable for Inventory>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/codec/mod.rs:144:54: replace > with < in read_next_vec
+stacks-common/src/types/chainstate.rs:129:9: replace PoxId::extend_with_not_present_block with ()
+stacks-common/src/types/mod.rs:88:9: replace StacksEpochId::value_sanitizing -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:368:70: replace < with == in Transaction::segwit_outputs_hash
+stacks-common/src/util/hash.rs:684:5: replace bytes_to_hex -> String with "xyzzy".into()
+stacks-common/src/util/vrf.rs:211:9: replace VRFPublicKey::from_hex -> Option<VRFPublicKey> with None
+stacks-common/src/util/retry.rs:97:9: replace BoundReader<'a, R>::num_read -> u64 with 1
+stacks-common/src/util/vrf.rs:134:9: replace <impl DerefMut for VRFPrivateKey>::deref_mut -> &mut ed25519_PrivateKey with Box::leak(Box::new(Default::default()))
+stacks-common/src/codec/mod.rs:82:9: replace StacksMessageCodec::serialize_to_vec -> Vec<u8> with vec![1]
+stacks-common/src/types/mod.rs:280:31: replace == with != in StacksEpoch<L>::find_epoch_by_id
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:195:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/address/b58.rs:268:5: replace encode_iter_to_fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/codec/mod.rs:173:5: replace read_next_exact -> Result<Vec<T>, Error> with Ok(vec![])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:371:9: replace Script::is_v0_p2wpkh -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:371:22: replace == with != in Script::is_v0_p2wpkh
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:512:41: replace && with || in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:357:27: replace == with != in Script::is_p2pk
+stacks-common/src/util/log.rs:252:44: replace == with != in inner_get_loglevel
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:594:13: replace || with && in All::classify
+stacks-common/src/util/log.rs:151:9: replace <impl Drain for TermFormat<D>>::log -> Result<Self::Ok, Self::Err> with Ok(Default::default())
+stacks-common/src/types/mod.rs:125:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/secp256k1.rs:320:9: replace <impl PrivateKey for Secp256k1PrivateKey>::to_bytes -> Vec<u8> with vec![1]
+stacks-common/src/util/secp256k1.rs:82:22: replace < with == in MessageSignature::from_raw
+stacks-common/src/util/secp256k1.rs:320:9: replace <impl PrivateKey for Secp256k1PrivateKey>::to_bytes -> Vec<u8> with vec![0]
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:585:66: replace <= with > in All::classify
+stacks-common/src/util/hash.rs:355:9: replace DoubleSha256::le_hex_string -> String with "xyzzy".into()
+stacks-common/src/types/mod.rs:88:9: replace StacksEpochId::value_sanitizing -> bool with true
+stacks-common/src/types/chainstate.rs:156:18: replace > with < in PoxId::bit_slice
+stacks-common/src/types/mod.rs:191:34: replace || with && in StacksAddress::from_public_keys
+stacks-common/src/codec/mod.rs:126:18: replace > with < in read_next_vec
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:264:5: replace read_scriptbool -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:295:9: replace Script::is_empty -> bool with true
+stacks-common/src/util/vrf.rs:95:9: replace <impl Debug for VRFPublicKey>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:174:9: replace PoxId::has_prefix -> bool with true
+stacks-common/src/types/mod.rs:268:45: replace && with || in StacksEpoch<L>::find_epoch
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:373:13: replace && with || in Script::is_v0_p2wpkh
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:124:9: replace BlockHeader::difficulty -> u64 with 1
+stacks-common/src/deps_common/bitcoin/util/hash.rs:125:9: replace <impl SimpleEncoder for Sha256dEncoder>::emit_bool -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:368:70: replace < with > in Transaction::segwit_outputs_hash
+stacks-common/src/util/uint.rs:507:9: replace Uint512::to_uint256 -> Uint256 with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:583:20: replace < with > in Builder::push_slice
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (0, Some(1))
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:328:37: replace && with || in Transaction::segwit_script_pubkey_bytes
+stacks-common/src/util/log.rs:86:5: replace pretty_print_msg_header -> io::Result<bool> with Ok(true)
+stacks-common/src/util/pipe.rs:175:58: replace == with != in PipeRead::fill_buf
+stacks-common/src/types/chainstate.rs:137:14: replace >= with < in PoxId::has_ith_anchor_block
+stacks-common/src/util/vrf.rs:560:9: replace VRF::verify -> Result<bool, Error> with Ok(true)
+stacks-common/src/types/chainstate.rs:428:34: replace == with != in VRFSeed::is_from_proof
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:669:17: replace <impl Deserialize for Script>::deserialize::<impl Visitor for Visitor>::visit_string -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/util/log.rs:224:54: replace == with != in make_logger
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:384:13: replace && with == in Script::is_provably_unspendable
+stacks-common/src/codec/mod.rs:111:5: replace write_next -> Result<(), Error> with Ok(())
+stacks-common/src/types/chainstate.rs:197:18: replace == with != in <impl FromStr for PoxId>::from_str
+stacks-common/src/util/pipe.rs:175:35: replace == with != in PipeRead::fill_buf
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:119:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/util/secp256k1.rs:82:22: replace < with > in MessageSignature::from_raw
+stacks-common/src/util/hash.rs:305:9: replace <impl MerkleHashFunc for Sha512Trunc256Sum>::bits -> &[u8] with Vec::leak(Vec::new())
+stacks-common/src/codec/mod.rs:181:9: replace <impl StacksMessageCodec for Vec<T>>::consensus_serialize -> Result<(), Error> with Ok(())
+stacks-common/src/types/mod.rs:236:24: replace != with == in <impl Address for StacksAddress>::from_string
+stacks-common/src/types/mod.rs:122:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:568:13: replace || with && in All::classify
+stacks-common/src/util/macros.rs:585:5: replace is_trace -> bool with true
+stacks-common/src/util/log.rs:347:31: replace != with == in isatty
+stacks-common/src/codec/mod.rs:82:9: replace StacksMessageCodec::serialize_to_vec -> Vec<u8> with vec![]
+stacks-common/src/types/chainstate.rs:156:31: replace == with != in PoxId::bit_slice
+stacks-common/src/util/pipe.rs:165:36: replace && with || in PipeRead::fill_buf
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:670:9: replace SigHashType::as_u32 -> u32 with 0
+stacks-common/src/util/pipe.rs:84:24: replace > with == in PipeRead::drain_buf
+stacks-common/src/types/mod.rs:155:9: replace StacksAddress::is_mainnet -> bool with true
+stacks-common/src/util/log.rs:248:37: replace == with != in inner_get_loglevel
+stacks-common/src/util/mod.rs:79:9: replace <impl Error for HexError>::description -> &str with ""
+stacks-common/src/util/secp256k1.rs:156:9: replace Secp256k1PublicKey::to_bytes_compressed -> Vec<u8> with vec![1]
+stacks-common/src/util/vrf.rs:160:9: replace VRFPrivateKey::from_hex -> Option<VRFPrivateKey> with None
+stacks-common/src/util/mod.rs:36:5: replace get_epoch_time_secs -> u64 with 0
+stacks-common/src/deps_common/bitcoin/network/serialize.rs:312:9: replace <impl SimpleEncoder for RawEncoder<W>>::emit_bool -> Result<(), Error> with Ok(())
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![], 0)
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![0], 1)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:356:13: replace && with || in Script::is_p2pk
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:76:41: replace < with == in <impl Debug for Script>::fmt
+stacks-common/src/types/chainstate.rs:211:9: replace <impl Display for PoxId>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/types/mod.rs:249:9: replace <impl Address for StacksAddress>::is_burn -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:9: replace || with != in read_scriptbool
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:442:73: replace > with < in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/util/mod.rs:76:9: replace <impl Error for HexError>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:516:36: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:477:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/constants.rs:53:5: replace max_money -> u64 with 0
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:542:9: replace Builder::len -> usize with 0
+stacks-common/src/types/chainstate.rs:156:18: replace > with == in PoxId::bit_slice
+stacks-common/src/util/hash.rs:684:5: replace bytes_to_hex -> String with String::new()
+stacks-common/src/types/mod.rs:183:9: replace StacksAddress::from_public_keys -> Option<StacksAddress> with None
+stacks-common/src/codec/mod.rs:100:9: replace <impl StacksMessageCodec for [u8; 32]>::consensus_serialize -> Result<(), Error> with Ok(())
+stacks-common/src/util/hash.rs:305:9: replace <impl MerkleHashFunc for Sha512Trunc256Sum>::bits -> &[u8] with Vec::leak(vec![0])
+stacks-common/src/deps_common/bech32/mod.rs:237:9: replace <impl WriteBase32 for Vec<u5>>::write -> Result<(), Self::Err> with Ok(())
+stacks-common/src/types/chainstate.rs:156:22: replace && with || in PoxId::bit_slice
+stacks-common/src/util/vrf.rs:218:9: replace VRFPublicKey::to_hex -> String with "xyzzy".into()
+stacks-common/src/types/chainstate.rs:126:9: replace PoxId::extend_with_present_block with ()
+stacks-common/src/deps_common/bech32/mod.rs:323:9: replace <impl Base32Len for T>::base32_len -> usize with 0
+stacks-common/src/util/hash.rs:257:9: replace <impl MerkleHashFunc for Sha256Sum>::bits -> &[u8] with Vec::leak(vec![1])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:477:36: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/address/mod.rs:144:20: replace == with != in <impl TryFrom for AddressHashMode>::try_from
+stacks-common/src/types/mod.rs:183:26: replace < with == in StacksAddress::from_public_keys
+stacks-common/src/types/mod.rs:249:20: replace == with != in <impl Address for StacksAddress>::is_burn
+stacks-common/src/util/hash.rs:236:9: replace <impl MerkleHashFunc for Hash160>::bits -> &[u8] with Vec::leak(Vec::new())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:453:36: replace < with == in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:492:36: replace < with > in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:575:13: replace || with && in All::classify
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:92:41: replace < with == in <impl Debug for Script>::fmt
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:633:9: replace <impl ConsensusEncodable for All>::consensus_encode -> Result<(), serialize::Error> with Ok(())
+stacks-common/src/types/chainstate.rs:174:9: replace PoxId::has_prefix -> bool with false
+stacks-common/src/util/secp256k1.rs:156:9: replace Secp256k1PublicKey::to_bytes_compressed -> Vec<u8> with vec![]
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:435:9: replace <impl ConsensusDecodable for HashMap<K, V>>::consensus_decode -> Result<HashMap<K, V>, serialize::Error> with Ok(HashMap::new())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:76:41: replace < with > in <impl Debug for Script>::fmt
+stacks-common/src/types/chainstate.rs:170:9: replace PoxId::num_inventory_reward_cycles -> usize with 0
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:567:13: replace || with && in All::classify
+stacks-common/src/types/mod.rs:124:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/uint.rs:499:9: replace Uint512::from_uint256 -> Uint512 with Default::default()
+stacks-common/src/deps_common/bitcoin/network/address.rs:131:13: replace && with || in <impl PartialEq for Address>::eq
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:282:16: replace > with == in <impl ConsensusDecodable for Box<[T]>>::consensus_decode
+stacks-common/src/deps_common/bitcoin/network/address.rs:130:9: replace <impl PartialEq for Address>::eq -> bool with false
+stacks-common/src/deps_common/bitcoin/util/hash.rs:310:17: replace <impl Deserialize for Sha256dHash>::deserialize::<impl Visitor for Visitor>::visit_borrowed_str -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/util/retry.rs:97:9: replace BoundReader<'a, R>::num_read -> u64 with 0
+stacks-common/src/util/hash.rs:355:9: replace DoubleSha256::le_hex_string -> String with String::new()
+stacks-common/src/util/vrf.rs:89:9: replace <impl DerefMut for VRFPublicKey>::deref_mut -> &mut ed25519_PublicKey with Box::leak(Box::new(Default::default()))
+stacks-common/src/types/chainstate.rs:188:9: replace PoxId::into_inner -> Vec<bool> with vec![false]
+stacks-common/src/util/log.rs:328:5: replace color_if_tty -> &str with ""
+stacks-common/src/codec/mod.rs:166:5: replace read_next_at_most -> Result<Vec<T>, Error> with Ok(vec![])
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:357:13: replace && with || in Script::is_p2pk
+stacks-common/src/util/vrf.rs:394:9: replace VRFProof::to_hex -> String with String::new()
+stacks-common/src/types/mod.rs:267:9: replace StacksEpoch<L>::find_epoch -> Option<usize> with Some(1)
+stacks-common/src/codec/mod.rs:144:54: replace > with == in read_next_vec
+stacks-common/src/address/mod.rs:114:9: replace AddressHashMode::to_version_mainnet -> u8 with 0
+stacks-common/src/util/vrf.rs:109:9: replace <impl PartialOrd for VRFPublicKey>::partial_cmp -> Option<Ordering> with None
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:488:41: replace && with || in <impl Iterator for Instructions<'a>>::next
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:662:17: replace <impl Deserialize for Script>::deserialize::<impl Visitor for Visitor>::visit_borrowed_str -> Result<Self::Value, E> with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:640:9: replace <impl Deserialize for Script>::deserialize -> Result<Self, D::Error> with Ok(Default::default())
+stacks-common/src/deps_common/bech32/mod.rs:697:9: replace <impl Error for Error>::description -> &str with "xyzzy"
+stacks-common/src/util/log.rs:77:25: replace != with == in print_msg_header
+stacks-common/src/types/mod.rs:279:9: replace StacksEpoch<L>::find_epoch_by_id -> Option<usize> with Some(1)
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:371:9: replace Script::is_v0_p2wpkh -> bool with false
+stacks-common/src/deps_common/bitcoin/blockdata/constants.rs:46:5: replace max_target -> Uint256 with Default::default()
+stacks-common/src/types/chainstate.rs:174:23: replace < with > in PoxId::has_prefix
+stacks-common/src/util/hash.rs:317:9: replace Sha256Sum::from_data -> Sha256Sum with Default::default()
+stacks-common/src/address/mod.rs:114:9: replace AddressHashMode::to_version_mainnet -> u8 with 1
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:265:29: replace == with != in read_scriptbool
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![0], 0)
+stacks-common/src/deps_common/bitcoin/util/hash.rs:418:19: replace < with > in bitcoin_merkle_root
+stacks-common/src/types/chainstate.rs:145:9: replace PoxId::len -> usize with 0
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:92:9: replace <impl Display for OutPoint>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/deps_common/bitcoin/util/hash.rs:296:17: replace <impl Deserialize for Sha256dHash>::deserialize::<impl Visitor for Visitor>::expecting -> fmt::Result with Ok(Default::default())
+stacks-common/src/types/chainstate.rs:149:9: replace PoxId::bit_slice -> (Vec<u8>, u64) with (vec![], 1)
+stacks-common/src/util/mod.rs:67:9: replace <impl Display for HexError>::fmt -> fmt::Result with Ok(Default::default())
+stacks-common/src/util/log.rs:166:9: replace TermFormat<D>::format_full -> io::Result<()> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:308:13: replace || with && in Transaction::segwit_sequence_hash
+stacks-common/src/util/secp256k1.rs:397:5: replace secp256k1_verify -> Result<(), LibSecp256k1Error> with Ok(())
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:365:13: replace && with || in Script::is_v0_p2wsh
+stacks-common/src/codec/mod.rs:135:16: replace != with == in read_next_vec
+stacks-common/src/util/log.rs:342:5: replace isatty -> bool with true
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:573:13: replace || with && in All::classify
+stacks-common/src/types/chainstate.rs:428:9: replace VRFSeed::is_from_proof -> bool with true
+stacks-common/src/codec/mod.rs:52:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:164:9: replace <impl BitcoinHash for Block>::bitcoin_hash -> Sha256dHash with Default::default()
+stacks-common/src/deps_common/bitcoin/util/mod.rs:79:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:146:9: replace BlockHeader::work -> Uint256 with Default::default()
+stacks-common/src/deps_common/bitcoin/blockdata/constants.rs:53:5: replace max_money -> u64 with 1
+stacks-common/src/util/vrf.rs:101:34: replace == with != in <impl PartialEq for VRFPublicKey>::eq
+stacks-common/src/types/mod.rs:229:9: replace <impl Address for StacksAddress>::from_string -> Option<StacksAddress> with None
+stacks-common/src/codec/mod.rs:190:9: replace <impl StacksMessageCodec for Vec<T>>::consensus_deserialize -> Result<Vec<T>, Error> with Ok(vec![])
+stacks-common/src/types/mod.rs:279:9: replace StacksEpoch<L>::find_epoch_by_id -> Option<usize> with Some(0)
+stacks-common/src/deps_common/bitcoin/blockdata/transaction.rs:590:42: replace && with == in <impl ConsensusDecodable for Transaction>::consensus_decode
+stacks-common/src/util/pair.rs:48:9: replace <impl Iterator for Pair<I>>::size_hint -> (usize, Option<usize>) with (0, Some(0))
+stacks-common/src/types/mod.rs:123:20: replace == with != in <impl TryFrom for StacksEpochId>::try_from
+stacks-common/src/util/secp256k1.rs:156:9: replace Secp256k1PublicKey::to_bytes_compressed -> Vec<u8> with vec![0]
+stacks-common/src/util/hash.rs:236:9: replace <impl MerkleHashFunc for Hash160>::bits -> &[u8] with Vec::leak(vec![0])
+stacks-common/src/deps_common/bech32/mod.rs:323:9: replace <impl Base32Len for T>::base32_len -> usize with 1
+stacks-common/src/deps_common/bitcoin/network/encodable.rs:256:22: replace > with == in <impl ConsensusDecodable for Vec<T>>::consensus_decode
+stacks-common/src/deps_common/bitcoin/blockdata/script.rs:92:41: replace < with > in <impl Debug for Script>::fmt
+stacks-common/src/deps_common/bitcoin/blockdata/block.rs:124:9: replace BlockHeader::difficulty -> u64 with 0
+stacks-common/src/deps_common/bitcoin/blockdata/opcodes.rs:571:13: replace || with && in All::classify
+stacks-common/src/util/hash.rs:305:9: replace <impl MerkleHashFunc for Sha512Trunc256Sum>::bits -> &[u8] with Vec::leak(vec![1])
+stacks-common/src/types/mod.rs:267:9: replace StacksEpoch<L>::find_epoch -> Option<usize> with Some(0)
+stacks-common/src/address/mod.rs:146:20: replace == with != in <impl TryFrom for AddressHashMode>::try_from
