@@ -23,7 +23,7 @@ RUN --mount=type=tmpfs,target=${BUILD_DIR} cp -R /src/. ${BUILD_DIR}/ \
             BUILD_ARG="--bin stacks-signer" \
             ;; \
         *) \
-            BUILD_ARG="--bin stacks-node --bin stacks-inspect --bin clarity-cli --bin blockstack-cli" \
+            BUILD_ARG="--bin stacks-node --bin stacks-inspect --bin clarity-cli --bin blockstack-cli --bin relay-server --bin stacks-event" \
             ;; \
     esac \
     && CC_x86_64_pc_windows_gnu=x86_64-w64-mingw32-gcc \
