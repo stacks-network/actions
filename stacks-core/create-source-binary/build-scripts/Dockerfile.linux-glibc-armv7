@@ -21,7 +21,7 @@ RUN --mount=type=tmpfs,target=${BUILD_DIR} cp -R /src/. ${BUILD_DIR}/ \
             BUILD_ARG="--bin stacks-signer" \
             ;; \
         *) \
-            BUILD_ARG="--bin stacks-node --bin stacks-inspect --bin clarity-cli --bin blockstack-cli --bin relay-server --bin stacks-event" \
+            BUILD_ARG="--bin stacks-node --bin stacks-inspect --bin clarity-cli --bin blockstack-cli --bin relay-server --bin stacks-events" \
             ;; \
     esac \
     && CC=arm-linux-gnueabihf-gcc \
