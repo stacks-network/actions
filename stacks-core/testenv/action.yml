@@ -58,13 +58,26 @@ runs:
         action: restore
         btc-version: ${{ inputs.btc-version }}
 
-    ## Symlink bitoind to $PATH
-    - name: Link Bitcoin Binary
+    # ## Symlink bitoind to $PATH
+    # - name: Link Bitcoin Binary
+    #   id: bitcoin_binary
+    #   shell: bash
+    #   run: |
+    #     sudo ln -s ~/bitcoin/bin/bitcoind /bin/
+    #     ls -al /bin/bitcoind
+
+    - name: Copy Bitcoin Binary
       id: bitcoin_binary
       shell: bash
       run: |
-        sudo ln -s ~/bitcoin/bin/bitcoind /bin/
-        ls -al /bin/bitcoind
+        echo "check for extracted bitcoind"
+        ls -al ~/bitcoin/bin/bitcoind
+        echo
+        sudo cp -a ~/bitcoin/bin/bitcoind /bin/bitcoind
+        echo $?
+        echo 
+        echo "bitcoind: $(ls -al /bin/bitcoind)"
+        echo "PATH: ${PATH}"
 
     ## Restore nextest test archive cache data
     - name: Restore Test Archive Cache
