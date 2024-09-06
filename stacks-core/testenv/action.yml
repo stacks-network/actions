@@ -72,6 +72,8 @@ runs:
       run: |
         echo "$HOME"
         echo
+        echo "tilda"
+        echo ~
         echo "ls HOME"
         ls -al $HOME
         echo
