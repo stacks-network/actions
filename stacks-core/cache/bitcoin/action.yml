@@ -24,7 +24,7 @@ inputs:
   cache-key:
     description: "Cache Key name"
     required: false
-    default: ${{ github.event.repository.name }}-bitcoin-binaries
+    default: ${{ github.event.repository.name }}-bitcoin-binaries2
   btc-version:
     description: "Bitcoin version"
     required: false
