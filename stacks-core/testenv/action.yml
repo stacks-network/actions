@@ -50,13 +50,13 @@ runs:
       with:
         action: restore
 
-    ## Restore bitcoin cache data
-    - name: Restore Bitcoin Binary Cache
-      id: restore_bitcoin_cache
-      uses: stacks-network/actions/stacks-core/cache/bitcoin@main
-      with:
-        action: restore
-        btc-version: ${{ inputs.btc-version }}
+    # ## Restore bitcoin cache data
+    # - name: Restore Bitcoin Binary Cache
+    #   id: restore_bitcoin_cache
+    #   uses: stacks-network/actions/stacks-core/cache/bitcoin@main
+    #   with:
+    #     action: restore
+    #     btc-version: ${{ inputs.btc-version }}
 
     # ## Symlink bitoind to $PATH
     # - name: Link Bitcoin Binary
@@ -70,19 +70,20 @@ runs:
       id: echo
       shell: bash
       run: |
-        echo "$HOME"
-        echo
-        echo "tilda"
-        echo ~
-        echo "ls HOME"
-        ls -al $HOME
-        echo
-        echo "ls HOME/actions-runner"
-        ls -al $HOME/actions-runner
-        echo
-        sudo ln -s ~/bitcoin/bin/bitcoind /bin/
-        ls -al /bin/bitcoind
-        echo
+        curl -LSf -# https://github.com/stacks-network/bitcoin/releases/download/v${{ inputs.btc-version }}/bitcoin-${{ inputs.btc-version }}-x86_64-linux-gnu.tar.gz | sudo tar zxf - -C /bin --strip-components=2
+        # echo "$HOME"
+        # echo
+        # echo "tilda"
+        # echo ~
+        # echo "ls HOME"
+        # ls -al $HOME
+        # echo
+        # echo "ls HOME/actions-runner"
+        # ls -al $HOME/actions-runner
+        # echo
+        # sudo ln -s ~/bitcoin/bin/bitcoind /bin/
+        # ls -al /bin/bitcoind
+        # echo
         echo "bitcoind: $(ls -al /bin/bitcoind)"
         echo "PATH: ${PATH}"
 
