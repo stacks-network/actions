@@ -67,7 +67,7 @@ runs:
         ls -al /bin/bitcoind
 
     - name: Copy Bitcoin Binary
-      id: bitcoin_binary
+      id: echo
       shell: bash
       run: |
         echo "$HOME"
