@@ -72,8 +72,8 @@ runs:
       run: |
         echo "ls home"
         ls -al ~/
-        echo "ls home/action_runner"
-        ls -al ~/home/action_runner
+        echo "ls~/actions-runner"
+        ls -al ~/actions-runner
         echo
         echo "check for extracted bitcoind"
         ls -al ~/bitcoin/bin/bitcoind
