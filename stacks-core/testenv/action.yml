@@ -70,19 +70,21 @@ runs:
       id: bitcoin_binary
       shell: bash
       run: |
-        echo "HOME"
-        echo $HOME
         echo
-        echo "ls home"
-        ls -al ~/
-        echo "ls~/actions-runner"
-        ls -al ~/actions-runner
+        echo "ls HOME"
+        ls -al $HOME
         echo
-        echo "check for extracted bitcoind"
-        ls -al ~/bitcoin/bin/bitcoind
+        echo "ls HOME/actions-runner"
+        ls -al $HOME/actions-runner
         echo
-        sudo cp -a ~/bitcoin/bin/bitcoind /bin/bitcoind
-        echo $?
+        echo "check for extracted HOME/bitcoin/bin/bitcoind"
+        ls -al $HOME/bitcoin/bin/bitcoind
+        echo
+        echo "SYMLINK"
+        sudo ln -s $HOME/bitcoin/bin/bitcoind /bin/bitcoind
+        echo
+        echo "COPY bitcoin to /bin/bitcoind"
+        sudo cp -a $HOME/bitcoin/bin/bitcoind /bin/bitcoind
         echo
         echo "bitcoind: $(ls -al /bin/bitcoind)"
         echo "PATH: ${PATH}"
