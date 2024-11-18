@@ -47,5 +47,4 @@ runs:
             --fail-fast \
             ${{ inputs.threads != '1' && format('--success-output {0}', inputs.success-output) || '' }} \
             --status-level ${{ inputs.status-level }} \
-            -E "test(=${{ inputs.test-name }})"
             --partition count:${{ inputs.partition }}/${{ inputs.total-partitions }}
