@@ -40,11 +40,11 @@ runs:
       shell: bash
       run: |
         cargo nextest run \
-          --test-threads ${{ inputs.threads}} \
+          --archive-file ${{ inputs.archive-file }} \
+          ${{ inputs.threads == '1' && '--no-capture' || format('--test-threads {0}', inputs.threads) }} \
           --retries ${{ inputs.retries }} \
           --final-status-level ${{ inputs.status-level }} \
           --fail-fast \
-          --success-output ${{ inputs.success-output }} \
+          ${{ inputs.threads != '1' && format('--success-output {0}', inputs.success-output) || '' }} \
           --status-level ${{ inputs.status-level }} \
-          --archive-file ${{ inputs.archive-file }} \
           --partition count:${{ inputs.partition }}/${{ inputs.total-partitions }}
