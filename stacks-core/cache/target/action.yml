@@ -12,7 +12,7 @@ inputs:
   fail-on-cache-miss:
     description: "Fail workflow if cache is not restorable"
     required: false
-    default: "true"
+    default: "false"
   retries:
     description: "Number of attempts"
     required: false
@@ -46,7 +46,7 @@ runs:
         key: ${{ inputs.cache-key }}
 
     ## Restore cache data
-    ## Use wretry action, to retry on a failed upload
+    ## Use wretry action, to retry on a failed download
     - name: Restore Cache
       if: |
         inputs.action == 'restore'
