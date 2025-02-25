@@ -25,7 +25,7 @@ runs:
     ## Checkout the code
     - name: Checkout the latest code
       id: git_checkout
-      uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
     ## Set some vars to be used in the build process
     - name: Set Vars
@@ -51,12 +51,12 @@ runs:
     ## Setup QEMU for multi-arch builds
     - name: Set up QEMU
       id: docker_qemu
-      uses: docker/setup-qemu-action@68827325e0b33c7199eb31dd4e31fbe9023e06e3 # v3.0.0
+      uses: docker/setup-qemu-action@4574d27a4764455b42196d70a065bc6853246a25 # v3.4.0
 
     ## Setup docker buildx
     - name: Set up Docker Buildx
       id: docker_buildx
-      uses: docker/setup-buildx-action@d70bba72b1f3fd22344832f00baa16ece964efeb # v3.3.0
+      uses: docker/setup-buildx-action@f7ce87c1d6bead3e36075b2ce75da1f6cc28aaca # v3.9.0
 
     ## Login to dockerhub
     - name: Login to DockerHub
@@ -64,7 +64,7 @@ runs:
         inputs.username != '' &&
         inputs.password != ''
       id: docker_login
-      uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3.1.0
+      uses: docker/login-action@9780b0c442fbb1117ed29e0efdff1e18412f7567 # v3.3.0
       with:
         username: ${{ inputs.username }}
         password: ${{ inputs.password }}

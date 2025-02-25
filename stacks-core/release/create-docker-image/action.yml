@@ -74,7 +74,7 @@ runs:
     - name: Docker Metadata ( ${{matrix.dist}} )
       if: ${{ env.is-signer-release == 'true' }}
       id: docker_metadata_signer
-      uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 #v5.5.1
+      uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 #v5.6.1
       with:
         images: |
           ${{env.docker-org}}/stacks-signer
@@ -89,7 +89,7 @@ runs:
     - name: Docker Metadata ( ${{matrix.dist}} )
       if: ${{ env.is-signer-release == 'false' }}
       id: docker_metadata_node
-      uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 #v5.5.1
+      uses: docker/metadata-action@369eb591f429131d6889c46b94e711f089e6ca96 #v5.6.1
       with:
         ## tag images with current repo name `stacks-core` as well as legacy `stacks-blockchain`
         images: |
@@ -107,7 +107,7 @@ runs:
     - name: Build and Push ( ${{matrix.dist}} )
       if: ${{ env.is-signer-release == 'true' }}
       id: docker_build_signer
-      uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
+      uses: docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991 # v6.13.0
       with:
         file: ./.github/actions/dockerfiles/Dockerfile.${{ matrix.dist }}-binary
         platforms: ${{ env.docker_platforms }}
@@ -125,7 +125,7 @@ runs:
     - name: Build and Push ( ${{matrix.dist}} )
       if: ${{ env.is-signer-release == 'false' }}
       id: docker_build_node
-      uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
+      uses: docker/build-push-action@ca877d9245402d1537745e0e356eab47c3520991 # v6.13.0
       with:
         file: ./.github/actions/dockerfiles/Dockerfile.${{ matrix.dist }}-binary
         platforms: ${{ env.docker_platforms }}

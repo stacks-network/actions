@@ -39,7 +39,7 @@ runs:
       if: |
         inputs.action == 'check' ||
         inputs.action == 'save'
-      uses: actions/cache@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+      uses: actions/cache@0c907a75c2c80ebcb7f088228285e798b750cf8f # v4.2.1
       id: check_cache
       with:
         lookup-only: true
@@ -56,9 +56,9 @@ runs:
       if: |
         inputs.action == 'restore'
       id: restore_cache
-      uses: Wandalen/wretry.action@6feedb7dedadeb826de0f45ff482b53b379a7844 # v3.5.0
+      uses: Wandalen/wretry.action@e68c23e6309f2871ca8ae4763e7629b9c258e1ea # v3.8.0
       with:
-        action: actions/cache/restore@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        action: actions/cache/restore@0c907a75c2c80ebcb7f088228285e798b750cf8f # v4.2.1
         with: |
           fail-on-cache-miss: ${{ inputs.fail-on-cache-miss }}
           path: |
@@ -77,7 +77,7 @@ runs:
         inputs.action == 'save' &&
         steps.check_cache.outputs.cache-hit != 'true'
       id: install_nextest
-      uses: taiki-e/install-action@2f990e9c484f0590cb76a07296e9677b417493e9 # v2.33.23
+      uses: taiki-e/install-action@54b836426b3fa9aef432e760885ea0419ab50dab # v2.48.15
       with:
         tool: nextest # can be versioned, ex: tool@1.1.1.1
 
@@ -88,7 +88,7 @@ runs:
         inputs.action == 'save' &&
         steps.check_cache.outputs.cache-hit != 'true'
       id: install_grcov
-      uses: taiki-e/install-action@2f990e9c484f0590cb76a07296e9677b417493e9 # v2.33.23
+      uses: taiki-e/install-action@54b836426b3fa9aef432e760885ea0419ab50dab # v2.48.15
       with:
         tool: grcov # can be versioned, ex: tool@1.1.1.1
 
@@ -98,9 +98,9 @@ runs:
         inputs.action == 'save' &&
         steps.check_cache.outputs.cache-hit != 'true'
       id: save_cache
-      uses: Wandalen/wretry.action@6feedb7dedadeb826de0f45ff482b53b379a7844 # v3.5.0
+      uses: Wandalen/wretry.action@e68c23e6309f2871ca8ae4763e7629b9c258e1ea # v3.8.0
       with:
-        action: actions/cache/save@1bd1e32a3bdc45362d1e726936510720a7c30a57 # v4.2.0
+        action: actions/cache/save@0c907a75c2c80ebcb7f088228285e798b750cf8f # v4.2.1
         with: |
           path: |
             ~/.cargo/bin/
