@@ -11,6 +11,9 @@ runs:
     - name: Setup Rust Toolchain
       id: setup_rust_toolchain
       uses: actions-rust-lang/setup-rust-toolchain@11df97af8e8102fd60b60a77dfbf58d40cd843b8 # v1.10.1
+      with:
+        toolchain: stable
+        cache: false
 
     - name: Run Cargo Checks
       id: run_cargo_check
