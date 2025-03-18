@@ -16,6 +16,10 @@ runs:
       id: run_cargo_check
       shell: bash
       run: |
+        # Disable exit on error
+        set +e
+
+        # Define variables for cargo status and failures
         CARGO_STATUS=0
         FAILED_COMMANDS=()
         FAILED_CODES=()
@@ -42,15 +46,18 @@ runs:
         done
 
         # Print a summary of the cargo check results
-        echo "=== Cargo Check Summary ===" >> $GITHUB_STEP_SUMMARY
+        echo "=== Cargo Check Summary ===" >> "$GITHUB_STEP_SUMMARY"
         if [ ${#FAILED_COMMANDS[@]} -eq 0 ]; then
-          echo "All cargo checks passed." >> $GITHUB_STEP_SUMMARY
+          echo "All cargo checks passed." >> "$GITHUB_STEP_SUMMARY"
         else
-          echo "The following cargo checks failed:" >> $GITHUB_STEP_SUMMARY
+          echo "The following cargo checks failed:" >> "$GITHUB_STEP_SUMMARY"
           for i in "${!FAILED_COMMANDS[@]}"; do
-            echo " - ${FAILED_COMMANDS[$i]} (exit code: ${FAILED_CODES[$i]})" >> $GITHUB_STEP_SUMMARY
+            echo " - ${FAILED_COMMANDS[$i]} (exit code: ${FAILED_CODES[$i]})" >> "$GITHUB_STEP_SUMMARY"
           done
         fi
 
         # Exit with 1 in case of failures, or 0 if all passed
         exit $CARGO_STATUS
+
+        # Enable exit on error
+        set -e
