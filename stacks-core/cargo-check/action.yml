@@ -1,0 +1,56 @@
+## Composite action to run cargo check for stacks-core
+name: Cargo Check
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout the latest code
+      id: git_checkout
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+    - name: Setup Rust Toolchain
+      id: setup_rust_toolchain
+      uses: actions-rust-lang/setup-rust-toolchain@11df97af8e8102fd60b60a77dfbf58d40cd843b8 # v1.10.1
+
+    - name: Run Cargo Checks
+      id: run_cargo_check
+      shell: bash
+      run: |
+        CARGO_STATUS=0
+        FAILED_COMMANDS=()
+        FAILED_CODES=()
+
+        # Define an array of commands to run
+        commands=(
+          "cargo check"
+          "cargo check --features monitoring_prom"
+          "cargo check -p clarity --no-default-features"
+          "cargo check -p stacks-common --no-default-features"
+        )
+
+        # Loop over each command and run it
+        for cmd in "${commands[@]}"; do
+          echo "Running: $cmd"
+          eval "$cmd"
+          exit_code=$?
+          if [ $exit_code -ne 0 ]; then
+            echo "Command failed: $cmd (exit code: $exit_code)"
+            FAILED_COMMANDS+=("$cmd")
+            FAILED_CODES+=("$exit_code")
+            CARGO_STATUS=1
+          fi
+        done
+
+        # Print a summary of the cargo check results
+        echo "=== Cargo Check Summary ===" >> $GITHUB_STEP_SUMMARY
+        if [ ${#FAILED_COMMANDS[@]} -eq 0 ]; then
+          echo "All cargo checks passed." >> $GITHUB_STEP_SUMMARY
+        else
+          echo "The following cargo checks failed:" >> $GITHUB_STEP_SUMMARY
+          for i in "${!FAILED_COMMANDS[@]}"; do
+            echo " - ${FAILED_COMMANDS[$i]} (exit code: ${FAILED_CODES[$i]})" >> $GITHUB_STEP_SUMMARY
+          done
+        fi
+
+        # Exit with 1 in case of failures, or 0 if all passed
+        exit $CARGO_STATUS
