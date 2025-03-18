@@ -10,8 +10,8 @@ Runs `cargo check` commands for different packages and scenarios for the `stacks
 name: Action
 on: pull-request
 jobs:
-  check-packages-and-shards:
-    name: Check Release
+  cargo-check:
+    name: Cargo Check
     runs-on: ubuntu-latest
     steps:
       - name: Cargo Check
