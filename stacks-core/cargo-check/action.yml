@@ -51,7 +51,7 @@ runs:
         else
           echo "The following cargo checks failed:" >> "$GITHUB_STEP_SUMMARY"
           for i in "${!FAILED_COMMANDS[@]}"; do
-            echo " - `${FAILED_COMMANDS[$i]}` failed with exit code ${FAILED_CODES[$i]}." >> "$GITHUB_STEP_SUMMARY"
+            echo " - \`${FAILED_COMMANDS[$i]}\` failed with exit code ${FAILED_CODES[$i]}." >> "$GITHUB_STEP_SUMMARY"
           done
         fi
 
