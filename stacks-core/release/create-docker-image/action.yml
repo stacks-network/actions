@@ -98,7 +98,6 @@ runs:
         ## tag images with current repo name `stacks-core` as well as legacy `stacks-blockchain`
         images: |
           ${{env.docker-org}}/${{ github.event.repository.name }}
-          ${{env.docker-org}}/stacks-blockchain
         tags: |
           type=raw,value=latest,enable=${{ inputs.docker_tag != '' && env.docker_tag_rc != 'true' && matrix.dist == 'debian' }}
           type=raw,value=${{ inputs.docker_tag }}-${{ matrix.dist }},enable=${{ inputs.docker_tag != '' && matrix.dist == 'debian'}}
