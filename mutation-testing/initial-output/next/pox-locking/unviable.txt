@@ -1,0 +1,102 @@
+pox-locking/src/pox_2.rs:43:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:52:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:73:9: replace || with == in is_read_only
+pox-locking/src/pox_3.rs:394:58: replace || with != in handle_contract_call
+pox-locking/src/pox_2.rs:512:58: replace || with != in handle_contract_call
+pox-locking/src/pox_2.rs:53:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:128:5: replace parse_pox_increase -> std::result::Result<(PrincipalData, u128), i128> with Ok((Default::default(), 1))
+pox-locking/src/pox_1.rs:37:5: replace parse_pox_stacking_result_v1 -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 1, 1))
+pox-locking/src/pox_2.rs:45:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:36:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:77:9: replace || with != in is_read_only
+pox-locking/src/pox_3.rs:116:5: replace pox_lock_increase_v3 -> Result<STXBalance, LockingError> with Ok(Default::default())
+pox-locking/src/pox_2.rs:42:9: replace || with == in is_read_only
+pox-locking/src/pox_3.rs:396:47: replace || with != in handle_contract_call
+pox-locking/src/pox_2.rs:65:5: replace parse_pox_stacking_result -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 0, 0))
+pox-locking/src/pox_2.rs:47:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:75:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:50:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:99:5: replace parse_pox_extend_result -> std::result::Result<(PrincipalData, u64), i128> with Ok((Default::default(), 0))
+pox-locking/src/pox_1.rs:74:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:40:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:77:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:71:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:39:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:76:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:516:49: replace || with == in handle_contract_call
+pox-locking/src/pox_2.rs:53:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:165:5: replace pox_lock_increase_v2 -> Result<STXBalance, LockingError> with Ok(Default::default())
+pox-locking/src/pox_2.rs:56:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:54:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:414:5: replace handle_stack_lockup_increase_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/events.rs:33:5: replace get_stacker -> Value with Default::default()
+pox-locking/src/pox_2.rs:44:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:52:9: replace || with == in is_read_only
+pox-locking/src/lib.rs:85:48: replace && with == in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:38:9: replace || with != in is_read_only
+pox-locking/src/lib.rs:85:48: replace && with != in handle_contract_call_special_cases
+pox-locking/src/pox_3.rs:394:58: replace || with == in handle_contract_call
+pox-locking/src/pox_1.rs:78:9: replace || with == in is_read_only
+pox-locking/src/pox_3.rs:396:47: replace || with == in handle_contract_call
+pox-locking/src/pox_1.rs:79:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:36:9: replace || with != in is_read_only
+pox-locking/src/pox_3.rs:233:5: replace handle_stack_lockup_extension_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:40:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:35:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:49:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:38:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:39:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:512:58: replace || with == in handle_contract_call
+pox-locking/src/pox_2.rs:99:5: replace parse_pox_extend_result -> std::result::Result<(PrincipalData, u64), i128> with Ok((Default::default(), 1))
+pox-locking/src/pox_2.rs:281:5: replace handle_stack_lockup_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:47:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:48:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:41:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:65:5: replace parse_pox_stacking_result -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 1, 0))
+pox-locking/src/pox_1.rs:73:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:51:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:55:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:45:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:54:9: replace || with != in is_read_only
+pox-locking/src/pox_3.rs:162:5: replace handle_stack_lockup_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:43:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:129:39: replace || with == in handle_contract_call
+pox-locking/src/pox_1.rs:75:9: replace || with != in is_read_only
+pox-locking/src/pox_3.rs:398:49: replace || with == in handle_contract_call
+pox-locking/src/pox_2.rs:46:9: replace || with == in is_read_only
+pox-locking/src/events.rs:352:5: replace synthesize_pox_2_or_3_event_info -> Result<Option<Value>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:42:9: replace || with != in is_read_only
+pox-locking/src/lib.rs:68:13: replace && with != in handle_contract_call_special_cases
+pox-locking/src/pox_3.rs:297:5: replace handle_stack_lockup_increase_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:55:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:37:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:50:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:79:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:78:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:51:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:49:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:350:5: replace handle_stack_lockup_extension_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(Some(Default::default()))
+pox-locking/src/pox_2.rs:41:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:46:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:76:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:128:5: replace parse_pox_increase -> std::result::Result<(PrincipalData, u128), i128> with Ok((Default::default(), 0))
+pox-locking/src/pox_1.rs:74:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:72:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:48:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:514:47: replace || with == in handle_contract_call
+pox-locking/src/pox_2.rs:37:9: replace || with != in is_read_only
+pox-locking/src/lib.rs:68:13: replace && with == in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:44:9: replace || with == in is_read_only
+pox-locking/src/pox_2.rs:516:49: replace || with != in handle_contract_call
+pox-locking/src/pox_1.rs:72:9: replace || with == in is_read_only
+pox-locking/src/pox_1.rs:37:5: replace parse_pox_stacking_result_v1 -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 0, 0))
+pox-locking/src/pox_1.rs:37:5: replace parse_pox_stacking_result_v1 -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 1, 0))
+pox-locking/src/pox_2.rs:65:5: replace parse_pox_stacking_result -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 0, 1))
+pox-locking/src/pox_2.rs:35:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:71:9: replace || with != in is_read_only
+pox-locking/src/pox_1.rs:37:5: replace parse_pox_stacking_result_v1 -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 0, 1))
+pox-locking/src/pox_2.rs:56:9: replace || with != in is_read_only
+pox-locking/src/pox_2.rs:65:5: replace parse_pox_stacking_result -> std::result::Result<(PrincipalData, u128, u64), i128> with Ok((Default::default(), 1, 1))
+pox-locking/src/pox_3.rs:398:49: replace || with != in handle_contract_call
+pox-locking/src/pox_1.rs:129:39: replace || with != in handle_contract_call
+pox-locking/src/pox_2.rs:514:47: replace || with != in handle_contract_call

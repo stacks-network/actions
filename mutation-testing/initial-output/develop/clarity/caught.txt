@@ -1,0 +1,853 @@
+clarity/src/vm/contexts.rs:1596:9: replace GlobalContext<'a, 'hooks>::is_top_level -> bool with false
+clarity/src/vm/functions/assets.rs:934:19: replace > with == in special_burn_token
+clarity/src/vm/database/structures.rs:838:9: replace STXBalance::checked_add_unlocked_amount -> Option<u128> with Some(0)
+clarity/src/vm/database/clarity_store.rs:296:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get -> Option<String> with None
+clarity/src/vm/types/mod.rs:1198:9: replace ListData::len -> u32 with 1
+clarity/src/vm/types/signatures.rs:542:52: replace >= with < in TypeSignature::admits_type_v2_0
+clarity/src/vm/types/serialization.rs:1154:9: replace <impl Write for WriteCounter>::write -> std::io::Result<usize> with Ok(1)
+clarity/src/vm/types/mod.rs:1342:9: replace StandardPrincipalData::to_address -> String with "xyzzy".into()
+clarity/src/vm/types/mod.rs:266:9: replace SequenceData::len -> usize with 1
+clarity/src/vm/representations.rs:373:9: replace PreSymbolicExpression::match_list -> Option<&[PreSymbolicExpression]> with Some(Vec::leak(Vec::new()))
+clarity/src/vm/types/signatures.rs:446:27: replace > with == in ListTypeData::new_list
+clarity/src/vm/mod.rs:242:24: replace && with || in apply
+clarity/src/vm/types/signatures.rs:477:9: replace ListTypeData::get_max_len -> u32 with 0
+clarity/src/vm/ast/parser/v2/mod.rs:227:37: replace && with != in Parser<'a>::handle_open_node
+clarity/src/vm/tests/mod.rs:166:5: replace test_only_mainnet_to_chain_id -> u32 with 1
+clarity/src/vm/functions/principals.rs:35:13: replace == with != in version_matches_mainnet
+clarity/src/vm/functions/assets.rs:137:19: replace != with == in stx_transfer_consolidated
+clarity/src/vm/analysis/type_checker/contexts.rs:114:28: replace >= with < in TypingContext<'a>::add_variable_type
+clarity/src/vm/database/structures.rs:791:9: replace STXBalance::amount_locked -> u128 with 1
+clarity/src/vm/types/mod.rs:1054:9: replace Value::expect_buff -> Vec<u8> with vec![1]
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:165:9: replace ContractContext::is_contract -> bool with true
+clarity/src/vm/analysis/read_only_checker/mod.rs:450:54: replace && with || in ReadOnlyChecker<'a, 'b>::check_expression_application_is_read_only
+clarity/src/vm/types/mod.rs:1082:15: replace > with == in Value::expect_buff_padded
+clarity/src/vm/database/key_value_wrapper.rs:190:5: replace rollback_lookup_map -> String with "xyzzy".into()
+clarity/src/vm/analysis/types.rs:196:9: replace ContractAnalysis::canonicalize_types with ()
+clarity/src/vm/callables.rs:178:60: replace < with == in DefinedFunction::execute_apply
+clarity/src/vm/database/structures.rs:893:9: replace STXBalance::get_available_balance_at_burn_block -> u128 with 0
+clarity/src/vm/database/clarity_db.rs:679:9: replace ClarityDatabase<'a>::set_contract_data_size -> Result<()> with Ok(())
+clarity/src/vm/ast/parser/v2/mod.rs:172:9: replace Parser<'a>::ignore_whitespace -> bool with false
+clarity/src/vm/database/key_value_wrapper.rs:533:9: replace RollbackWrapper<'a>::has_metadata_entry -> bool with true
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:64:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:846:5: replace type_reserved_variable -> Option<TypeSignature> with None
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:170:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/key_value_wrapper.rs:46:5: replace rollback_edits_push with ()
+clarity/src/vm/ast/parser/v2/mod.rs:227:37: replace && with || in Parser<'a>::handle_open_node
+clarity/src/vm/costs/mod.rs:1118:9: replace <impl CostOverflowingMath for u64>::cost_overflow_add -> Result<u64> with Ok(0)
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:191:9: replace ContractContext::get_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/ast/parser/v2/mod.rs:132:9: replace Parser<'a>::next_token -> Option<PlacedToken> with None
+clarity/src/vm/contexts.rs:883:9: replace <impl CostTracker for Environment<'_, '_, '_>>::drop_memory with ()
+clarity/src/vm/callables.rs:344:9: replace DefinedFunction::is_public -> bool with true
+clarity/src/vm/database/clarity_db.rs:307:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_height_for_block -> Option<u32> with None
+clarity/src/vm/database/clarity_db.rs:1530:29: replace && with == in ClarityDatabase<'a>::inner_set_entry
+clarity/src/vm/types/signatures.rs:700:29: replace && with != in TypeSignature::admits_type_v2_1
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:213:35: replace != with == in FunctionType::check_args_2_05
+clarity/src/vm/functions/options.rs:124:52: replace >= with < in eval_with_new_binding
+clarity/src/vm/types/serialization.rs:349:9: replace DeserializeStackItem::next_expected_type -> Result<Option<TypeSignature>, SerializationError> with Ok(None)
+clarity/src/vm/ast/parser/v1.rs:206:36: replace < with == in inner_lex
+clarity/src/vm/mod.rs:246:31: replace >= with < in apply
+clarity/src/vm/types/mod.rs:1187:9: replace BuffData::append -> Result<()> with Ok(())
+clarity/src/vm/functions/sequences.rs:376:56: replace || with && in special_slice
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:67:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/database/structures.rs:421:9: replace STXBalanceSnapshot<'db, 'conn>::set_balance with ()
+clarity/src/vm/types/serialization.rs:784:28: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/types/signatures.rs:866:9: replace TupleTypeSignature::admits -> Result<bool> with Ok(false)
+clarity/src/vm/ast/parser/v2/mod.rs:923:58: replace > with == in Parser<'a>::parse_node
+clarity/src/vm/types/serialization.rs:1140:9: replace Value::serialized_size -> u32 with 0
+clarity/src/vm/ast/definition_sorter/mod.rs:500:42: replace == with != in GraphWalker::get_cycling_dependencies
+clarity/src/vm/ast/parser/v2/mod.rs:923:58: replace > with < in Parser<'a>::parse_node
+clarity/src/vm/types/serialization.rs:795:29: replace && with == in Value::inner_deserialize_read
+clarity/src/vm/database/clarity_store.rs:308:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_block_at_height -> Option<StacksBlockId> with None
+clarity/src/vm/functions/assets.rs:714:21: replace < with > in special_transfer_token
+clarity/src/vm/types/mod.rs:1355:9: replace <impl Debug for StandardPrincipalData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/functions/mod.rs:680:37: replace != with == in handle_binding_list
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:526:5: replace clarity2_check_functions_compatible -> bool with false
+clarity/src/vm/types/mod.rs:681:9: replace <impl SequencedValue for UTF8Data>::drained_items -> Vec<Vec<u8>> with vec![]
+clarity/src/vm/types/signatures.rs:1447:28: replace != with == in TypeSignature::parse_string_ascii_type_repr
+clarity/src/vm/ast/mod.rs:106:36: replace < with == in build_ast_with_rules
+clarity/src/vm/functions/define.rs:278:9: replace DefineFunctions::try_parse -> Option<(DefineFunctions, &[SymbolicExpression])> with None
+clarity/src/vm/functions/assets.rs:543:26: replace != with == in special_transfer_asset_v200
+clarity/src/vm/functions/mod.rs:678:5: replace handle_binding_list -> std::result::Result<(), E> with Ok(())
+clarity/src/vm/functions/assets.rs:714:21: replace < with == in special_transfer_token
+clarity/src/vm/ast/definition_sorter/mod.rs:489:9: replace GraphWalker::get_cycling_dependencies -> Option<Vec<usize>> with None
+clarity/src/vm/tests/traits.rs:1817:14: replace < with == in test_pass_embedded_trait_to_subtrait_list_option
+clarity/src/vm/contexts.rs:1715:9: replace GlobalContext<'a, 'hooks>::commit -> Result<(Option<AssetMap>, Option<EventBatch>)> with Ok((None, Some(Default::default())))
+clarity/src/vm/types/signatures.rs:471:9: replace ListTypeData::reduce_max_len with ()
+clarity/src/vm/types/mod.rs:681:9: replace <impl SequencedValue for UTF8Data>::drained_items -> Vec<Vec<u8>> with vec![vec![1]]
+clarity/src/vm/types/signatures.rs:536:9: replace TypeSignature::admits_type_v2_0 -> Result<bool> with Ok(false)
+clarity/src/vm/types/signatures.rs:1736:9: replace ListTypeData::type_size -> Option<u32> with None
+clarity/src/vm/types/mod.rs:872:9: replace Value::size -> u32 with 0
+clarity/src/vm/types/serialization.rs:1118:23: replace != with == in Value::try_deserialize_bytes_exact
+clarity/src/vm/contexts.rs:1715:9: replace GlobalContext<'a, 'hooks>::commit -> Result<(Option<AssetMap>, Option<EventBatch>)> with Ok((Some(Default::default()), None))
+clarity/src/vm/functions/arithmetic.rs:547:52: replace >= with < in special_less
+clarity/src/vm/tests/traits.rs:1398:14: replace < with > in test_pass_trait_to_subtrait
+clarity/src/vm/ast/parser/v2/mod.rs:813:25: replace || with && in Parser<'a>::parse_node
+clarity/src/vm/types/mod.rs:809:45: replace > with < in Value::some
+clarity/src/vm/database/clarity_db.rs:1530:29: replace && with || in ClarityDatabase<'a>::inner_set_entry
+clarity/src/vm/database/clarity_store.rs:96:9: replace ClarityBackingStore::make_contract_commitment -> String with "xyzzy".into()
+clarity/src/vm/types/mod.rs:1081:9: replace Value::expect_buff_padded -> Vec<u8> with vec![0]
+clarity/src/vm/database/key_value_wrapper.rs:403:9: replace RollbackWrapper<'a>::get_value -> Result<Option<ValueResult>, SerializationError> with Ok(None)
+clarity/src/vm/mod.rs:519:5: replace execute_with_parameters -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/analysis/read_only_checker/mod.rs:333:46: replace != with == in ReadOnlyChecker<'a, 'b>::check_native_function_is_read_only
+clarity/src/vm/database/clarity_db.rs:1761:9: replace ClarityDatabase<'a>::get_ft_supply -> Result<u128> with Ok(1)
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:305:9: replace ContractContext::get_trait -> Option<&BTreeMap<ClarityName, FunctionSignature>> with None
+clarity/src/vm/database/sqlite.rs:82:9: replace SqliteConnection::get -> Option<String> with Some(String::new())
+clarity/src/vm/types/serialization.rs:982:33: replace && with != in Value::inner_deserialize_read
+clarity/src/vm/database/clarity_db.rs:1694:9: replace ClarityDatabase<'a>::checked_decrease_token_supply -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:1817:5: replace parse_name_type_pairs -> Result<Vec<(ClarityName, TypeSignature)>> with Ok(vec![])
+clarity/src/vm/contexts.rs:1275:9: replace Environment<'a, 'b, 'hooks>::initialize_contract -> Result<()> with Ok(())
+clarity/src/vm/ast/parser/v2/mod.rs:597:45: replace == with != in Parser<'a>::read_principal
+clarity/src/vm/database/sqlite.rs:92:9: replace SqliteConnection::insert_metadata with ()
+clarity/src/vm/tests/traits.rs:1745:14: replace < with == in test_pass_embedded_trait_to_subtrait_list
+clarity/src/vm/types/mod.rs:534:9: replace SequenceData::is_list -> bool with false
+clarity/src/vm/ast/mod.rs:226:18: replace != with == in inner_build_ast
+clarity/src/vm/types/signatures.rs:520:9: replace TypeSignature::admits -> Result<bool> with Ok(false)
+clarity/src/vm/types/signatures.rs:1749:9: replace TupleTypeSignature::type_size -> Option<u32> with None
+clarity/src/vm/types/signatures.rs:355:17: replace > with == in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:63:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/structures.rs:359:9: replace STXBalanceSnapshot<'db, 'conn>::get_available_balance -> u128 with 1
+clarity/src/vm/types/mod.rs:960:72: replace && with != in Value::string_ascii_from_bytes
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:93:9: replace ArithmeticOnlyChecker<'a>::check_define_function -> Result<(), Error> with Ok(())
+clarity/src/vm/contexts.rs:1815:9: replace ContractContext::lookup_variable -> Option<&Value> with None
+clarity/src/vm/contexts.rs:1837:13: replace || with && in ContractContext::is_name_used
+clarity/src/vm/database/sqlite.rs:160:9: replace SqliteConnection::initialize_conn -> Result<()> with Ok(())
+clarity/src/vm/functions/principals.rs:285:34: replace > with == in special_principal_construct
+clarity/src/vm/functions/crypto.rs:112:27: replace != with == in special_principal_of
+clarity/src/vm/database/clarity_store.rs:332:9: replace <impl ClarityBackingStore for MemoryBackingStore>::put_all with ()
+clarity/src/vm/tests/traits.rs:2093:14: replace < with > in test_pass_principal_literal_to_trait
+clarity/src/vm/types/signatures.rs:620:27: replace == with != in TypeSignature::admits_type_v2_0
+clarity/src/vm/database/clarity_db.rs:803:9: replace ClarityDatabase<'a>::get_current_block_height -> u32 with 0
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:183:9: replace ContractContext::get_trait -> Option<&BTreeMap<ClarityName, FunctionSignature>> with None
+clarity/src/vm/database/clarity_db.rs:880:9: replace ClarityDatabase<'a>::get_sortition_id_for_stacks_tip -> Option<SortitionId> with None
+clarity/src/vm/contexts.rs:1627:9: replace GlobalContext<'a, 'hooks>::log_token_transfer -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:516:32: replace == with != in TypeSignature::is_no_type
+clarity/src/vm/ast/definition_sorter/mod.rs:178:60: replace == with != in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/ast/mod.rs:185:68: replace >= with < in inner_build_ast
+clarity/src/vm/contexts.rs:1830:9: replace ContractContext::is_explicitly_implementing_trait -> bool with true
+clarity/src/vm/analysis/types.rs:156:9: replace ContractAnalysis::add_defined_trait with ()
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:174:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/tests/traits.rs:1601:14: replace < with > in test_pass_embedded_trait_to_subtrait_ok
+clarity/src/vm/analysis/types.rs:191:9: replace ContractAnalysis::get_defined_trait -> Option<&BTreeMap<ClarityName, FunctionSignature>> with None
+clarity/src/vm/database/sqlite.rs:51:5: replace sqlite_get -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/ast/definition_sorter/mod.rs:430:9: replace Graph::nodes_count -> usize with 1
+clarity/src/vm/types/mod.rs:848:36: replace > with < in Value::okay
+clarity/src/vm/types/signatures.rs:377:17: replace > with < in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:193:25: replace == with != in FunctionType::check_args_2_05
+clarity/src/vm/ast/definition_sorter/mod.rs:489:9: replace GraphWalker::get_cycling_dependencies -> Option<Vec<usize>> with Some(vec![1])
+clarity/src/vm/database/clarity_db.rs:459:9: replace ClarityDatabase<'a>::put with ()
+clarity/src/vm/variables.rs:56:5: replace is_reserved_name -> bool with false
+clarity/src/vm/ast/definition_sorter/mod.rs:489:9: replace GraphWalker::get_cycling_dependencies -> Option<Vec<usize>> with Some(vec![])
+clarity/src/vm/contexts.rs:1708:9: replace GlobalContext<'a, 'hooks>::begin_read_only with ()
+clarity/src/vm/functions/principals.rs:53:9: replace || with == in version_matches_current_network
+clarity/src/vm/types/mod.rs:846:45: replace > with < in Value::okay
+clarity/src/vm/functions/options.rs:221:5: replace is_some -> Result<bool> with Ok(true)
+clarity/src/vm/analysis/read_only_checker/mod.rs:412:58: replace && with != in ReadOnlyChecker<'a, 'b>::check_native_function_is_read_only
+clarity/src/vm/contexts.rs:1964:24: replace != with == in CallStack::remove
+clarity/src/vm/types/mod.rs:681:9: replace <impl SequencedValue for UTF8Data>::drained_items -> Vec<Vec<u8>> with vec![vec![0]]
+clarity/src/vm/contexts.rs:1700:9: replace GlobalContext<'a, 'hooks>::begin with ()
+clarity/src/vm/functions/principals.rs:52:39: replace && with == in version_matches_current_network
+clarity/src/vm/database/clarity_db.rs:695:9: replace ClarityDatabase<'a>::insert_contract with ()
+clarity/src/vm/diagnostic.rs:68:9: replace <impl Display for Diagnostic>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/signatures.rs:866:32: replace != with == in TupleTypeSignature::admits
+clarity/src/vm/database/clarity_db.rs:738:9: replace ClarityDatabase<'a>::get_total_liquid_ustx -> u128 with 1
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:224:31: replace == with != in ArithmeticOnlyChecker<'a>::check_native_function
+clarity/src/vm/errors.rs:121:9: replace <impl PartialEq for Error>::eq -> bool with true
+clarity/src/vm/functions/sequences.rs:379:35: replace < with == in special_slice
+clarity/src/vm/types/mod.rs:1183:9: replace BuffData::as_slice -> &[u8] with Vec::leak(vec![1])
+clarity/src/vm/types/signatures.rs:1884:9: replace <impl Display for TypeSignature>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/serialization.rs:769:51: replace < with == in Value::inner_deserialize_read
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:133:9: replace ArithmeticOnlyChecker<'a>::check_expression -> Result<(), Error> with Ok(())
+clarity/src/vm/errors.rs:121:9: replace <impl PartialEq for Error>::eq -> bool with false
+clarity/src/vm/contexts.rs:1640:9: replace GlobalContext<'a, 'hooks>::log_stx_burn -> Result<()> with Ok(())
+clarity/src/vm/ast/parser/v2/lexer/token.rs:48:9: replace <impl Display for Token>::fmt -> std::fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:78:9: replace ArithmeticOnlyChecker<'a>::run -> Result<(), Error> with Ok(())
+clarity/src/vm/functions/define.rs:115:5: replace check_legal_define -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:1598:17: replace && with || in TypeSignature::parse_trait_type_repr
+clarity/src/vm/database/key_value_wrapper.rs:244:9: replace RollbackWrapper<'a>::rollback with ()
+clarity/src/vm/functions/assets.rs:697:27: replace == with != in special_transfer_token
+clarity/src/vm/types/signatures.rs:457:26: replace > with < in ListTypeData::new_list
+clarity/src/vm/ast/types.rs:103:9: replace <impl Iterator for PreExpressionsDrain>::next -> Option<PreSymbolicExpression> with None
+clarity/src/vm/types/mod.rs:638:9: replace <impl SequencedValue for BuffData>::drained_items -> Vec<u8> with vec![1]
+clarity/src/vm/database/key_value_wrapper.rs:434:9: replace RollbackWrapper<'a>::prepare_for_contract_metadata with ()
+clarity/src/vm/ast/definition_sorter/mod.rs:471:9: replace GraphWalker::sort_dependencies_recursion with ()
+clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs:307:19: replace != with == in check_special_match_opt
+clarity/src/vm/types/signatures.rs:395:9: replace <impl From for u32>::from -> u32 with 0
+clarity/src/vm/types/mod.rs:861:36: replace > with < in Value::error
+clarity/src/vm/contexts.rs:834:9: replace OwnedEnvironment<'a, 'hooks>::begin with ()
+clarity/src/vm/types/signatures.rs:1158:22: replace == with != in TypeSignature::least_supertype_v2_0
+clarity/src/vm/ast/parser/v2/mod.rs:825:51: replace > with < in Parser<'a>::parse_node
+clarity/src/vm/analysis/types.rs:168:9: replace ContractAnalysis::get_read_only_function_type -> Option<&FunctionType> with None
+clarity/src/vm/functions/principals.rs:53:46: replace && with != in version_matches_current_network
+clarity/src/vm/database/clarity_db.rs:700:9: replace ClarityDatabase<'a>::has_contract -> bool with true
+clarity/src/vm/types/serialization.rs:728:28: replace > with < in Value::inner_deserialize_read
+clarity/src/vm/types/serialization.rs:868:57: replace <= with > in Value::inner_deserialize_read
+clarity/src/vm/database/sqlite.rs:134:9: replace SqliteConnection::get_metadata -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/costs/mod.rs:71:5: replace runtime_cost -> Result<()> with Ok(())
+clarity/src/vm/functions/crypto.rs:202:27: replace > with < in special_secp256k1_verify
+clarity/src/vm/types/signatures.rs:866:9: replace TupleTypeSignature::admits -> Result<bool> with Ok(true)
+clarity/src/vm/types/signatures.rs:389:9: replace <impl From for u32>::from -> u32 with 1
+clarity/src/vm/types/signatures.rs:1728:23: replace > with < in ListTypeData::inner_size
+clarity/src/vm/analysis/types.rs:160:9: replace ContractAnalysis::add_implemented_trait with ()
+clarity/src/vm/functions/options.rs:228:5: replace is_okay -> Result<bool> with Ok(true)
+clarity/src/vm/types/mod.rs:427:9: replace SequenceData::filter -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:516:9: replace TypeSignature::is_no_type -> bool with false
+clarity/src/vm/functions/principals.rs:285:34: replace > with < in special_principal_construct
+clarity/src/vm/database/clarity_db.rs:783:9: replace ClarityDatabase<'a>::is_in_regtest -> bool with false
+clarity/src/vm/contexts.rs:1750:9: replace GlobalContext<'a, 'hooks>::roll_back with ()
+clarity/src/vm/database/sqlite.rs:134:9: replace SqliteConnection::get_metadata -> Option<String> with None
+clarity/src/vm/representations.rs:587:9: replace SymbolicExpression::match_atom_value -> Option<&Value> with None
+clarity/src/vm/ast/parser/v2/mod.rs:500:24: replace == with != in Parser<'a>::open_tuple
+clarity/src/vm/ast/parser/v2/mod.rs:738:41: replace == with != in Parser<'a>::read_sugared_principal
+clarity/src/vm/test_util/mod.rs:72:5: replace is_committed -> bool with false
+clarity/src/vm/errors.rs:122:63: replace == with != in <impl PartialEq for Error>::eq
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:536:9: replace TypeChecker<'a, 'b>::get_function_type -> Option<FunctionType> with None
+clarity/src/vm/types/serialization.rs:1176:9: replace Value::serialize_to_vec -> Vec<u8> with vec![]
+clarity/src/vm/analysis/errors.rs:304:5: replace formatted_expected_types -> String with String::new()
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:657:45: replace <= with > in clarity2_inner_type_check_type
+clarity/src/vm/ast/parser/v1.rs:500:5: replace handle_expression with ()
+clarity/src/vm/types/signatures.rs:489:21: replace > with < in TypeSignature::new_option
+clarity/src/vm/types/signatures.rs:651:33: replace >= with < in TypeSignature::admits_type_v2_1
+clarity/src/vm/database/clarity_db.rs:538:9: replace ClarityDatabase<'a>::make_metadata_key -> String with "xyzzy".into()
+clarity/src/vm/types/signatures.rs:1853:9: replace <impl Display for TupleTypeSignature>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/test_util/mod.rs:91:68: replace == with != in is_err_code_i128
+clarity/src/vm/functions/mod.rs:589:18: replace != with == in native_eq
+clarity/src/vm/database/clarity_db.rs:487:9: replace ClarityDatabase<'a>::put_value_with_size -> Result<u64> with Ok(1)
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:170:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:192:9: replace ContractContext::ft_exists -> bool with true
+clarity/src/vm/types/mod.rs:1055:36: replace <= with > in Value::expect_buff
+clarity/src/vm/database/sqlite.rs:78:9: replace SqliteConnection::put with ()
+clarity/src/vm/ast/parser/v1.rs:293:42: replace > with < in inner_lex
+clarity/src/vm/functions/define.rs:292:9: replace DefineFunctionsParsed<'a>::try_parse -> std::result::Result<Option<DefineFunctionsParsed<'a>>, CheckErrors> with Ok(None)
+clarity/src/vm/functions/principals.rs:212:50: replace > with < in special_principal_construct
+clarity/src/vm/representations.rs:349:9: replace PreSymbolicExpression::match_trait_reference -> Option<&ClarityName> with None
+clarity/src/vm/functions/conversions.rs:56:36: replace > with < in buff_to_int_generic
+clarity/src/vm/ast/parser/v2/mod.rs:159:28: replace == with != in Parser<'a>::peek_last_token
+clarity/src/vm/types/serialization.rs:656:44: replace == with != in Value::inner_deserialize_read
+clarity/src/vm/functions/sequences.rs:295:25: replace > with == in special_as_max_len
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:89:9: replace ContractContext::get_nft_type -> Option<&TypeSignature> with None
+clarity/src/vm/database/clarity_db.rs:1303:9: replace ClarityDatabase<'a>::make_key_for_data_map_entry_serialized -> String with String::new()
+clarity/src/vm/database/clarity_db.rs:1720:9: replace ClarityDatabase<'a>::get_ft_balance -> Result<u128> with Ok(0)
+clarity/src/vm/types/serialization.rs:588:28: replace > with < in Value::inner_deserialize_read
+clarity/src/vm/ast/traits_resolver/mod.rs:61:35: replace != with == in TraitsResolver::run
+clarity/src/vm/types/signatures.rs:897:9: replace TupleTypeSignature::shallow_merge with ()
+clarity/src/vm/types/mod.rs:491:39: replace == with != in SequenceData::slice
+clarity/src/vm/representations.rs:397:9: replace PreSymbolicExpression::match_comment -> Option<&str> with None
+clarity/src/vm/types/signatures.rs:1824:33: replace != with == in parse_name_type_pairs
+clarity/src/vm/contexts.rs:1963:9: replace CallStack::remove -> Result<()> with Ok(())
+clarity/src/vm/analysis/analysis_db.rs:94:9: replace AnalysisDatabase<'a>::load_contract_non_canonical -> Option<ContractAnalysis> with None
+clarity/src/vm/functions/crypto.rs:191:27: replace != with == in special_secp256k1_verify
+clarity/src/vm/types/serialization.rs:835:58: replace <= with > in Value::inner_deserialize_read
+clarity/src/vm/ast/parser/v1.rs:466:17: replace == with != in unescape_ascii_chars
+clarity/src/vm/database/clarity_db.rs:1486:9: replace ClarityDatabase<'a>::data_map_entry_exists -> Result<bool> with Ok(false)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:252:57: replace >= with < in FunctionType::check_args_2_1
+clarity/src/vm/database/clarity_store.rs:296:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/analysis/errors.rs:296:5: replace check_arguments_at_most -> Result<(), CheckErrors> with Ok(())
+clarity/src/vm/variables.rs:45:9: replace NativeVariables::lookup_by_name_at_version -> Option<NativeVariables> with None
+clarity/src/vm/types/mod.rs:1198:9: replace ListData::len -> u32 with 0
+clarity/src/vm/ast/definition_sorter/mod.rs:119:39: replace != with == in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/types/mod.rs:582:9: replace <impl Display for UTF8Data>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:216:38: replace || with && in ArithmeticOnlyChecker<'a>::check_native_function
+clarity/src/vm/ast/parser/v2/mod.rs:945:58: replace > with < in Parser<'a>::parse_node
+clarity/src/vm/functions/principals.rs:53:46: replace && with || in version_matches_current_network
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:313:9: replace ContractContext::get_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/database/structures.rs:359:9: replace STXBalanceSnapshot<'db, 'conn>::get_available_balance -> u128 with 0
+clarity/src/vm/tests/traits.rs:2025:14: replace < with > in test_let3_trait
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:1157:9: replace TypeChecker<'a, 'b>::try_native_function_check -> Option<TypeResult> with None
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:734:30: replace == with != in Lexer<'a>::read_token
+clarity/src/vm/database/clarity_store.rs:141:9: replace ClarityBackingStore::get_metadata -> Result<Option<String>> with Ok(Some(String::new()))
+clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs:304:19: replace != with == in check_special_match_opt
+clarity/src/vm/costs/mod.rs:1115:9: replace <impl CostOverflowingMath for u64>::cost_overflow_mul -> Result<u64> with Ok(1)
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:37:5: replace is_separator -> bool with true
+clarity/src/vm/analysis/errors.rs:280:5: replace check_argument_count -> Result<(), CheckErrors> with Ok(())
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:216:52: replace == with != in ArithmeticOnlyChecker<'a>::check_native_function
+clarity/src/vm/ast/definition_sorter/mod.rs:417:9: replace Graph::add_directed_edge with ()
+clarity/src/vm/ast/definition_sorter/mod.rs:162:60: replace == with != in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/types/mod.rs:861:36: replace > with == in Value::error
+clarity/src/vm/functions/mod.rs:201:47: replace <= with > in NativeFunctions::lookup_by_name_at_version
+clarity/src/vm/functions/sequences.rs:379:35: replace < with > in special_slice
+clarity/src/vm/types/mod.rs:566:9: replace <impl Display for ASCIIData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/functions/assets.rs:923:19: replace == with != in special_burn_token
+clarity/src/vm/types/signatures.rs:1759:26: replace > with < in TupleTypeSignature::type_size
+clarity/src/vm/types/signatures.rs:1653:9: replace TypeSignature::size -> u32 with 0
+clarity/src/vm/types/mod.rs:638:9: replace <impl SequencedValue for BuffData>::drained_items -> Vec<u8> with vec![]
+clarity/src/vm/docs/mod.rs:780:5: replace get_output_type_string -> String with String::new()
+clarity/src/vm/types/mod.rs:1081:9: replace Value::expect_buff_padded -> Vec<u8> with vec![]
+clarity/src/vm/types/serialization.rs:1176:9: replace Value::serialize_to_vec -> Vec<u8> with vec![1]
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:69:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/functions/crypto.rs:202:27: replace > with == in special_secp256k1_verify
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:216:33: replace == with != in ArithmeticOnlyChecker<'a>::check_native_function
+clarity/src/vm/ast/parser/v2/mod.rs:132:28: replace >= with < in Parser<'a>::next_token
+clarity/src/vm/ast/definition_sorter/mod.rs:426:9: replace Graph::has_node_descendants -> bool with false
+clarity/src/vm/types/signatures.rs:435:24: replace < with > in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:754:30: replace != with == in Lexer<'a>::read_token
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:647:9: replace TypeChecker<'a, 'b>::try_native_function_check -> Option<TypeResult> with None
+clarity/src/vm/callables.rs:184:39: replace < with > in DefinedFunction::execute_apply
+clarity/src/vm/types/serialization.rs:1302:9: replace <impl ClaritySerializable for u32>::serialize -> String with "xyzzy".into()
+clarity/src/vm/database/sqlite.rs:82:9: replace SqliteConnection::get -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/mod.rs:170:43: replace || with == in lookup_variable
+clarity/src/vm/analysis/types.rs:140:9: replace ContractAnalysis::add_private_function with ()
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:225:62: replace != with == in FunctionType::check_args_2_05
+clarity/src/vm/functions/principals.rs:41:5: replace version_matches_testnet -> bool with true
+clarity/src/vm/database/sqlite.rs:51:5: replace sqlite_get -> Option<String> with Some(String::new())
+clarity/src/vm/functions/crypto.rs:208:45: replace > with < in special_secp256k1_verify
+clarity/src/vm/representations.rs:397:9: replace PreSymbolicExpression::match_comment -> Option<&str> with Some("")
+clarity/src/vm/contexts.rs:1944:9: replace CallStack::contains -> bool with true
+clarity/src/vm/representations.rs:621:9: replace <impl Display for SymbolicExpression>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/signatures.rs:1723:9: replace ListTypeData::inner_size -> Option<u32> with Some(0)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:573:32: replace == with != in clarity2_trait_check_trait_compliance
+clarity/src/vm/database/clarity_db.rs:738:9: replace ClarityDatabase<'a>::get_total_liquid_ustx -> u128 with 0
+clarity/src/vm/types/mod.rs:1362:9: replace <impl Display for PrincipalData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/ast/definition_sorter/mod.rs:199:67: replace == with != in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/database/clarity_db.rs:473:9: replace ClarityDatabase<'a>::get -> Option<T> with None
+clarity/src/vm/ast/parser/v2/mod.rs:191:32: replace >= with < in Parser<'a>::ignore_whitespace_and_comments
+clarity/src/vm/types/signatures.rs:435:24: replace < with == in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/functions/options.rs:221:5: replace is_some -> Result<bool> with Ok(false)
+clarity/src/vm/database/key_value_wrapper.rs:364:9: replace RollbackWrapper<'a>::get -> Option<T> with None
+clarity/src/vm/database/clarity_db.rs:538:9: replace ClarityDatabase<'a>::make_metadata_key -> String with String::new()
+clarity/src/vm/functions/assets.rs:316:19: replace == with != in special_mint_token
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:63:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/database/clarity_store.rs:308:19: replace == with != in <impl ClarityBackingStore for MemoryBackingStore>::get_block_at_height
+clarity/src/vm/types/signatures.rs:491:29: replace > with == in TypeSignature::new_option
+clarity/src/vm/types/signatures.rs:1630:9: replace TypeSignature::depth -> u8 with 1
+clarity/src/vm/functions/principals.rs:36:9: replace || with && in version_matches_mainnet
+clarity/src/vm/types/mod.rs:638:9: replace <impl SequencedValue for BuffData>::drained_items -> Vec<u8> with vec![0]
+clarity/src/vm/contexts.rs:350:9: replace AssetMap::commit_other -> Result<()> with Ok(())
+clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs:412:40: replace < with > in check_contract_call
+clarity/src/vm/analysis/read_only_checker/mod.rs:249:29: replace && with == in ReadOnlyChecker<'a, 'b>::check_each_expression_is_read_only
+clarity/src/vm/callables.rs:178:60: replace < with > in DefinedFunction::execute_apply
+clarity/src/vm/tests/traits.rs:1463:14: replace < with > in test_embedded_trait
+clarity/src/vm/functions/principals.rs:41:13: replace == with != in version_matches_testnet
+clarity/src/vm/types/signatures.rs:539:48: replace == with != in TypeSignature::admits_type_v2_0
+clarity/src/vm/database/clarity_db.rs:1827:9: replace ClarityDatabase<'a>::set_nft_owner -> Result<()> with Ok(())
+clarity/src/vm/types/mod.rs:658:9: replace <impl SequencedValue for ASCIIData>::drained_items -> Vec<u8> with vec![1]
+clarity/src/vm/test_util/mod.rs:83:68: replace == with != in is_err_code
+clarity/src/vm/database/clarity_db.rs:442:9: replace ClarityDatabase<'a>::commit with ()
+clarity/src/vm/contexts.rs:1715:9: replace GlobalContext<'a, 'hooks>::commit -> Result<(Option<AssetMap>, Option<EventBatch>)> with Ok((Some(Default::default()), Some(Default::default())))
+clarity/src/vm/types/mod.rs:1288:27: replace > with < in <impl Display for Value>::fmt
+clarity/src/vm/database/clarity_db.rs:487:9: replace ClarityDatabase<'a>::put_value_with_size -> Result<u64> with Ok(0)
+clarity/src/vm/types/mod.rs:960:43: replace && with || in Value::string_ascii_from_bytes
+clarity/src/vm/costs/mod.rs:1251:5: replace int_log2 -> Option<u64> with Some(1)
+clarity/src/vm/tests/traits.rs:1673:14: replace < with > in test_pass_embedded_trait_to_subtrait_err
+clarity/src/vm/types/mod.rs:876:9: replace Value::depth -> u8 with 1
+clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs:412:40: replace < with == in check_contract_call
+clarity/src/vm/analysis/errors.rs:280:19: replace != with == in check_argument_count
+clarity/src/vm/tests/traits.rs:1529:14: replace < with > in test_pass_embedded_trait_to_subtrait_optional
+clarity/src/vm/functions/options.rs:174:19: replace != with == in special_match_resp
+clarity/src/vm/variables.rs:64:5: replace lookup_reserved_variable -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/costs/mod.rs:1121:9: replace <impl CostOverflowingMath for u64>::cost_overflow_sub -> Result<u64> with Ok(0)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:972:33: replace >= with < in TypeChecker<'a, 'b>::type_check_expects
+clarity/src/vm/types/mod.rs:801:23: replace == with != in <impl PartialEq for TupleData>::eq
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:275:9: replace ArithmeticOnlyChecker<'a>::check_function_application -> Result<(), Error> with Ok(())
+clarity/src/vm/functions/principals.rs:48:5: replace version_matches_current_network -> bool with false
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:145:9: replace ArithmeticOnlyChecker<'a>::check_variables_allowed -> Result<(), Error> with Ok(())
+clarity/src/vm/contexts.rs:1636:9: replace GlobalContext<'a, 'hooks>::log_stx_transfer -> Result<()> with Ok(())
+clarity/src/vm/ast/parser/v2/mod.rs:189:9: replace Parser<'a>::ignore_whitespace_and_comments -> Vec<PreSymbolicExpression> with vec![]
+clarity/src/vm/contexts.rs:1300:9: replace Environment<'a, 'b, 'hooks>::initialize_contract_from_ast -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:927:23: replace != with == in FunctionSignature::check_args_trait_compliance
+clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs:363:29: replace || with == in check_special_match_resp
+clarity/src/vm/errors.rs:133:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:371:30: replace == with != in SequenceData::contains
+clarity/src/vm/analysis/types.rs:172:9: replace ContractAnalysis::get_private_function -> Option<&FunctionType> with None
+clarity/src/vm/functions/assets.rs:129:15: replace == with != in stx_transfer_consolidated
+clarity/src/vm/ast/definition_sorter/mod.rs:495:61: replace || with && in GraphWalker::get_cycling_dependencies
+clarity/src/vm/analysis/type_checker/contexts.rs:126:9: replace TypingContext<'a>::add_trait_reference with ()
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:676:57: replace != with == in clarity2_inner_type_check_type
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:192:9: replace ContractContext::ft_exists -> bool with false
+clarity/src/vm/database/clarity_db.rs:1486:9: replace ClarityDatabase<'a>::data_map_entry_exists -> Result<bool> with Ok(true)
+clarity/src/vm/types/serialization.rs:774:50: replace != with == in Value::inner_deserialize_read
+clarity/src/vm/functions/sequences.rs:444:18: replace >= with < in special_replace_at
+clarity/src/vm/types/serialization.rs:795:29: replace && with != in Value::inner_deserialize_read
+clarity/src/vm/ast/parser/v2/mod.rs:639:31: replace > with < in Parser<'a>::read_principal
+clarity/src/vm/types/mod.rs:1263:9: replace <impl Display for BuffData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/functions/crypto.rs:163:44: replace > with < in special_secp256k1_recover
+clarity/src/vm/ast/definition_sorter/mod.rs:489:9: replace GraphWalker::get_cycling_dependencies -> Option<Vec<usize>> with Some(vec![0])
+clarity/src/vm/functions/assets.rs:1099:19: replace != with == in special_burn_asset_v205
+clarity/src/vm/analysis/analysis_db.rs:107:9: replace AnalysisDatabase<'a>::load_contract -> Option<ContractAnalysis> with None
+clarity/src/vm/contexts.rs:1835:13: replace || with && in ContractContext::is_name_used
+clarity/src/vm/ast/stack_depth_checker.rs:29:14: replace >= with < in check
+clarity/src/vm/analysis/types.rs:132:9: replace ContractAnalysis::add_read_only_function with ()
+clarity/src/vm/ast/traits_resolver/mod.rs:125:35: replace != with == in TraitsResolver::run
+clarity/src/vm/types/mod.rs:811:36: replace > with < in Value::some
+clarity/src/vm/functions/principals.rs:195:34: replace > with < in special_principal_construct
+clarity/src/vm/database/structures.rs:333:9: replace STXBalanceSnapshot<'db, 'conn>::save with ()
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:306:5: replace type_reserved_variable -> Option<TypeSignature> with None
+clarity/src/vm/analysis/type_checker/contexts.rs:130:9: replace TypingContext<'a>::lookup_trait_reference_type -> Option<&TraitIdentifier> with None
+clarity/src/vm/functions/crypto.rs:208:27: replace == with != in special_secp256k1_verify
+clarity/src/vm/analysis/analysis_db.rs:63:9: replace AnalysisDatabase<'a>::commit with ()
+clarity/src/vm/types/mod.rs:279:23: replace <= with > in SequenceData::element_at
+clarity/src/vm/types/mod.rs:1479:9: replace TupleData::len -> u64 with 1
+clarity/src/vm/functions/sequences.rs:161:29: replace != with == in special_map
+clarity/src/vm/contexts.rs:303:9: replace AssetMap::add_stx_burn -> Result<()> with Ok(())
+clarity/src/vm/contexts.rs:688:9: replace OwnedEnvironment<'a, 'hooks>::initialize_contract -> Result<((), AssetMap, Vec<StacksTransactionEvent>)> with Ok(((), Default::default(), vec![]))
+clarity/src/vm/database/clarity_db.rs:562:9: replace ClarityDatabase<'a>::insert_contract_hash -> Result<()> with Ok(())
+clarity/src/vm/ast/stack_depth_checker.rs:54:14: replace >= with < in check_vary
+clarity/src/vm/analysis/errors.rs:320:9: replace <impl DiagnosableError for CheckErrors>::message -> String with "xyzzy".into()
+clarity/src/vm/database/structures.rs:893:9: replace STXBalance::get_available_balance_at_burn_block -> u128 with 1
+clarity/src/vm/contexts.rs:264:9: replace AssetMap::get_next_stx_amount -> Result<u128> with Ok(0)
+clarity/src/vm/types/signatures.rs:635:48: replace == with != in TypeSignature::admits_type_v2_1
+clarity/src/vm/types/serialization.rs:718:36: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/types/signatures.rs:1723:9: replace ListTypeData::inner_size -> Option<u32> with None
+clarity/src/vm/types/signatures.rs:491:29: replace > with < in TypeSignature::new_option
+clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs:344:19: replace != with == in check_special_match_resp
+clarity/src/vm/types/mod.rs:314:18: replace >= with < in SequenceData::replace_at
+clarity/src/vm/functions/mod.rs:580:19: replace < with == in native_eq
+clarity/src/vm/analysis/read_only_checker/mod.rs:249:29: replace && with != in ReadOnlyChecker<'a, 'b>::check_each_expression_is_read_only
+clarity/src/vm/types/serialization.rs:718:36: replace > with < in Value::inner_deserialize_read
+clarity/src/vm/functions/arithmetic.rs:505:52: replace >= with < in special_greater
+clarity/src/vm/contexts.rs:1940:9: replace CallStack::depth -> usize with 0
+clarity/src/vm/types/signatures.rs:379:24: replace < with > in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/types/signatures.rs:1132:54: replace > with == in TypeSignature::least_supertype_v2_0
+clarity/src/vm/analysis/errors.rs:288:5: replace check_arguments_at_least -> Result<(), CheckErrors> with Ok(())
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:211:9: replace ContractContext::into_contract_analysis with ()
+clarity/src/vm/tests/traits.rs:1964:14: replace < with > in test_let_trait
+clarity/src/vm/types/signatures.rs:564:30: replace >= with < in TypeSignature::admits_type_v2_0
+clarity/src/vm/types/signatures.rs:1737:23: replace > with < in ListTypeData::type_size
+clarity/src/vm/types/mod.rs:1548:9: replace <impl Display for TupleData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/functions/assets.rs:273:23: replace != with == in special_stx_burn
+clarity/src/vm/functions/crypto.rs:205:27: replace < with > in special_secp256k1_verify
+clarity/src/vm/functions/principals.rs:252:34: replace < with > in special_principal_construct
+clarity/src/vm/types/signatures.rs:342:9: replace <impl From for u32>::from -> u32 with 0
+clarity/src/vm/database/structures.rs:410:9: replace STXBalanceSnapshot<'db, 'conn>::credit with ()
+clarity/src/vm/types/mod.rs:1206:9: replace ListData::append -> Result<()> with Ok(())
+clarity/src/vm/types/mod.rs:464:9: replace SequenceData::concat -> Result<()> with Ok(())
+clarity/src/vm/contexts.rs:285:9: replace AssetMap::get_next_amount -> Result<u128> with Ok(1)
+clarity/src/vm/callables.rs:184:39: replace < with == in DefinedFunction::execute_apply
+clarity/src/vm/analysis/type_checker/contexts.rs:98:9: replace TypingContext<'a>::lookup_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/functions/arithmetic.rs:420:52: replace >= with < in special_geq
+clarity/src/vm/contexts.rs:334:9: replace AssetMap::add_token_transfer -> Result<()> with Ok(())
+clarity/src/vm/types/serialization.rs:1200:9: replace Value::sanitize_value -> Option<(Value, bool)> with None
+clarity/src/vm/contexts.rs:1600:9: replace GlobalContext<'a, 'hooks>::get_asset_map -> &mut AssetMap with Box::leak(Box::new(Default::default()))
+clarity/src/vm/types/signatures.rs:389:9: replace <impl From for u32>::from -> u32 with 0
+clarity/src/vm/types/signatures.rs:446:27: replace > with < in ListTypeData::new_list
+clarity/src/vm/analysis/errors.rs:288:19: replace < with == in check_arguments_at_least
+clarity/src/vm/types/signatures.rs:502:21: replace > with < in TypeSignature::new_response
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:172:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/ast/mod.rs:54:5: replace parse -> Result<Vec<SymbolicExpression>, Error> with Ok(vec![])
+clarity/src/vm/ast/definition_sorter/mod.rs:193:60: replace != with == in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:225:53: replace && with || in FunctionType::check_args_2_05
+clarity/src/vm/contexts.rs:1696:9: replace GlobalContext<'a, 'hooks>::is_read_only -> bool with true
+clarity/src/vm/ast/parser/v2/mod.rs:533:41: replace == with != in Parser<'a>::read_principal
+clarity/src/vm/functions/principals.rs:52:39: replace && with || in version_matches_current_network
+clarity/src/vm/functions/crypto.rs:205:27: replace < with == in special_secp256k1_verify
+clarity/src/vm/analysis/type_checker/contexts.rs:83:23: replace >= with < in TypingContext<'a>::extend
+clarity/src/vm/analysis/errors.rs:288:19: replace < with > in check_arguments_at_least
+clarity/src/vm/types/signatures.rs:1233:54: replace > with < in TypeSignature::least_supertype_v2_1
+clarity/src/vm/functions/crypto.rs:163:44: replace > with == in special_secp256k1_recover
+clarity/src/vm/types/serialization.rs:1240:57: replace != with == in Value::sanitize_value
+clarity/src/vm/types/signatures.rs:1723:9: replace ListTypeData::inner_size -> Option<u32> with Some(1)
+clarity/src/vm/functions/assets.rs:269:19: replace == with != in special_stx_burn
+clarity/src/vm/types/signatures.rs:1924:9: replace <impl Display for StringUTF8Length>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:846:45: replace > with == in Value::okay
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:171:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/functions/crypto.rs:160:27: replace > with == in special_secp256k1_recover
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:233:26: replace != with == in FunctionType::check_args_2_05
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:242:46: replace != with == in ArithmeticOnlyChecker<'a>::check_native_function
+clarity/src/vm/database/clarity_db.rs:1530:29: replace && with != in ClarityDatabase<'a>::inner_set_entry
+clarity/src/vm/database/structures.rs:397:9: replace STXBalanceSnapshot<'db, 'conn>::can_transfer -> bool with true
+clarity/src/vm/database/clarity_db.rs:1875:9: replace ClarityDatabase<'a>::make_key_for_account_balance -> String with "xyzzy".into()
+clarity/src/vm/contexts.rs:1948:9: replace CallStack::insert with ()
+clarity/src/vm/types/mod.rs:756:47: replace <= with > in BlockInfoProperty::lookup_by_name_at_version
+clarity/src/vm/types/signatures.rs:1432:28: replace != with == in TypeSignature::parse_string_utf8_type_repr
+clarity/src/vm/database/clarity_db.rs:938:9: replace ClarityDatabase<'a>::get_pox_payout_addrs_for_burnchain_height -> Option<(Vec<TupleData>, u128)> with None
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:267:9: replace ContractInterfaceFunction::from_map -> Vec<ContractInterfaceFunction> with vec![]
+clarity/src/vm/database/structures.rs:768:9: replace STXBalance::effective_unlock_height -> u64 with 1
+clarity/src/vm/docs/mod.rs:780:5: replace get_output_type_string -> String with "xyzzy".into()
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:238:35: replace != with == in FunctionType::check_args_2_1
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:309:9: replace ContractContext::get_map_type -> Option<&(TypeSignature, TypeSignature)> with None
+clarity/src/vm/functions/principals.rs:195:34: replace > with == in special_principal_construct
+clarity/src/vm/analysis/errors.rs:304:5: replace formatted_expected_types -> String with "xyzzy".into()
+clarity/src/vm/mod.rs:242:24: replace && with != in apply
+clarity/src/vm/types/serialization.rs:795:29: replace && with || in Value::inner_deserialize_read
+clarity/src/vm/ast/parser/v2/mod.rs:571:27: replace > with < in Parser<'a>::read_principal
+clarity/src/vm/types/serialization.rs:1154:9: replace <impl Write for WriteCounter>::write -> std::io::Result<usize> with Ok(0)
+clarity/src/vm/types/signatures.rs:1783:9: replace TupleTypeSignature::inner_size -> Option<u32> with None
+clarity/src/vm/database/structures.rs:802:9: replace STXBalance::amount_unlocked -> u128 with 1
+clarity/src/vm/functions/options.rs:228:5: replace is_okay -> Result<bool> with Ok(false)
+clarity/src/vm/database/clarity_db.rs:1852:9: replace ClarityDatabase<'a>::burn_nft -> Result<()> with Ok(())
+clarity/src/vm/ast/parser/v2/mod.rs:441:32: replace == with != in Parser<'a>::handle_open_tuple
+clarity/src/vm/types/mod.rs:1389:9: replace <impl Display for TraitIdentifier>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/database/clarity_db.rs:447:9: replace ClarityDatabase<'a>::roll_back with ()
+clarity/src/vm/types/serialization.rs:1184:9: replace Value::serialize_to_hex -> String with String::new()
+clarity/src/vm/analysis/errors.rs:306:29: replace > with == in formatted_expected_types
+clarity/src/vm/types/signatures.rs:1389:28: replace != with == in TypeSignature::parse_list_type_repr
+clarity/src/vm/types/signatures.rs:638:52: replace >= with < in TypeSignature::admits_type_v2_1
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:526:32: replace != with == in clarity2_check_functions_compatible
+clarity/src/vm/analysis/read_only_checker/mod.rs:249:29: replace && with || in ReadOnlyChecker<'a, 'b>::check_each_expression_is_read_only
+clarity/src/vm/database/clarity_db.rs:1303:9: replace ClarityDatabase<'a>::make_key_for_data_map_entry_serialized -> String with "xyzzy".into()
+clarity/src/vm/database/clarity_store.rs:188:9: replace <impl ClaritySerializable for ContractCommitment>::serialize -> String with String::new()
+clarity/src/vm/functions/crypto.rs:149:27: replace != with == in special_secp256k1_recover
+clarity/src/vm/representations.rs:198:9: replace <impl SymbolicExpressionCommon for PreSymbolicExpression>::match_list_mut -> Option<&mut[PreSymbolicExpression]> with None
+clarity/src/vm/contexts.rs:1959:9: replace CallStack::decr_apply_depth with ()
+clarity/src/vm/functions/mod.rs:580:19: replace < with > in native_eq
+clarity/src/vm/types/signatures.rs:1783:9: replace TupleTypeSignature::inner_size -> Option<u32> with Some(0)
+clarity/src/vm/types/signatures.rs:1630:9: replace TypeSignature::depth -> u8 with 0
+clarity/src/vm/types/signatures.rs:1552:9: replace TypeSignature::parse_trait_type_repr -> Result<BTreeMap<ClarityName, FunctionSignature>> with Ok(BTreeMap::new())
+clarity/src/vm/callables.rs:332:26: replace == with != in DefinedFunction::is_read_only
+clarity/src/vm/types/signatures.rs:1233:54: replace > with == in TypeSignature::least_supertype_v2_1
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:196:25: replace == with != in FunctionType::check_args_2_05
+clarity/src/vm/mod.rs:359:5: replace is_reserved -> bool with false
+clarity/src/vm/representations.rs:212:9: replace <impl SymbolicExpressionCommon for SymbolicExpression>::match_list_mut -> Option<&mut[SymbolicExpression]> with None
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:84:30: replace == with != in Lexer<'a>::read_char
+clarity/src/vm/types/signatures.rs:849:9: replace TupleTypeSignature::len -> u64 with 1
+clarity/src/vm/types/mod.rs:355:47: replace != with == in SequenceData::contains
+clarity/src/vm/ast/definition_sorter/mod.rs:247:60: replace > with == in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/ast/parser/v2/mod.rs:813:25: replace || with == in Parser<'a>::parse_node
+clarity/src/vm/callables.rs:332:9: replace DefinedFunction::is_read_only -> bool with true
+clarity/src/vm/types/signatures.rs:366:17: replace > with < in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/functions/principals.rs:53:9: replace || with && in version_matches_current_network
+clarity/src/vm/analysis/type_checker/contexts.rs:114:9: replace TypingContext<'a>::add_variable_type with ()
+clarity/src/vm/types/serialization.rs:1238:67: replace || with == in Value::sanitize_value
+clarity/src/vm/database/sqlite.rs:37:5: replace sqlite_put with ()
+clarity/src/vm/types/signatures.rs:1653:9: replace TypeSignature::size -> u32 with 1
+clarity/src/vm/functions/principals.rs:252:34: replace < with == in special_principal_construct
+clarity/src/vm/variables.rs:46:47: replace <= with > in NativeVariables::lookup_by_name_at_version
+clarity/src/vm/contexts.rs:1849:9: replace ContractContext::canonicalize_types with ()
+clarity/src/vm/types/signatures.rs:1418:28: replace != with == in TypeSignature::parse_buff_type_repr
+clarity/src/vm/database/structures.rs:802:9: replace STXBalance::amount_unlocked -> u128 with 0
+clarity/src/vm/types/serialization.rs:759:28: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/database/clarity_db.rs:1679:27: replace > with == in ClarityDatabase<'a>::checked_increase_token_supply
+clarity/src/vm/representations.rs:198:9: replace <impl SymbolicExpressionCommon for PreSymbolicExpression>::match_list_mut -> Option<&mut[PreSymbolicExpression]> with Some(Vec::leak(Vec::new()))
+clarity/src/vm/test_util/mod.rs:66:5: replace symbols_from_values -> Vec<SymbolicExpression> with vec![]
+clarity/src/vm/types/signatures.rs:1477:28: replace != with == in TypeSignature::parse_response_type_repr
+clarity/src/vm/ast/definition_sorter/mod.rs:422:9: replace Graph::get_node_descendants -> Vec<usize> with vec![0]
+clarity/src/vm/types/signatures.rs:830:40: replace > with < in <impl TryFrom for TupleTypeSignature>::try_from
+clarity/src/vm/contexts.rs:1826:9: replace ContractContext::lookup_trait_definition -> Option<BTreeMap<ClarityName, FunctionSignature>> with Some(BTreeMap::new())
+clarity/src/vm/mod.rs:359:5: replace is_reserved -> bool with true
+clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs:587:19: replace > with == in check_principal_construct
+clarity/src/vm/database/structures.rs:164:9: replace <impl ClaritySerializable for STXBalance>::serialize -> String with String::new()
+clarity/src/vm/functions/mod.rs:200:9: replace NativeFunctions::lookup_by_name_at_version -> Option<NativeFunctions> with None
+clarity/src/vm/types/signatures.rs:660:30: replace >= with < in TypeSignature::admits_type_v2_1
+clarity/src/vm/types/serialization.rs:1184:9: replace Value::serialize_to_hex -> String with "xyzzy".into()
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:390:9: replace ContractInterface::serialize -> String with "xyzzy".into()
+clarity/src/vm/functions/database.rs:449:27: replace != with == in special_at_block
+clarity/src/vm/types/signatures.rs:1659:9: replace TypeSignature::inner_size -> Option<u32> with Some(1)
+clarity/src/vm/functions/assets.rs:133:13: replace == with != in stx_transfer_consolidated
+clarity/src/vm/types/signatures.rs:1659:9: replace TypeSignature::inner_size -> Option<u32> with Some(0)
+clarity/src/vm/types/signatures.rs:1659:9: replace TypeSignature::inner_size -> Option<u32> with None
+clarity/src/vm/types/signatures.rs:830:40: replace > with == in <impl TryFrom for TupleTypeSignature>::try_from
+clarity/src/vm/types/mod.rs:658:9: replace <impl SequencedValue for ASCIIData>::drained_items -> Vec<u8> with vec![]
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:355:9: replace ContractInterfaceMap::from_map -> Vec<ContractInterfaceMap> with vec![]
+clarity/src/vm/functions/options.rs:29:5: replace inner_unwrap -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/types/mod.rs:352:9: replace SequenceData::contains -> Result<Option<usize>> with Ok(None)
+clarity/src/vm/analysis/type_checker/v2_05/natives/sequences.rs:144:36: replace != with == in check_special_filter
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:334:9: replace ContractInterfaceVariable::from_map -> Vec<ContractInterfaceVariable> with vec![]
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:800:30: replace == with != in Lexer<'a>::read_token
+clarity/src/vm/mod.rs:375:5: replace eval_all -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:97:9: replace ArithmeticOnlyChecker<'a>::check_top_levels -> Result<(), Error> with Ok(())
+clarity/src/vm/database/structures.rs:397:38: replace >= with < in STXBalanceSnapshot<'db, 'conn>::can_transfer
+clarity/src/vm/types/mod.rs:890:51: replace < with == in Value::list_with_type
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:44:5: replace is_string_terminator -> bool with true
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:166:9: replace ArithmeticOnlyChecker<'a>::try_native_function_check -> Option<Result<(), Error>> with None
+clarity/src/vm/database/clarity_db.rs:1871:9: replace ClarityDatabase<'a>::make_key_for_account -> String with "xyzzy".into()
+clarity/src/vm/functions/principals.rs:53:46: replace && with == in version_matches_current_network
+clarity/src/vm/tests/traits.rs:1529:14: replace < with == in test_pass_embedded_trait_to_subtrait_optional
+clarity/src/vm/costs/mod.rs:1251:5: replace int_log2 -> Option<u64> with Some(0)
+clarity/src/vm/types/serialization.rs:900:50: replace <= with > in Value::inner_deserialize_read
+clarity/src/vm/functions/crypto.rs:123:67: replace > with == in special_principal_of
+clarity/src/vm/ast/parser/v1.rs:446:20: replace == with != in inner_lex
+clarity/src/vm/types/signatures.rs:395:9: replace <impl From for u32>::from -> u32 with 1
+clarity/src/vm/types/signatures.rs:1093:44: replace == with != in TypeSignature::least_supertype_v2_0
+clarity/src/vm/types/signatures.rs:1521:26: replace < with == in TypeSignature::parse_type_repr
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:51:9: replace TraitContext::is_name_used -> bool with true
+clarity/src/vm/types/mod.rs:795:9: replace <impl PartialEq for ListData>::eq -> bool with false
+clarity/src/vm/functions/principals.rs:246:34: replace > with == in special_principal_construct
+clarity/src/vm/database/clarity_db.rs:1871:9: replace ClarityDatabase<'a>::make_key_for_account -> String with String::new()
+clarity/src/vm/costs/mod.rs:1121:9: replace <impl CostOverflowingMath for u64>::cost_overflow_sub -> Result<u64> with Ok(1)
+clarity/src/vm/costs/mod.rs:1252:35: replace == with != in int_log2
+clarity/src/vm/types/signatures.rs:419:16: replace > with < in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/ast/definition_sorter/mod.rs:430:9: replace Graph::nodes_count -> usize with 0
+clarity/src/vm/types/serialization.rs:1140:9: replace Value::serialized_size -> u32 with 1
+clarity/src/vm/tests/traits.rs:2025:14: replace < with == in test_let3_trait
+clarity/src/vm/ast/parser/v2/mod.rs:774:27: replace > with < in Parser<'a>::read_sugared_principal
+clarity/src/vm/types/mod.rs:1036:9: replace Value::expect_u128 -> u128 with 0
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:175:9: replace ArithmeticOnlyChecker<'a>::check_native_function -> Result<(), Error> with Ok(())
+clarity/src/vm/types/signatures.rs:1863:9: replace <impl Debug for TupleTypeSignature>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/mod.rs:575:5: replace execute_v2 -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/mod.rs:563:5: replace execute -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/types/mod.rs:279:9: replace SequenceData::element_at -> Option<Value> with None
+clarity/src/vm/functions/principals.rs:246:34: replace > with < in special_principal_construct
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:176:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:437:9: replace ClarityDatabase<'a>::begin with ()
+clarity/src/vm/types/serialization.rs:769:51: replace < with > in Value::inner_deserialize_read
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:480:22: replace != with == in Lexer<'a>::read_utf8_encoding
+clarity/src/vm/database/clarity_db.rs:759:9: replace ClarityDatabase<'a>::increment_ustx_liquid_supply -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:1875:9: replace ClarityDatabase<'a>::make_key_for_account_balance -> String with String::new()
+clarity/src/vm/callables.rs:200:39: replace >= with < in DefinedFunction::execute_apply
+clarity/src/vm/functions/principals.rs:42:20: replace == with != in version_matches_testnet
+clarity/src/vm/representations.rs:579:9: replace SymbolicExpression::match_atom -> Option<&ClarityName> with None
+clarity/src/vm/analysis/read_only_checker/mod.rs:374:46: replace != with == in ReadOnlyChecker<'a, 'b>::check_native_function_is_read_only
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:782:37: replace == with != in Lexer<'a>::read_token
+clarity/src/vm/database/clarity_db.rs:1761:9: replace ClarityDatabase<'a>::get_ft_supply -> Result<u128> with Ok(0)
+clarity/src/vm/types/serialization.rs:1238:67: replace || with != in Value::sanitize_value
+clarity/src/vm/functions/principals.rs:52:39: replace && with != in version_matches_current_network
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:708:30: replace != with == in clarity2_inner_type_check_type
+clarity/src/vm/analysis/type_checker/v2_1/natives/mod.rs:587:19: replace > with < in check_principal_construct
+clarity/src/vm/ast/definition_sorter/mod.rs:127:39: replace != with == in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/database/clarity_db.rs:602:9: replace ClarityDatabase<'a>::insert_metadata with ()
+clarity/src/vm/mod.rs:242:24: replace && with == in apply
+clarity/src/vm/database/structures.rs:164:9: replace <impl ClaritySerializable for STXBalance>::serialize -> String with "xyzzy".into()
+clarity/src/vm/database/clarity_store.rs:320:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_open_chain_tip_height -> u32 with 1
+clarity/src/vm/representations.rs:195:9: replace <impl SymbolicExpressionCommon for PreSymbolicExpression>::set_id with ()
+clarity/src/vm/functions/options.rs:45:5: replace inner_unwrap_err -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/types/mod.rs:876:9: replace Value::depth -> u8 with 0
+clarity/src/vm/functions/principals.rs:278:34: replace < with > in special_principal_construct
+clarity/src/vm/functions/crypto.rs:208:33: replace && with || in special_secp256k1_verify
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:103:9: replace TraitContext::get_trait -> Option<&BTreeMap<ClarityName, FunctionSignature>> with None
+clarity/src/vm/types/serialization.rs:1238:67: replace || with && in Value::sanitize_value
+clarity/src/vm/functions/options.rs:116:9: replace || with == in eval_with_new_binding
+clarity/src/vm/types/mod.rs:620:9: replace <impl SequencedValue for ListData>::drained_items -> Vec<Value> with vec![]
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:173:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/types/signatures.rs:1561:27: replace != with == in TypeSignature::parse_trait_type_repr
+clarity/src/vm/analysis/types.rs:127:9: replace ContractAnalysis::add_persisted_variable_type with ()
+clarity/src/vm/database/structures.rs:838:9: replace STXBalance::checked_add_unlocked_amount -> Option<u128> with None
+clarity/src/vm/ast/parser/v2/mod.rs:141:28: replace >= with < in Parser<'a>::peek_next_token
+clarity/src/vm/variables.rs:56:5: replace is_reserved_name -> bool with true
+clarity/src/vm/types/serialization.rs:205:9: replace <impl ClarityValueSerializable for StandardPrincipalData>::serialize_write -> std::io::Result<()> with Ok(())
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:317:9: replace ContractContext::get_persisted_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/types/mod.rs:755:9: replace BlockInfoProperty::lookup_by_name_at_version -> Option<BlockInfoProperty> with None
+clarity/src/vm/types/mod.rs:352:9: replace SequenceData::contains -> Result<Option<usize>> with Ok(Some(1))
+clarity/src/vm/analysis/types.rs:115:9: replace ContractAnalysis::add_map_type with ()
+clarity/src/vm/functions/database.rs:98:55: replace == with != in special_contract_call
+clarity/src/vm/types/serialization.rs:1302:9: replace <impl ClaritySerializable for u32>::serialize -> String with String::new()
+clarity/src/vm/types/signatures.rs:405:16: replace > with == in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:175:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/types/signatures.rs:1697:9: replace TypeSignature::inner_type_size -> Option<u32> with None
+clarity/src/vm/types/serialization.rs:1218:67: replace || with && in Value::sanitize_value
+clarity/src/vm/contexts.rs:838:9: replace OwnedEnvironment<'a, 'hooks>::commit -> Result<(AssetMap, EventBatch)> with Ok((Default::default(), Default::default()))
+clarity/src/vm/contexts.rs:1970:24: replace && with || in CallStack::remove
+clarity/src/vm/ast/parser/v2/mod.rs:172:9: replace Parser<'a>::ignore_whitespace -> bool with true
+clarity/src/vm/types/mod.rs:1054:9: replace Value::expect_buff -> Vec<u8> with vec![0]
+clarity/src/vm/functions/principals.rs:48:5: replace version_matches_current_network -> bool with true
+clarity/src/vm/analysis/errors.rs:231:9: replace <impl Display for CheckError>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/signatures.rs:669:30: replace >= with < in TypeSignature::admits_type_v2_1
+clarity/src/vm/types/serialization.rs:1246:64: replace || with == in Value::sanitize_value
+clarity/src/vm/types/mod.rs:1328:23: replace != with == in PrincipalData::parse_standard_principal
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:119:53: replace == with != in TraitContext::into_contract_analysis
+clarity/src/vm/analysis/analysis_db.rs:59:9: replace AnalysisDatabase<'a>::begin with ()
+clarity/src/vm/test_util/mod.rs:81:5: replace is_err_code -> bool with false
+clarity/src/vm/ast/parser/v2/mod.rs:227:37: replace && with == in Parser<'a>::handle_open_node
+clarity/src/vm/types/signatures.rs:489:21: replace > with == in TypeSignature::new_option
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:66:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:85:9: replace ContractContext::ft_exists -> bool with true
+clarity/src/vm/analysis/types.rs:136:9: replace ContractAnalysis::add_public_function with ()
+clarity/src/vm/types/mod.rs:352:9: replace SequenceData::contains -> Result<Option<usize>> with Ok(Some(0))
+clarity/src/vm/types/signatures.rs:1195:44: replace == with != in TypeSignature::least_supertype_v2_1
+clarity/src/vm/ast/definition_sorter/mod.rs:413:9: replace Graph::add_node with ()
+clarity/src/vm/database/clarity_store.rs:141:9: replace ClarityBackingStore::get_metadata -> Result<Option<String>> with Ok(Some("xyzzy".into()))
+clarity/src/vm/contexts.rs:1838:13: replace || with == in ContractContext::is_name_used
+clarity/src/vm/types/mod.rs:204:24: replace != with == in TraitIdentifier::parse
+clarity/src/vm/functions/mod.rs:698:5: replace parse_eval_bindings -> Result<Vec<(ClarityName, Value)>> with Ok(vec![])
+clarity/src/vm/contexts.rs:315:9: replace AssetMap::add_asset_transfer with ()
+clarity/src/vm/types/mod.rs:359:38: replace == with != in SequenceData::contains
+clarity/src/vm/types/mod.rs:584:24: replace > with == in <impl Display for UTF8Data>::fmt
+clarity/src/vm/representations.rs:397:9: replace PreSymbolicExpression::match_comment -> Option<&str> with Some("xyzzy")
+clarity/src/vm/functions/crypto.rs:123:67: replace > with < in special_principal_of
+clarity/src/vm/types/signatures.rs:1132:54: replace > with < in TypeSignature::least_supertype_v2_0
+clarity/src/vm/tests/traits.rs:1601:14: replace < with == in test_pass_embedded_trait_to_subtrait_ok
+clarity/src/vm/types/mod.rs:546:9: replace <impl Display for CharType>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:1245:9: replace <impl Display for OptionalData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/errors.rs:225:9: replace <impl Display for CheckErrors>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:859:45: replace > with < in Value::error
+clarity/src/vm/contexts.rs:1940:9: replace CallStack::depth -> usize with 1
+clarity/src/vm/database/clarity_db.rs:517:9: replace ClarityDatabase<'a>::get_value -> Result<Option<ValueResult>> with Ok(None)
+clarity/src/vm/docs/mod.rs:729:5: replace get_input_type_string -> String with "xyzzy".into()
+clarity/src/vm/contexts.rs:1834:9: replace ContractContext::is_name_used -> bool with false
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:333:9: replace ContractContext::into_contract_analysis with ()
+clarity/src/vm/functions/crypto.rs:160:27: replace > with < in special_secp256k1_recover
+clarity/src/vm/types/signatures.rs:625:9: replace TypeSignature::admits_type_v2_1 -> Result<bool> with Ok(true)
+clarity/src/vm/types/signatures.rs:477:9: replace ListTypeData::get_max_len -> u32 with 1
+clarity/src/vm/database/key_value_wrapper.rs:445:9: replace RollbackWrapper<'a>::insert_metadata with ()
+clarity/src/vm/ast/definition_sorter/mod.rs:370:23: replace == with != in DefinitionSorter::probe_for_dependencies_in_key_value_pair
+clarity/src/vm/functions/crypto.rs:163:27: replace < with == in special_secp256k1_recover
+clarity/src/vm/functions/principals.rs:227:21: replace >= with < in special_principal_construct
+clarity/src/vm/types/signatures.rs:433:16: replace > with < in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/types/serialization.rs:397:9: replace TypeSignature::max_serialized_size -> Result<u32, CheckErrors> with Ok(1)
+clarity/src/vm/types/mod.rs:658:9: replace <impl SequencedValue for ASCIIData>::drained_items -> Vec<u8> with vec![0]
+clarity/src/vm/database/clarity_db.rs:1745:9: replace ClarityDatabase<'a>::set_ft_balance -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:621:9: replace ClarityDatabase<'a>::fetch_metadata -> Result<Option<T>> with Ok(None)
+clarity/src/vm/callables.rs:344:9: replace DefinedFunction::is_public -> bool with false
+clarity/src/vm/contexts.rs:1836:13: replace || with == in ContractContext::is_name_used
+clarity/src/vm/tests/traits.rs:1964:14: replace < with == in test_let_trait
+clarity/src/vm/contexts.rs:296:9: replace AssetMap::add_stx_transfer -> Result<()> with Ok(())
+clarity/src/vm/analysis/errors.rs:296:19: replace > with < in check_arguments_at_most
+clarity/src/vm/functions/database.rs:158:58: replace == with != in special_contract_call
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:68:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/types/mod.rs:1234:9: replace UTF8Data::append -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:348:9: replace <impl From for u32>::from -> u32 with 0
+clarity/src/vm/costs/mod.rs:1118:9: replace <impl CostOverflowingMath for u64>::cost_overflow_add -> Result<u64> with Ok(1)
+clarity/src/vm/database/clarity_db.rs:944:9: replace ClarityDatabase<'a>::get_burnchain_block_height -> Option<u32> with None
+clarity/src/vm/types/signatures.rs:525:9: replace TypeSignature::admits_type -> Result<bool> with Ok(false)
+clarity/src/vm/types/signatures.rs:379:24: replace < with == in <impl TryFrom for BufferLength>::try_from
+clarity/src/vm/contexts.rs:409:9: replace AssetMap::to_table -> HashMap<PrincipalData, HashMap<AssetIdentifier, AssetMapEntry>> with HashMap::new()
+clarity/src/vm/types/mod.rs:809:45: replace > with == in Value::some
+clarity/src/vm/database/clarity_store.rs:96:9: replace ClarityBackingStore::make_contract_commitment -> String with String::new()
+clarity/src/vm/tests/traits.rs:1673:14: replace < with == in test_pass_embedded_trait_to_subtrait_err
+clarity/src/vm/types/mod.rs:859:45: replace > with == in Value::error
+clarity/src/vm/types/serialization.rs:982:33: replace && with == in Value::inner_deserialize_read
+clarity/src/vm/contexts.rs:1696:9: replace GlobalContext<'a, 'hooks>::is_read_only -> bool with false
+clarity/src/vm/database/key_value_wrapper.rs:60:5: replace rollback_check_pre_bottom_commit -> Vec<(T, String)> with vec![]
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:221:25: replace == with != in FunctionType::check_args_2_1
+clarity/src/vm/types/serialization.rs:1246:77: replace != with == in Value::sanitize_value
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:613:14: replace > with < in clarity2_inner_type_check_type
+clarity/src/vm/functions/assets.rs:693:19: replace == with != in special_transfer_token
+clarity/src/vm/functions/mod.rs:215:5: replace lookup_reserved_functions -> Option<CallableType> with None
+clarity/src/vm/types/mod.rs:960:43: replace && with != in Value::string_ascii_from_bytes
+clarity/src/vm/representations.rs:209:9: replace <impl SymbolicExpressionCommon for SymbolicExpression>::set_id with ()
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:225:26: replace != with == in FunctionType::check_args_2_05
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:321:9: replace ContractContext::get_function_type -> Option<&FunctionType> with None
+clarity/src/vm/functions/sequences.rs:142:36: replace >= with < in special_map
+clarity/src/vm/ast/definition_sorter/mod.rs:505:26: replace == with != in GraphWalker::get_cycling_dependencies
+clarity/src/vm/types/mod.rs:1109:9: replace Value::expect_optional -> Option<Value> with None
+clarity/src/vm/types/serialization.rs:1209:28: replace > with == in Value::sanitize_value
+clarity/src/vm/database/key_value_wrapper.rs:316:9: replace RollbackWrapper<'a>::put with ()
+clarity/src/vm/types/mod.rs:111:24: replace != with == in QualifiedContractIdentifier::parse
+clarity/src/vm/types/serialization.rs:728:28: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/contexts.rs:1955:9: replace CallStack::incr_apply_depth with ()
+clarity/src/vm/types/mod.rs:890:51: replace < with > in Value::list_with_type
+clarity/src/vm/types/serialization.rs:711:28: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/functions/principals.rs:35:5: replace version_matches_mainnet -> bool with false
+clarity/src/vm/database/clarity_db.rs:1703:19: replace > with < in ClarityDatabase<'a>::checked_decrease_token_supply
+clarity/src/vm/types/serialization.rs:1246:64: replace || with && in Value::sanitize_value
+clarity/src/vm/types/signatures.rs:1464:28: replace != with == in TypeSignature::parse_optional_type_repr
+clarity/src/vm/tests/traits.rs:1745:14: replace < with > in test_pass_embedded_trait_to_subtrait_list
+clarity/src/vm/callables.rs:364:9: replace DefinedFunction::canonicalize_types with ()
+clarity/src/vm/types/signatures.rs:520:9: replace TypeSignature::admits -> Result<bool> with Ok(true)
+clarity/src/vm/database/clarity_db.rs:1720:9: replace ClarityDatabase<'a>::get_ft_balance -> Result<u128> with Ok(1)
+clarity/src/vm/types/signatures.rs:838:26: replace > with < in <impl TryFrom for TupleTypeSignature>::try_from
+clarity/src/vm/types/mod.rs:811:36: replace > with == in Value::some
+clarity/src/vm/types/signatures.rs:858:9: replace TupleTypeSignature::field_type -> Option<&TypeSignature> with None
+clarity/src/vm/types/signatures.rs:348:9: replace <impl From for u32>::from -> u32 with 1
+clarity/src/vm/contexts.rs:1715:9: replace GlobalContext<'a, 'hooks>::commit -> Result<(Option<AssetMap>, Option<EventBatch>)> with Ok((None, None))
+clarity/src/vm/types/mod.rs:1288:27: replace > with == in <impl Display for Value>::fmt
+clarity/src/vm/types/signatures.rs:1247:54: replace > with == in TypeSignature::least_supertype_v2_1
+clarity/src/vm/ast/parser/v2/mod.rs:844:55: replace > with < in Parser<'a>::parse_node
+clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs:360:29: replace || with && in check_special_match_resp
+clarity/src/vm/types/serialization.rs:982:33: replace && with || in Value::inner_deserialize_read
+clarity/src/vm/database/clarity_db.rs:1116:5: replace map_no_contract_as_none -> Result<Option<T>> with Ok(None)
+clarity/src/vm/database/structures.rs:838:9: replace STXBalance::checked_add_unlocked_amount -> Option<u128> with Some(1)
+clarity/src/vm/database/clarity_store.rs:141:9: replace ClarityBackingStore::get_metadata -> Result<Option<String>> with Ok(None)
+clarity/src/vm/types/mod.rs:1275:9: replace <impl Display for Value>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/database/key_value_wrapper.rs:306:5: replace inner_put with ()
+clarity/src/vm/functions/boolean.rs:28:5: replace type_force_bool -> Result<bool> with Ok(true)
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:237:9: replace ContractInterfaceFunctionArg::from_function_args -> Vec<ContractInterfaceFunctionArg> with vec![]
+clarity/src/vm/representations.rs:212:9: replace <impl SymbolicExpressionCommon for SymbolicExpression>::match_list_mut -> Option<&mut[SymbolicExpression]> with Some(Vec::leak(Vec::new()))
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:65:13: replace || with == in ContractContext::check_name_used
+clarity/src/vm/tests/traits.rs:2093:14: replace < with == in test_pass_principal_literal_to_trait
+clarity/src/vm/types/mod.rs:384:38: replace == with != in SequenceData::contains
+clarity/src/vm/contexts.rs:1838:13: replace || with && in ContractContext::is_name_used
+clarity/src/vm/analysis/read_only_checker/mod.rs:450:54: replace && with != in ReadOnlyChecker<'a, 'b>::check_expression_application_is_read_only
+clarity/src/vm/representations.rs:595:9: replace SymbolicExpression::match_literal_value -> Option<&Value> with None
+clarity/src/vm/functions/options.rs:115:9: replace || with == in eval_with_new_binding
+clarity/src/vm/database/clarity_db.rs:749:9: replace ClarityDatabase<'a>::set_ustx_liquid_supply with ()
+clarity/src/vm/ast/parser/v2/mod.rs:174:32: replace >= with < in Parser<'a>::ignore_whitespace
+clarity/src/vm/tests/traits.rs:1892:14: replace < with > in test_pass_embedded_trait_to_subtrait_option_list
+clarity/src/vm/analysis/types.rs:105:9: replace ContractAnalysis::replace_contract_cost_tracker with ()
+clarity/src/vm/analysis/type_checker/v2_1/natives/sequences.rs:144:36: replace != with == in check_special_filter
+clarity/src/vm/functions/sequences.rs:139:36: replace > with < in special_map
+clarity/src/vm/database/sqlite.rs:82:9: replace SqliteConnection::get -> Option<String> with None
+clarity/src/vm/tests/mod.rs:166:5: replace test_only_mainnet_to_chain_id -> u32 with 0
+clarity/src/vm/types/serialization.rs:952:48: replace != with == in Value::inner_deserialize_read
+clarity/src/vm/analysis/errors.rs:320:9: replace <impl DiagnosableError for CheckErrors>::message -> String with String::new()
+clarity/src/vm/functions/assets.rs:614:27: replace == with != in special_transfer_asset_v205
+clarity/src/vm/contexts.rs:1612:9: replace GlobalContext<'a, 'hooks>::log_asset_transfer with ()
+clarity/src/vm/types/signatures.rs:1197:34: replace == with != in TypeSignature::least_supertype_v2_1
+clarity/src/vm/types/signatures.rs:604:29: replace && with != in TypeSignature::admits_type_v2_0
+clarity/src/vm/functions/principals.rs:35:5: replace version_matches_mainnet -> bool with true
+clarity/src/vm/representations.rs:373:9: replace PreSymbolicExpression::match_list -> Option<&[PreSymbolicExpression]> with None
+clarity/src/vm/types/signatures.rs:405:16: replace > with < in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/mod.rs:194:59: replace < with > in lookup_variable
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:218:25: replace == with != in FunctionType::check_args_2_1
+clarity/src/vm/callables.rs:332:9: replace DefinedFunction::is_read_only -> bool with false
+clarity/src/vm/functions/assets.rs:631:26: replace != with == in special_transfer_asset_v205
+clarity/src/vm/types/mod.rs:1082:15: replace > with < in Value::expect_buff_padded
+clarity/src/vm/database/clarity_store.rs:188:9: replace <impl ClaritySerializable for ContractCommitment>::serialize -> String with "xyzzy".into()
+clarity/src/vm/functions/database.rs:753:21: replace >= with < in special_get_block_info
+clarity/src/vm/contexts.rs:1944:9: replace CallStack::contains -> bool with false
+clarity/src/vm/types/mod.rs:404:38: replace == with != in SequenceData::contains
+clarity/src/vm/types/signatures.rs:555:33: replace >= with < in TypeSignature::admits_type_v2_0
+clarity/src/vm/types/signatures.rs:1783:9: replace TupleTypeSignature::inner_size -> Option<u32> with Some(1)
+clarity/src/vm/types/signatures.rs:1259:22: replace == with != in TypeSignature::least_supertype_v2_1
+clarity/src/vm/database/key_value_wrapper.rs:421:9: replace RollbackWrapper<'a>::get_current_block_height -> u32 with 0
+clarity/src/vm/tests/traits.rs:1892:14: replace < with == in test_pass_embedded_trait_to_subtrait_option_list
+clarity/src/vm/types/signatures.rs:927:9: replace FunctionSignature::check_args_trait_compliance -> Result<bool> with Ok(true)
+clarity/src/vm/callables.rs:160:23: replace != with == in DefinedFunction::execute_apply
+clarity/src/vm/database/key_value_wrapper.rs:234:9: replace RollbackWrapper<'a>::nest with ()
+clarity/src/vm/mod.rs:194:59: replace < with == in lookup_variable
+clarity/src/vm/database/sqlite.rs:51:5: replace sqlite_get -> Option<String> with None
+clarity/src/vm/functions/conversions.rs:67:43: replace == with != in buff_to_int_generic
+clarity/src/vm/ast/mod.rs:106:36: replace < with > in build_ast_with_rules
+clarity/src/vm/functions/crypto.rs:208:45: replace > with == in special_secp256k1_verify
+clarity/src/vm/database/clarity_db.rs:927:9: replace ClarityDatabase<'a>::get_burnchain_block_header_hash_for_burnchain_height -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/types/serialization.rs:784:28: replace > with < in Value::inner_deserialize_read
+clarity/src/vm/test_util/mod.rs:89:5: replace is_err_code_i128 -> bool with false
+clarity/src/vm/database/clarity_db.rs:551:9: replace ClarityDatabase<'a>::make_key_for_quad -> String with "xyzzy".into()
+clarity/src/vm/types/mod.rs:307:32: replace != with == in SequenceData::replace_at
+clarity/src/vm/contexts.rs:1914:9: replace LocalContext<'a>::lookup_callable_contract -> Option<&CallableData> with None
+clarity/src/vm/database/key_value_wrapper.rs:190:5: replace rollback_lookup_map -> String with String::new()
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:199:9: replace ContractContext::get_function_type -> Option<&FunctionType> with None
+clarity/src/vm/database/structures.rs:397:9: replace STXBalanceSnapshot<'db, 'conn>::can_transfer -> bool with false
+clarity/src/vm/functions/assets.rs:526:27: replace == with != in special_transfer_asset_v200
+clarity/src/vm/ast/definition_sorter/mod.rs:422:9: replace Graph::get_node_descendants -> Vec<usize> with vec![1]
+clarity/src/vm/contexts.rs:1834:9: replace ContractContext::is_name_used -> bool with true
+clarity/src/vm/types/signatures.rs:927:9: replace FunctionSignature::check_args_trait_compliance -> Result<bool> with Ok(false)
+clarity/src/vm/representations.rs:571:9: replace SymbolicExpression::match_list -> Option<&[SymbolicExpression]> with None
+clarity/src/vm/functions/crypto.rs:163:32: replace || with && in special_secp256k1_recover
+clarity/src/vm/database/clarity_db.rs:1679:27: replace > with < in ClarityDatabase<'a>::checked_increase_token_supply
+clarity/src/vm/types/signatures.rs:1221:53: replace > with < in TypeSignature::least_supertype_v2_1
+clarity/src/vm/types/signatures.rs:525:9: replace TypeSignature::admits_type -> Result<bool> with Ok(true)
+clarity/src/vm/types/serialization.rs:1209:28: replace > with < in Value::sanitize_value
+clarity/src/vm/types/signatures.rs:512:9: replace TypeSignature::is_response_type -> bool with true
+clarity/src/vm/types/mod.rs:1183:9: replace BuffData::as_slice -> &[u8] with Vec::leak(Vec::new())
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:390:9: replace ContractInterface::serialize -> String with String::new()
+clarity/src/vm/database/key_value_wrapper.rs:426:9: replace RollbackWrapper<'a>::get_block_header_hash -> Option<StacksBlockId> with None
+clarity/src/vm/functions/define.rs:346:31: replace == with != in DefineFunctionsParsed<'a>::try_parse
+clarity/src/vm/analysis/read_only_checker/mod.rs:269:9: replace ReadOnlyChecker<'a, 'b>::try_check_native_function_is_read_only -> Option<CheckResult<bool>> with None
+clarity/src/vm/types/mod.rs:1081:9: replace Value::expect_buff_padded -> Vec<u8> with vec![1]
+clarity/src/vm/types/signatures.rs:849:9: replace TupleTypeSignature::len -> u64 with 0
+clarity/src/vm/contexts.rs:1836:13: replace || with && in ContractContext::is_name_used
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:171:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/types/mod.rs:400:47: replace != with == in SequenceData::contains
+clarity/src/vm/contexts.rs:1837:13: replace || with == in ContractContext::is_name_used
+clarity/src/vm/contexts.rs:272:9: replace AssetMap::get_next_stx_burn_amount -> Result<u128> with Ok(0)
+clarity/src/vm/database/structures.rs:338:9: replace STXBalanceSnapshot<'db, 'conn>::transfer_to -> Result<()> with Ok(())
+clarity/src/vm/functions/conversions.rs:56:36: replace > with == in buff_to_int_generic
+clarity/src/vm/types/signatures.rs:573:30: replace >= with < in TypeSignature::admits_type_v2_0
+clarity/src/vm/ast/definition_sorter/mod.rs:380:9: replace DefinitionSorter::find_expression_definition -> Option<(ClarityName, u64, &'b PreSymbolicExpression)> with None
+clarity/src/vm/types/signatures.rs:625:9: replace TypeSignature::admits_type_v2_1 -> Result<bool> with Ok(false)
+clarity/src/vm/tests/traits.rs:1463:14: replace < with == in test_embedded_trait
+clarity/src/vm/types/signatures.rs:1796:23: replace > with < in TupleTypeSignature::inner_size
+clarity/src/vm/database/clarity_store.rs:170:9: replace ClarityBackingStore::put_all_metadata with ()
+clarity/src/vm/types/mod.rs:795:19: replace == with != in <impl PartialEq for ListData>::eq
+clarity/src/vm/ast/types.rs:103:23: replace >= with < in <impl Iterator for PreExpressionsDrain>::next
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:65:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/contexts.rs:272:9: replace AssetMap::get_next_stx_burn_amount -> Result<u128> with Ok(1)
+clarity/src/vm/ast/definition_sorter/mod.rs:222:60: replace == with != in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/functions/arithmetic.rs:463:52: replace >= with < in special_leq
+clarity/src/vm/contexts.rs:1890:9: replace LocalContext<'a>::extend -> Result<LocalContext<'a>> with Ok(Default::default())
+clarity/src/vm/types/mod.rs:801:9: replace <impl PartialEq for TupleData>::eq -> bool with false
+clarity/src/vm/types/mod.rs:1036:9: replace Value::expect_u128 -> u128 with 1
+clarity/src/vm/costs/mod.rs:1115:9: replace <impl CostOverflowingMath for u64>::cost_overflow_mul -> Result<u64> with Ok(0)
+clarity/src/vm/analysis/types.rs:164:9: replace ContractAnalysis::get_public_function_type -> Option<&FunctionType> with None
+clarity/src/vm/analysis/errors.rs:306:29: replace > with < in formatted_expected_types
+clarity/src/vm/types/serialization.rs:623:58: replace <= with > in Value::inner_deserialize_read
+clarity/src/vm/test_util/mod.rs:72:5: replace is_committed -> bool with true
+clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs:341:19: replace != with == in check_special_match_resp
+clarity/src/vm/contexts.rs:1819:9: replace ContractContext::lookup_function -> Option<DefinedFunction> with None
+clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs:363:29: replace || with && in check_special_match_resp
+clarity/src/vm/contexts.rs:264:9: replace AssetMap::get_next_stx_amount -> Result<u128> with Ok(1)
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:171:9: replace ContractInterfaceAtomType::vec_from_tuple_type -> Vec<ContractInterfaceTupleEntryType> with vec![]
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:85:9: replace ContractContext::ft_exists -> bool with false
+clarity/src/vm/callables.rs:309:9: replace DefinedFunction::check_trait_expectations -> Result<()> with Ok(())
+clarity/src/vm/types/mod.rs:1183:9: replace BuffData::as_slice -> &[u8] with Vec::leak(vec![0])
+clarity/src/vm/types/signatures.rs:342:9: replace <impl From for u32>::from -> u32 with 1
+clarity/src/vm/types/mod.rs:1348:9: replace <impl Display for StandardPrincipalData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:848:36: replace > with == in Value::okay
+clarity/src/vm/types/signatures.rs:1598:36: replace >= with < in TypeSignature::parse_trait_type_repr
+clarity/src/vm/types/signatures.rs:1521:26: replace < with > in TypeSignature::parse_type_repr
+clarity/src/vm/types/mod.rs:1223:9: replace ASCIIData::append -> Result<()> with Ok(())
+clarity/src/vm/functions/principals.rs:212:50: replace > with == in special_principal_construct
+clarity/src/vm/analysis/errors.rs:296:19: replace > with == in check_arguments_at_most
+clarity/src/vm/functions/sequences.rs:426:27: replace != with == in special_replace_at
+clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs:360:29: replace || with == in check_special_match_resp
+clarity/src/vm/types/serialization.rs:1018:9: replace Value::serialize_write -> std::io::Result<()> with Ok(())
+clarity/src/vm/types/serialization.rs:949:41: replace <= with > in Value::inner_deserialize_read

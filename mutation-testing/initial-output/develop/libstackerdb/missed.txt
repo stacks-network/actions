@@ -1,0 +1,9 @@
+libstackerdb/src/libstackerdb.rs:198:9: replace StackerDBChunkData::verify -> Result<bool, Error> with Ok(false)
+libstackerdb/src/libstackerdb.rs:61:9: replace <impl Error for Error>::cause -> Option<&dyn error::Error> with None
+libstackerdb/src/libstackerdb.rs:237:5: replace stackerdb_chunk_hex_deserialize -> Result<Vec<u8>, D::Error> with Ok(vec![1])
+libstackerdb/src/libstackerdb.rs:198:9: replace StackerDBChunkData::verify -> Result<bool, Error> with Ok(true)
+libstackerdb/src/libstackerdb.rs:189:9: replace StackerDBChunkData::sign -> Result<(), Error> with Ok(())
+libstackerdb/src/libstackerdb.rs:237:5: replace stackerdb_chunk_hex_deserialize -> Result<Vec<u8>, D::Error> with Ok(vec![])
+libstackerdb/src/libstackerdb.rs:52:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+libstackerdb/src/libstackerdb.rs:205:9: replace <impl StacksMessageCodec for StackerDBChunkData>::consensus_serialize -> Result<(), CodecError> with Ok(())
+libstackerdb/src/libstackerdb.rs:237:5: replace stackerdb_chunk_hex_deserialize -> Result<Vec<u8>, D::Error> with Ok(vec![0])
