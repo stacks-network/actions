@@ -7,3 +7,4 @@ Folder of composite actions for the [stacks blockchain](https://github.com/stack
 - [run-tests](./run-tests) - Run tests with [nextest](https://nexte.st)
 - [mutation-testing](./mutation-testing) - Run mutation testing
 - [release](./release) - Actions used in Stacks Core release process
+- [node-config-docsgen](./node-config-docsgen) - Generates and uploads the node configuration reference
