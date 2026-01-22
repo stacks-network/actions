@@ -3,8 +3,8 @@
 Monorepo of [composite actions](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action) used in the [stacks-network](https://github.com/stacks-network) org
 
 - [cleanup](./cleanup) - removes unused packages/dirs from a runner, freeing around 48GB of space on a runner
-- [codecov](./cleanup) - Uploads codecov reports with a retry if it fails (optionally it can run grcov to generate a report to send)
-- [openapi](./cleanup) - Generates and uploads an [OpenAPI](https://spec.openapis.org/oas/latest.html) artifact
+- [codecov](./codecov) - Uploads codecov reports with a retry if it fails (optionally it can run grcov to generate a report to send)
+- [openapi](./openapi) - Generates and uploads an [OpenAPI](https://spec.openapis.org/oas/latest.html) artifact
 - [docker](./docker) - Generic Docker setup workflows
 - [generate-checksum](./generate-checksum/) - Generate a 512-bit `sha` hash of the uploaded artifacts
 - [check-jobs-status](./check-jobs-status/) - Check the result of every job parsed as input. Only succeeds if none of the given jobs have failed.
