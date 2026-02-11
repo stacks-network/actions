@@ -1,0 +1,8 @@
+stacks-signer/src/stacks_client.rs:191:9: replace StacksClient::get_current_reward_cycle -> Result<u64, ClientError> with Ok(1)
+stacks-signer/src/stacks_client.rs:191:9: replace StacksClient::get_current_reward_cycle -> Result<u64, ClientError> with Ok(0)
+stacks-signer/src/stacks_client.rs:404:9: replace StacksClient::pox_path -> String with String::new()
+stacks-signer/src/stacks_client.rs:404:9: replace StacksClient::pox_path -> String with "xyzzy".into()
+stacks-signer/src/stacks_client.rs:360:9: replace StacksClient::read_only_contract_call_with_retry -> Result<String, ClientError> with Ok(String::new())
+stacks-signer/src/stacks_client.rs:417:9: replace StacksClient::read_only_path -> String with "xyzzy".into()
+stacks-signer/src/stacks_client.rs:360:9: replace StacksClient::read_only_contract_call_with_retry -> Result<String, ClientError> with Ok("xyzzy".into())
+stacks-signer/src/stacks_client.rs:417:9: replace StacksClient::read_only_path -> String with String::new()

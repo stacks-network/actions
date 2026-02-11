@@ -1,0 +1,911 @@
+clarity/src/vm/database/clarity_db.rs:337:9: replace <impl HeadersDB for NullHeadersDB>::get_tokens_earned_for_block -> Option<u128> with Some(0)
+clarity/src/vm/types/mod.rs:1569:5: replace byte_len_of_serialization -> u64 with 1
+clarity/src/vm/contexts.rs:884:9: replace <impl CostTracker for Environment<'_, '_, '_>>::drop_memory with ()
+clarity/src/vm/ast/definition_sorter/mod.rs:426:9: replace Graph::has_node_descendants -> bool with true
+clarity/src/vm/database/structures.rs:628:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v3
+clarity/src/vm/test_util/mod.rs:276:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 1))
+clarity/src/vm/ast/parser/v1.rs:209:28: replace > with < in inner_lex
+clarity/src/vm/events.rs:208:9: replace STXBurnEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:73:9: replace ArithmeticOnlyChecker<'a>::check_contract_cost_eligible with ()
+clarity/src/vm/database/clarity_db.rs:915:34: replace < with > in ClarityDatabase<'a>::get_sortition_id_for_stacks_tip
+clarity/src/vm/events.rs:43:9: replace StacksTransactionEvent::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/test_util/mod.rs:257:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_rejection_fraction -> u64 with 0
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:174:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/structures.rs:782:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::extend_lock_v4
+clarity/src/vm/database/clarity_db.rs:224:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_start_height -> u32 with 0
+clarity/src/vm/database/structures.rs:1243:35: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:422:28: replace < with == in FunctionType::check_args_by_allowing_trait_cast_2_1
+clarity/src/vm/database/clarity_db.rs:343:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_block_height -> Option<u32> with Some(0)
+clarity/src/vm/database/clarity_db.rs:201:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v3_unlock_height -> u32 with 0
+clarity/src/vm/representations.rs:140:13: replace || with && in <impl StacksMessageCodec for ContractName>::consensus_deserialize
+clarity/src/vm/types/serialization.rs:1327:9: replace <impl StacksMessageCodec for Value>::consensus_serialize -> Result<(), codec_error> with Ok(())
+clarity/src/vm/database/structures.rs:1300:35: replace == with != in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/docs/mod.rs:2627:5: replace make_json_api_reference -> String with "xyzzy".into()
+clarity/src/vm/database/clarity_db.rs:735:9: replace ClarityDatabase<'a>::ustx_liquid_supply_key -> &'static str with ""
+clarity/src/vm/test_util/mod.rs:154:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_time_for_block -> Option<u64> with Some(0)
+clarity/src/vm/database/structures.rs:321:31: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/types/signatures.rs:458:26: replace > with == in ListTypeData::new_list
+clarity/src/vm/database/structures.rs:442:9: replace STXBalanceSnapshot<'db, 'conn>::debit with ()
+clarity/src/vm/ast/parser/v2/lexer/error.rs:37:9: replace <impl DiagnosableError for LexerError>::message -> String with "xyzzy".into()
+clarity/src/vm/database/clarity_db.rs:866:9: replace ClarityDatabase<'a>::get_current_burnchain_block_height -> u32 with 1
+clarity/src/vm/database/structures.rs:49:9: replace <impl ClarityDeserializable for String>::deserialize -> String with "xyzzy".into()
+clarity/src/vm/types/serialization.rs:1219:67: replace || with != in Value::sanitize_value
+clarity/src/vm/database/clarity_db.rs:343:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_block_height -> Option<u32> with None
+clarity/src/vm/costs/mod.rs:311:21: replace && with || in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/database/clarity_db.rs:282:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_header_hash_for_block -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/events.rs:157:9: replace STXTransferEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/analysis/types.rs:184:9: replace ContractAnalysis::get_persisted_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/costs/mod.rs:1235:34: replace > with < in ExecutionCost::exceeds
+clarity/src/vm/database/clarity_db.rs:827:9: replace ClarityDatabase<'a>::get_v1_unlock_height -> u32 with 0
+clarity/src/vm/database/sqlite.rs:154:9: replace SqliteConnection::has_entry -> bool with false
+clarity/src/vm/database/clarity_db.rs:853:45: replace >= with < in ClarityDatabase<'a>::get_v3_unlock_height
+clarity/src/vm/database/clarity_db.rs:317:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_height_for_block -> Option<u32> with Some(0)
+clarity/src/vm/types/signatures.rs:505:29: replace > with == in TypeSignature::new_response
+clarity/src/vm/database/structures.rs:1223:35: replace == with != in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/contexts.rs:481:9: replace AssetMap::get_fungible_tokens -> Option<u128> with Some(0)
+clarity/src/vm/database/structures.rs:1275:9: replace STXBalance::has_unlockable_tokens_at_burn_block -> bool with false
+clarity/src/vm/database/clarity_db.rs:263:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 1))
+clarity/src/vm/docs/contracts.rs:70:5: replace doc_execute -> Result<Option<Value>, vm::Error> with Ok(None)
+clarity/src/vm/database/structures.rs:452:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::credit
+clarity/src/vm/representations.rs:390:9: replace PreSymbolicExpression::match_placeholder -> Option<&str> with Some("")
+clarity/src/vm/tests/traits.rs:1531:5: replace test_pass_embedded_trait_to_subtrait_optional with ()
+clarity/src/vm/database/sqlite.rs:154:9: replace SqliteConnection::has_entry -> bool with true
+clarity/src/vm/database/clarity_db.rs:837:9: replace ClarityDatabase<'a>::get_pox_4_activation_height -> u32 with 0
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:70:26: replace == with != in Lexer<'a>::add_diagnostic
+clarity/src/vm/ast/definition_sorter/mod.rs:238:60: replace > with < in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/database/clarity_db.rs:395:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_4_activation_height -> u32 with 1
+clarity/src/vm/contexts.rs:1492:9: replace Environment<'a, 'b, 'hooks>::register_nft_mint_event -> Result<()> with Ok(())
+clarity/src/vm/types/serialization.rs:292:9: replace <impl StacksMessageCodec for PrincipalData>::consensus_serialize -> Result<(), codec_error> with Ok(())
+clarity/src/vm/analysis/errors.rs:209:9: replace CheckError::has_expression -> bool with false
+clarity/src/vm/test_util/mod.rs:203:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_block_height -> Option<u32> with Some(0)
+clarity/src/vm/database/structures.rs:1361:11: replace >= with < in STXBalance::can_transfer_at_burn_block
+clarity/src/vm/costs/mod.rs:536:65: replace != with == in load_cost_functions
+clarity/src/vm/types/signatures.rs:703:29: replace && with || in TypeSignature::admits_type_v2_1
+clarity/src/vm/test_util/mod.rs:192:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with None
+clarity/src/vm/database/clarity_db.rs:866:9: replace ClarityDatabase<'a>::get_current_burnchain_block_height -> u32 with 0
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:422:28: replace < with > in FunctionType::check_args_by_allowing_trait_cast_2_1
+clarity/src/vm/analysis/analysis_db.rs:85:9: replace AnalysisDatabase<'a>::has_contract -> bool with false
+clarity/src/vm/database/structures.rs:848:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::accelerate_unlock
+clarity/src/vm/database/clarity_db.rs:181:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with None
+clarity/src/vm/database/clarity_db.rs:1916:9: replace ClarityDatabase<'a>::make_key_for_account_stx_locked -> String with "xyzzy".into()
+clarity/src/vm/ast/parser/v1.rs:670:27: replace > with == in parse_lexed
+clarity/src/vm/database/structures.rs:773:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::extend_lock_v4
+clarity/src/vm/database/structures.rs:327:31: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/representations.rs:139:32: replace < with > in <impl StacksMessageCodec for ContractName>::consensus_deserialize
+clarity/src/vm/errors.rs:115:9: replace <impl PartialEq for IncomparableError<T>>::eq -> bool with false
+clarity/src/vm/database/structures.rs:1318:35: replace == with != in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/functions/crypto.rs:163:27: replace < with > in special_secp256k1_recover
+clarity/src/vm/analysis/types.rs:148:9: replace ContractAnalysis::add_fungible_token with ()
+clarity/src/vm/database/structures.rs:1257:35: replace == with != in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/contexts.rs:1971:24: replace && with == in CallStack::remove
+clarity/src/vm/representations.rs:513:9: replace SymbolicExpression::span -> &Span with &Default::default()
+clarity/src/vm/coverage.rs:171:9: replace CoverageReporter::register_src_file -> std::io::Result<()> with Ok(())
+clarity/src/vm/database/structures.rs:1118:9: replace STXBalance::get_locked_balance_at_burn_block -> (u128, u64) with (1, 0)
+clarity/src/vm/tests/traits.rs:1966:5: replace test_let_trait with ()
+clarity/src/vm/database/structures.rs:467:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v1
+clarity/src/vm/database/clarity_db.rs:1007:9: replace ClarityDatabase<'a>::get_miner_spend_total -> u128 with 1
+clarity/src/vm/database/structures.rs:505:9: replace STXBalanceSnapshot<'db, 'conn>::is_v2_locked -> bool with true
+clarity/src/vm/database/clarity_db.rs:205:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_3_activation_height -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:244:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_reward_cycle_length -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:240:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_prepare_length -> u32 with 0
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:170:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:337:9: replace <impl HeadersDB for NullHeadersDB>::get_tokens_earned_for_block -> Option<u128> with Some(1)
+clarity/src/vm/errors.rs:115:9: replace <impl PartialEq for IncomparableError<T>>::eq -> bool with true
+clarity/src/vm/tests/traits.rs:1039:5: replace test_dynamic_dispatch_pass_literal_principal_as_trait_in_user_defined_functions with ()
+clarity/src/vm/database/structures.rs:1304:35: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/contexts.rs:928:9: replace <impl CostTracker for GlobalContext<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(false)
+clarity/src/vm/types/signatures.rs:1155:54: replace > with == in TypeSignature::least_supertype_v2_0
+clarity/src/vm/coverage.rs:197:9: replace CoverageReporter::produce_lcov -> std::io::Result<()> with Ok(())
+clarity/src/vm/types/serialization.rs:104:9: replace <impl Error for SerializationError>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/types/mod.rs:960:43: replace && with == in Value::string_ascii_from_bytes
+clarity/src/vm/database/clarity_db.rs:1081:9: replace ClarityDatabase<'a>::insert_microblock_poison -> Result<()> with Ok(())
+clarity/src/vm/costs/mod.rs:1060:9: replace <impl CostTracker for &mut LimitedCostTracker>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/sqlite.rs:111:9: replace SqliteConnection::commit_metadata_to with ()
+clarity/src/vm/types/serialization.rs:255:9: replace PrincipalData::inner_consensus_serialize -> std::io::Result<()> with Ok(())
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:329:28: replace >= with < in FunctionType::principal_to_callable_type
+clarity/src/vm/costs/mod.rs:1205:9: replace ExecutionCost::add -> Result<()> with Ok(())
+clarity/src/vm/costs/mod.rs:836:9: replace LimitedCostTracker::get_memory_limit -> u64 with 0
+clarity/src/vm/types/signatures.rs:1805:23: replace > with == in TupleTypeSignature::inner_size
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![1]))
+clarity/src/vm/database/clarity_db.rs:337:9: replace <impl HeadersDB for NullHeadersDB>::get_tokens_earned_for_block -> Option<u128> with None
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![]))
+clarity/src/vm/database/clarity_db.rs:1018:25: replace == with != in ClarityDatabase<'a>::get_block_reward
+clarity/src/vm/database/structures.rs:514:9: replace STXBalanceSnapshot<'db, 'conn>::increase_lock_v2 with ()
+clarity/src/vm/analysis/errors.rs:269:9: replace <impl Error for CheckErrors>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/database/clarity_db.rs:205:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_3_activation_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:197:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v2_unlock_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:165:20: replace == with != in <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_height_for_block
+clarity/src/vm/test_util/mod.rs:260:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_start_height -> u32 with 1
+clarity/src/vm/clarity.rs:326:9: replace TransactionConnection::initialize_smart_contract -> Result<(AssetMap, Vec<StacksTransactionEvent>), Error> with Ok((Default::default(), vec![]))
+clarity/src/vm/contexts.rs:1474:9: replace Environment<'a, 'b, 'hooks>::register_nft_transfer_event -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:328:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(0)
+clarity/src/vm/tests/traits.rs:92:5: replace test_dynamic_dispatch_pass_trait_nested_in_let with ()
+clarity/src/vm/types/signatures.rs:1745:9: replace ListTypeData::type_size -> Option<u32> with Some(1)
+clarity/src/vm/test_util/mod.rs:266:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_sortition_id_from_consensus_hash -> Option<SortitionId> with None
+clarity/src/vm/database/clarity_db.rs:263:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 0))
+clarity/src/vm/costs/mod.rs:1029:9: replace <impl CostTracker for LimitedCostTracker>::short_circuit_contract_call -> Result<bool> with Ok(true)
+clarity/src/vm/representations.rs:140:36: replace > with == in <impl StacksMessageCodec for ContractName>::consensus_deserialize
+clarity/src/vm/contexts.rs:914:9: replace <impl CostTracker for GlobalContext<'_, '_>>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/test_util/mod.rs:146:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_stacks_block_header_hash_for_block -> Option<BlockHeaderHash> with None
+clarity/src/vm/version.rs:50:14: replace == with != in <impl FromStr for ClarityVersion>::from_str
+clarity/src/vm/tests/traits.rs:1747:5: replace test_pass_embedded_trait_to_subtrait_list with ()
+clarity/src/vm/ast/parser/v1.rs:110:5: replace get_lines_at -> Vec<usize> with vec![0]
+clarity/src/vm/contexts.rs:463:9: replace AssetMap::get_stx_burned -> Option<u128> with None
+clarity/src/vm/database/structures.rs:658:9: replace STXBalanceSnapshot<'db, 'conn>::extend_lock_v3 with ()
+clarity/src/vm/costs/mod.rs:154:9: replace <impl CostTracker for ()>::short_circuit_contract_call -> Result<bool> with Ok(true)
+clarity/src/vm/test_util/mod.rs:173:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_miner_address -> Option<StacksAddress> with None
+clarity/src/vm/test_util/mod.rs:146:20: replace == with != in <impl HeadersDB for UnitTestHeaderDB>::get_stacks_block_header_hash_for_block
+clarity/src/vm/contexts.rs:854:9: replace OwnedEnvironment<'a, 'hooks>::destruct -> Option<(ClarityDatabase<'a>, LimitedCostTracker)> with None
+clarity/src/vm/analysis/types.rs:144:9: replace ContractAnalysis::add_non_fungible_token with ()
+clarity/src/vm/database/structures.rs:797:9: replace STXBalanceSnapshot<'db, 'conn>::increase_lock_v4 with ()
+clarity/src/vm/database/clarity_db.rs:309:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_time_for_block -> Option<u64> with Some(0)
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![0]))
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![0]))
+clarity/src/vm/ast/parser/v1.rs:639:27: replace > with == in parse_lexed
+clarity/src/vm/contexts.rs:1839:13: replace || with != in ContractContext::is_name_used
+clarity/src/vm/contexts.rs:1838:13: replace || with != in ContractContext::is_name_used
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:105:9: replace <impl CostTracker for TypeChecker<'_, '_>>::reset_memory with ()
+clarity/src/vm/database/clarity_db.rs:1920:9: replace ClarityDatabase<'a>::make_key_for_account_unlock_height -> String with String::new()
+clarity/src/vm/costs/mod.rs:1057:9: replace <impl CostTracker for &mut LimitedCostTracker>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/coverage.rs:105:9: replace CoverageReporter::executable_lines -> Vec<u32> with vec![0]
+clarity/src/vm/analysis/type_checker/v2_1/natives/options.rs:363:29: replace || with != in check_special_match_resp
+clarity/src/vm/database/structures.rs:515:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::increase_lock_v2
+clarity/src/vm/database/structures.rs:684:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::increase_lock_v3
+clarity/src/vm/database/clarity_db.rs:407:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_rejection_fraction -> u64 with 0
+clarity/src/vm/contexts.rs:459:9: replace AssetMap::get_stx -> Option<u128> with None
+clarity/src/vm/database/structures.rs:426:9: replace STXBalanceSnapshot<'db, 'conn>::has_unlockable_tokens -> bool with false
+clarity/src/vm/tests/traits.rs:1465:5: replace test_embedded_trait with ()
+clarity/src/vm/tests/traits.rs:328:5: replace test_dynamic_dispatch_by_implementing_imported_trait_mul_funcs with ()
+clarity/src/vm/types/mod.rs:534:9: replace SequenceData::is_list -> bool with true
+clarity/src/vm/database/clarity_db.rs:328:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(1)
+clarity/src/vm/database/clarity_db.rs:181:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(1)
+clarity/src/vm/database/clarity_db.rs:1736:19: replace > with == in ClarityDatabase<'a>::checked_decrease_token_supply
+clarity/src/vm/database/clarity_db.rs:1045:9: replace ClarityDatabase<'a>::set_stx_btc_ops_processed with ()
+clarity/src/vm/costs/mod.rs:1235:34: replace > with == in ExecutionCost::exceeds
+clarity/src/vm/contexts.rs:858:9: replace OwnedEnvironment<'a, 'hooks>::add_eval_hook with ()
+clarity/src/vm/functions/options.rs:115:9: replace || with && in eval_with_new_binding
+clarity/src/vm/database/structures.rs:1184:9: replace STXBalance::was_locked_by_v2 -> bool with false
+clarity/src/vm/database/structures.rs:891:9: replace STXBalanceSnapshot<'db, 'conn>::unlock_available_tokens_if_any -> u128 with 0
+clarity/src/vm/contexts.rs:1509:9: replace Environment<'a, 'b, 'hooks>::register_nft_burn_event -> Result<()> with Ok(())
+clarity/src/vm/database/key_value_wrapper.rs:518:9: replace RollbackWrapper<'a>::has_entry -> bool with false
+clarity/src/vm/database/clarity_db.rs:178:9: replace <impl HeadersDB for &dyn HeadersDB>::get_miner_address -> Option<StacksAddress> with None
+clarity/src/vm/costs/mod.rs:154:9: replace <impl CostTracker for ()>::short_circuit_contract_call -> Result<bool> with Ok(false)
+clarity/src/vm/representations.rs:123:34: replace < with > in <impl StacksMessageCodec for ContractName>::consensus_serialize
+clarity/src/vm/database/structures.rs:668:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::extend_lock_v3
+clarity/src/vm/test_util/mod.rs:85:5: replace is_err_code -> bool with true
+clarity/src/vm/database/clarity_db.rs:298:20: replace == with != in <impl HeadersDB for NullHeadersDB>::get_stacks_block_header_hash_for_block
+clarity/src/vm/database/structures.rs:659:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::extend_lock_v3
+clarity/src/vm/database/structures.rs:773:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::extend_lock_v4
+clarity/src/vm/database/structures.rs:1118:9: replace STXBalance::get_locked_balance_at_burn_block -> (u128, u64) with (0, 1)
+clarity/src/vm/test_util/mod.rs:197:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_tokens_earned_for_block -> Option<u128> with Some(0)
+clarity/src/vm/database/clarity_db.rs:1040:9: replace ClarityDatabase<'a>::get_stx_btc_ops_processed -> u64 with 0
+clarity/src/vm/tests/contracts.rs:100:5: replace test_get_block_info_eval with ()
+clarity/src/vm/database/structures.rs:289:65: replace != with == in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:175:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:383:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v2_unlock_height -> u32 with 0
+clarity/src/vm/types/signatures.rs:1882:9: replace <impl Display for AssetIdentifier>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:67:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/events.rs:174:9: replace STXMintEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/analysis/types.rs:176:9: replace ContractAnalysis::get_map_type -> Option<&(TypeSignature, TypeSignature)> with None
+clarity/src/vm/types/signatures.rs:1746:23: replace > with == in ListTypeData::type_size
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:113:9: replace <impl CostTracker for TypeChecker<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(true)
+clarity/src/vm/ast/parser/v2/mod.rs:1111:5: replace parse_collect_diagnostics -> (Vec<PreSymbolicExpression>, Vec<Diagnostic>, bool) with (vec![], vec![], true)
+clarity/src/vm/representations.rs:124:13: replace || with && in <impl StacksMessageCodec for ContractName>::consensus_serialize
+clarity/src/vm/costs/mod.rs:1214:9: replace ExecutionCost::sub -> Result<()> with Ok(())
+clarity/src/vm/tests/traits.rs:455:5: replace test_dynamic_dispatch_including_nested_trait with ()
+clarity/src/vm/costs/mod.rs:1157:9: replace ExecutionCost::proportion_dot_product -> u64 with 1
+clarity/src/vm/database/clarity_db.rs:379:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v1_unlock_height -> u32 with 1
+clarity/src/vm/types/signatures.rs:1781:9: replace TupleTypeSignature::max_depth -> u8 with 0
+clarity/src/vm/database/clarity_store.rs:156:9: replace ClarityBackingStore::get_metadata_manual -> Result<Option<String>> with Ok(Some("xyzzy".into()))
+clarity/src/vm/database/structures.rs:735:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v4
+clarity/src/vm/database/clarity_db.rs:184:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(1)
+clarity/src/vm/coverage.rs:238:9: replace <impl EvalHook for CoverageReporter>::will_begin_eval with ()
+clarity/src/vm/tests/traits.rs:770:5: replace test_readwrite_violation_dynamic_dispatch with ()
+clarity/src/vm/database/clarity_db.rs:387:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v3_unlock_height -> u32 with 0
+clarity/src/vm/database/structures.rs:555:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::extend_lock_v2
+clarity/src/vm/types/signatures.rs:607:29: replace && with == in TypeSignature::admits_type_v2_0
+clarity/src/vm/costs/mod.rs:284:9: replace <impl Debug for LimitedCostTracker>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/serialization.rs:537:59: replace && with || in Value::deserialize_read_count
+clarity/src/vm/database/clarity_db.rs:334:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(0)
+clarity/src/vm/functions/options.rs:115:9: replace || with != in eval_with_new_binding
+clarity/src/vm/database/clarity_db.rs:996:9: replace ClarityDatabase<'a>::get_miner_spend_winner -> u128 with 0
+clarity/src/vm/representations.rs:240:9: replace PreSymbolicExpression::set_span with ()
+clarity/src/vm/database/clarity_db.rs:347:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_start_height -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:482:9: replace ClarityDatabase<'a>::put_with_size -> u64 with 1
+clarity/src/vm/tests/contracts.rs:1117:5: replace test_cc_trait_stack_depth with ()
+clarity/src/vm/database/structures.rs:289:54: replace && with || in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/database/structures.rs:1153:9: replace STXBalance::get_total_balance -> u128 with 0
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:68:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/contexts.rs:1545:9: replace Environment<'a, 'b, 'hooks>::register_ft_mint_event -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:343:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_block_height -> Option<u32> with Some(1)
+clarity/src/vm/ast/errors.rs:130:9: replace <impl Display for ParseError>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/events.rs:191:9: replace STXLockEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/database/structures.rs:848:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::accelerate_unlock
+clarity/src/vm/database/structures.rs:836:9: replace STXBalanceSnapshot<'db, 'conn>::is_v4_locked -> bool with true
+clarity/src/vm/tests/defines.rs:59:5: replace test_accept_options with ()
+clarity/src/vm/tests/traits.rs:37:5: replace test_dynamic_dispatch_by_defining_trait with ()
+clarity/src/vm/events.rs:334:9: replace FTBurnEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/test_util/mod.rs:241:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_3_activation_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:154:20: replace == with != in <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_time_for_block
+clarity/src/vm/docs/mod.rs:810:5: replace get_signature -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/types/signatures.rs:1104:34: replace == with != in TypeSignature::least_supertype_v2_0
+clarity/src/vm/test_util/mod.rs:197:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_tokens_earned_for_block -> Option<u128> with Some(1)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:102:9: replace <impl CostTracker for TypeChecker<'_, '_>>::drop_memory with ()
+clarity/src/vm/mod.rs:220:5: replace add_stack_trace with ()
+clarity/src/vm/tests/contracts.rs:1080:5: replace test_cc_stack_depth with ()
+clarity/src/vm/contexts.rs:459:9: replace AssetMap::get_stx -> Option<u128> with Some(0)
+clarity/src/vm/analysis/errors.rs:209:9: replace CheckError::has_expression -> bool with true
+clarity/src/vm/database/clarity_db.rs:325:9: replace <impl HeadersDB for NullHeadersDB>::get_miner_address -> Option<StacksAddress> with None
+clarity/src/vm/database/clarity_db.rs:801:9: replace ClarityDatabase<'a>::is_in_regtest -> bool with true
+clarity/src/vm/database/clarity_db.rs:184:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(0)
+clarity/src/vm/test_util/mod.rs:276:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 0))
+clarity/src/vm/contexts.rs:895:9: replace <impl CostTracker for Environment<'_, '_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(true)
+clarity/src/vm/database/structures.rs:1153:9: replace STXBalance::get_total_balance -> u128 with 1
+clarity/src/vm/tests/datamaps.rs:26:5: replace assert_executes with ()
+clarity/src/vm/tests/contracts.rs:161:5: replace test_contract_caller with ()
+clarity/src/vm/costs/mod.rs:1157:9: replace ExecutionCost::proportion_dot_product -> u64 with 0
+clarity/src/vm/database/structures.rs:1336:35: replace == with != in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/costs/mod.rs:106:9: replace <impl MemoryConsumer for Value>::get_memory_use -> u64 with 0
+clarity/src/vm/database/structures.rs:798:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::increase_lock_v4
+clarity/src/vm/test_util/mod.rs:260:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_start_height -> u32 with 0
+clarity/src/vm/costs/mod.rs:1089:9: replace <impl Display for ExecutionCost>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:795:9: replace <impl PartialEq for ListData>::eq -> bool with true
+clarity/src/vm/ast/parser/v2/mod.rs:123:26: replace == with != in Parser<'a>::add_diagnostic
+clarity/src/vm/database/clarity_db.rs:1991:9: replace ClarityDatabase<'a>::get_stacks_epoch -> Option<StacksEpoch> with None
+clarity/src/vm/database/clarity_db.rs:450:28: replace == with != in ClarityDatabase<'a>::is_stack_empty
+clarity/src/vm/functions/options.rs:116:9: replace || with != in eval_with_new_binding
+clarity/src/vm/callables.rs:120:9: replace <impl Display for FunctionIdentifier>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/lib.rs:109:5: replace version_string -> String with "xyzzy".into()
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:173:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:172:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_time_for_block -> Option<u64> with Some(0)
+clarity/src/vm/database/clarity_db.rs:187:9: replace <impl HeadersDB for &dyn HeadersDB>::get_tokens_earned_for_block -> Option<u128> with Some(1)
+clarity/src/vm/database/clarity_db.rs:1065:9: replace ClarityDatabase<'a>::insert_microblock_pubkey_hash_height -> Result<()> with Ok(())
+clarity/src/vm/costs/mod.rs:633:34: replace > with == in load_cost_functions
+clarity/src/vm/database/clarity_store.rs:156:9: replace ClarityBackingStore::get_metadata_manual -> Result<Option<String>> with Ok(Some(String::new()))
+clarity/src/vm/ast/parser/v1.rs:294:42: replace > with == in inner_lex
+clarity/src/vm/docs/contracts.rs:179:5: replace produce_docs_refs -> BTreeMap<String, ContractRef> with BTreeMap::new()
+clarity/src/vm/diagnostic.rs:57:9: replace Diagnostic::add_span with ()
+clarity/src/vm/database/clarity_db.rs:379:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v1_unlock_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:177:20: replace == with != in <impl HeadersDB for UnitTestHeaderDB>::get_consensus_hash_for_block
+clarity/src/vm/database/structures.rs:43:9: replace <impl ClaritySerializable for String>::serialize -> String with "xyzzy".into()
+clarity/src/vm/tests/contracts.rs:743:5: replace test_aborts with ()
+clarity/src/vm/database/clarity_db.rs:391:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_3_activation_height -> u32 with 0
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![1]))
+clarity/src/vm/test_util/mod.rs:192:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(1)
+clarity/src/vm/ast/parser/v2/lexer/token.rs:83:9: replace Token::reproduce -> String with "xyzzy".into()
+clarity/src/vm/types/signatures.rs:1700:9: replace TypeSignature::type_size -> Result<u32> with Ok(0)
+clarity/src/vm/types/signatures.rs:1737:23: replace > with == in ListTypeData::inner_size
+clarity/src/vm/types/mod.rs:257:9: replace SequenceData::element_size -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:172:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_time_for_block -> Option<u64> with Some(1)
+clarity/src/vm/costs/mod.rs:1029:9: replace <impl CostTracker for LimitedCostTracker>::short_circuit_contract_call -> Result<bool> with Ok(false)
+clarity/src/vm/database/key_value_wrapper.rs:97:5: replace rollback_check_pre_bottom_commit -> Vec<(T, String)> with vec![(Default::default(), "xyzzy".into())]
+clarity/src/vm/database/clarity_db.rs:1018:9: replace ClarityDatabase<'a>::get_block_reward -> Option<u128> with Some(0)
+clarity/src/vm/types/mod.rs:275:9: replace SequenceData::is_empty -> bool with true
+clarity/src/vm/database/clarity_db.rs:244:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_reward_cycle_length -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:362:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_header_hash -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/types/signatures.rs:1155:54: replace > with < in TypeSignature::least_supertype_v2_0
+clarity/src/vm/database/clarity_db.rs:236:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_stacks_epoch -> Option<StacksEpoch> with None
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:308:9: replace ContractInterfaceFungibleTokens::from_set -> Vec<Self> with vec![]
+clarity/src/vm/database/clarity_store.rs:69:9: replace ClarityBackingStore::has_entry -> bool with true
+clarity/src/vm/database/clarity_store.rs:69:9: replace ClarityBackingStore::has_entry -> bool with false
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:64:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/structures.rs:1118:9: replace STXBalance::get_locked_balance_at_burn_block -> (u128, u64) with (1, 1)
+clarity/src/vm/types/signatures.rs:861:9: replace TupleTypeSignature::is_empty -> bool with true
+clarity/src/vm/types/signatures.rs:607:29: replace && with || in TypeSignature::admits_type_v2_0
+clarity/src/vm/tests/traits.rs:653:5: replace test_reentrant_dynamic_dispatch with ()
+clarity/src/vm/functions/options.rs:116:9: replace || with && in eval_with_new_binding
+clarity/src/vm/ast/parser/v2/mod.rs:945:58: replace > with == in Parser<'a>::parse_node
+clarity/src/vm/database/clarity_db.rs:391:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_3_activation_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:977:9: replace ClarityDatabase<'a>::get_burnchain_block_height -> Option<u32> with Some(0)
+clarity/src/vm/database/structures.rs:1322:35: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/types/mod.rs:1045:9: replace Value::expect_i128 -> i128 with 1
+clarity/src/vm/ast/parser/v2/lexer/token.rs:83:9: replace Token::reproduce -> String with String::new()
+clarity/src/vm/contexts.rs:707:9: replace OwnedEnvironment<'a, 'hooks>::initialize_versioned_contract -> Result<((), AssetMap, Vec<StacksTransactionEvent>)> with Ok(((), Default::default(), vec![]))
+clarity/src/vm/database/structures.rs:564:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::extend_lock_v2
+clarity/src/vm/database/structures.rs:620:9: replace STXBalanceSnapshot<'db, 'conn>::lock_tokens_v3 with ()
+clarity/src/vm/contexts.rs:917:9: replace <impl CostTracker for GlobalContext<'_, '_>>::drop_memory with ()
+clarity/src/vm/costs/mod.rs:1074:9: replace <impl CostTracker for &mut LimitedCostTracker>::short_circuit_contract_call -> Result<bool> with Ok(false)
+clarity/src/vm/types/mod.rs:584:24: replace > with < in <impl Display for UTF8Data>::fmt
+clarity/src/vm/database/structures.rs:798:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::increase_lock_v4
+clarity/src/vm/database/clarity_db.rs:414:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with None
+clarity/src/vm/contexts.rs:920:9: replace <impl CostTracker for GlobalContext<'_, '_>>::reset_memory with ()
+clarity/src/vm/costs/mod.rs:830:9: replace LimitedCostTracker::get_memory -> u64 with 0
+clarity/src/vm/types/serialization.rs:80:9: replace <impl Display for SerializationError>::fmt -> std::fmt::Result with Ok(Default::default())
+clarity/src/vm/tests/traits.rs:393:5: replace test_dynamic_dispatch_by_importing_trait with ()
+clarity/src/vm/database/structures.rs:515:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::increase_lock_v2
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:99:9: replace <impl CostTracker for TypeChecker<'_, '_>>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/costs/mod.rs:308:33: replace == with != in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/database/clarity_db.rs:298:9: replace <impl HeadersDB for NullHeadersDB>::get_stacks_block_header_hash_for_block -> Option<BlockHeaderHash> with None
+clarity/src/vm/types/signatures.rs:910:9: replace FixedFunction::total_type_size -> Result<u64> with Ok(0)
+clarity/src/vm/ast/parser/v1.rs:110:5: replace get_lines_at -> Vec<usize> with vec![1]
+clarity/src/vm/database/sqlite.rs:73:5: replace sqlite_has_entry -> bool with true
+clarity/src/vm/representations.rs:485:9: replace SymbolicExpression::set_span with ()
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:69:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:399:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_prepare_length -> u32 with 0
+clarity/src/vm/test_util/mod.rs:249:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_prepare_length -> u32 with 0
+clarity/src/vm/costs/mod.rs:310:41: replace == with != in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/ast/parser/v2/mod.rs:774:27: replace > with == in Parser<'a>::read_sugared_principal
+clarity/src/vm/test_util/mod.rs:93:5: replace is_err_code_i128 -> bool with true
+clarity/src/vm/database/structures.rs:1198:9: replace STXBalance::has_locked_tokens_at_burn_block -> bool with false
+clarity/src/vm/database/clarity_db.rs:181:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(0)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:113:9: replace <impl CostTracker for TypeChecker<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(false)
+clarity/src/vm/database/clarity_db.rs:220:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_sortition_id_from_consensus_hash -> Option<SortitionId> with None
+clarity/src/vm/ast/mod.rs:70:17: replace >= with < in parse_in_epoch
+clarity/src/vm/costs/mod.rs:1238:33: replace > with < in ExecutionCost::exceeds
+clarity/src/vm/database/structures.rs:1002:9: replace STXBalance::debit_unlocked_amount with ()
+clarity/src/vm/contexts.rs:728:9: replace OwnedEnvironment<'a, 'hooks>::initialize_contract_from_ast -> Result<((), AssetMap, Vec<StacksTransactionEvent>)> with Ok(((), Default::default(), vec![]))
+clarity/src/vm/database/clarity_store.rs:228:9: replace <impl ClarityBackingStore for NullBackingStore>::get -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/costs/mod.rs:1010:9: replace <impl CostTracker for LimitedCostTracker>::drop_memory with ()
+clarity/src/vm/tests/traits.rs:827:5: replace test_bad_call_with_trait with ()
+clarity/src/vm/database/clarity_db.rs:821:9: replace ClarityDatabase<'a>::get_current_block_height -> u32 with 1
+clarity/src/vm/database/structures.rs:452:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::credit
+clarity/src/vm/database/clarity_db.rs:1106:9: replace ClarityDatabase<'a>::get_microblock_pubkey_hash_height -> Option<u32> with None
+clarity/src/vm/clarity.rs:228:9: replace TransactionConnection::save_analysis -> Result<(), CheckError> with Ok(())
+clarity/src/vm/test_util/mod.rs:257:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_rejection_fraction -> u64 with 1
+clarity/src/vm/database/clarity_db.rs:894:9: replace ClarityDatabase<'a>::get_block_time -> u64 with 0
+clarity/src/vm/ast/parser/v2/mod.rs:717:23: replace > with == in Parser<'a>::read_sugared_principal
+clarity/src/vm/database/clarity_store.rs:178:5: replace make_contract_hash_key -> String with String::new()
+clarity/src/vm/tests/traits.rs:539:5: replace test_dynamic_dispatch_mismatched_args with ()
+clarity/src/vm/database/structures.rs:621:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v3
+clarity/src/vm/database/clarity_db.rs:1912:9: replace ClarityDatabase<'a>::make_key_for_account_nonce -> String with "xyzzy".into()
+clarity/src/vm/contexts.rs:887:9: replace <impl CostTracker for Environment<'_, '_, '_>>::reset_memory with ()
+clarity/src/vm/costs/mod.rs:570:28: replace == with != in load_cost_functions
+clarity/src/vm/database/structures.rs:1209:35: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/ast/parser/v2/lexer/error.rs:37:9: replace <impl DiagnosableError for LexerError>::message -> String with String::new()
+clarity/src/vm/contexts.rs:1786:9: replace GlobalContext<'a, 'hooks>::destruct -> Option<(ClarityDatabase<'a>, LimitedCostTracker)> with None
+clarity/src/vm/types/signatures.rs:1129:53: replace > with < in TypeSignature::least_supertype_v2_0
+clarity/src/vm/contexts.rs:1431:9: replace Environment<'a, 'b, 'hooks>::register_print_event -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:354:9: replace <impl BurnStateDB for NullBurnStateDB>::get_sortition_id_from_consensus_hash -> Option<SortitionId> with None
+clarity/src/vm/types/mod.rs:1202:20: replace == with != in ListData::is_empty
+clarity/src/vm/database/key_value_wrapper.rs:262:9: replace RollbackWrapper<'a>::depth -> usize with 1
+clarity/src/vm/database/clarity_db.rs:240:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_prepare_length -> u32 with 1
+clarity/src/vm/analysis/errors.rs:444:9: replace <impl DiagnosableError for CheckErrors>::suggestion -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/test_util/mod.rs:229:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v1_unlock_height -> u32 with 1
+clarity/src/vm/ast/sugar_expander/mod.rs:128:52: replace == with != in SugarExpander::transform
+clarity/src/vm/tests/traits.rs:1819:5: replace test_pass_embedded_trait_to_subtrait_list_option with ()
+clarity/src/vm/database/structures.rs:836:9: replace STXBalanceSnapshot<'db, 'conn>::is_v4_locked -> bool with false
+clarity/src/vm/representations.rs:123:34: replace < with == in <impl StacksMessageCodec for ContractName>::consensus_serialize
+clarity/src/vm/ast/errors.rs:114:9: replace ParseError::has_pre_expression -> bool with false
+clarity/src/vm/types/signatures.rs:1758:9: replace TupleTypeSignature::type_size -> Option<u32> with Some(0)
+clarity/src/vm/ast/parser/v1.rs:649:27: replace > with == in parse_lexed
+clarity/src/vm/costs/mod.rs:309:41: replace == with != in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/database/structures.rs:921:9: replace STXBalance::unlock_height -> u64 with 0
+clarity/src/vm/database/structures.rs:467:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v1
+clarity/src/vm/costs/mod.rs:106:9: replace <impl MemoryConsumer for Value>::get_memory_use -> u64 with 1
+clarity/src/vm/database/clarity_db.rs:383:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v2_unlock_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:163:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_header_hash_for_block -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:171:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/tests/contracts.rs:686:5: replace test_simple_contract_call with ()
+clarity/src/vm/database/clarity_db.rs:735:9: replace ClarityDatabase<'a>::ustx_liquid_supply_key -> &'static str with "xyzzy"
+clarity/src/vm/database/structures.rs:1213:48: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/analysis/contract_interface_builder/mod.rs:319:9: replace ContractInterfaceNonFungibleTokens::from_map -> Vec<Self> with vec![]
+clarity/src/vm/tests/assets.rs:522:5: replace test_simple_token_system with ()
+clarity/src/vm/mod.rs:485:5: replace execute_on_network -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/test_util/mod.rs:140:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_vrf_seed_for_block -> Option<VRFSeed> with None
+clarity/src/vm/database/structures.rs:43:9: replace <impl ClaritySerializable for String>::serialize -> String with String::new()
+clarity/src/vm/costs/mod.rs:718:9: replace LimitedCostTracker::default_cost_contract_for_epoch -> String with "xyzzy".into()
+clarity/src/vm/tests/assets.rs:139:5: replace test_native_stx_ops with ()
+clarity/src/vm/database/structures.rs:722:9: replace STXBalanceSnapshot<'db, 'conn>::is_v3_locked -> bool with false
+clarity/src/vm/analysis/errors.rs:218:9: replace CheckError::set_expressions with ()
+clarity/src/vm/database/sqlite.rs:122:9: replace SqliteConnection::drop_metadata with ()
+clarity/src/vm/contexts.rs:1880:9: replace LocalContext<'a>::depth -> u16 with 1
+clarity/src/vm/database/clarity_db.rs:544:9: replace ClarityDatabase<'a>::get_with_proof -> Option<(T, Vec<u8>)> with None
+clarity/src/vm/tests/contracts.rs:993:5: replace test_at_unknown_block with ()
+clarity/src/vm/database/clarity_db.rs:317:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_height_for_block -> Option<u32> with Some(1)
+clarity/src/vm/ast/parser/v1.rs:670:27: replace > with < in parse_lexed
+clarity/src/vm/costs/mod.rs:1234:9: replace ExecutionCost::exceeds -> bool with false
+clarity/src/vm/contexts.rs:1836:13: replace || with != in ContractContext::is_name_used
+clarity/src/vm/database/sqlite.rs:193:9: replace SqliteConnection::check_schema -> Result<()> with Ok(())
+clarity/src/vm/costs/mod.rs:981:34: replace == with != in <impl CostTracker for LimitedCostTracker>::compute_cost
+clarity/src/vm/database/structures.rs:970:9: replace STXBalance::amount_locked -> u128 with 0
+clarity/src/vm/database/structures.rs:311:30: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/types/signatures.rs:921:9: replace FunctionSignature::total_type_size -> Result<u64> with Ok(0)
+clarity/src/vm/costs/mod.rs:1066:9: replace <impl CostTracker for &mut LimitedCostTracker>::reset_memory with ()
+clarity/src/vm/database/key_value_wrapper.rs:230:9: replace RollbackWrapper<'a>::get_cc_special_cases_handler -> Option<SpecialCaseHandler> with None
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with None
+clarity/src/vm/types/mod.rs:1027:9: replace Value::expect_ascii -> String with String::new()
+clarity/src/vm/database/clarity_db.rs:843:9: replace ClarityDatabase<'a>::get_v2_unlock_height -> u32 with 0
+clarity/src/vm/contexts.rs:1562:9: replace Environment<'a, 'b, 'hooks>::register_ft_burn_event -> Result<()> with Ok(())
+clarity/src/vm/types/mod.rs:801:9: replace <impl PartialEq for TupleData>::eq -> bool with true
+clarity/src/vm/contexts.rs:504:9: replace <impl Display for AssetMap>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:176:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/tests/assets.rs:822:5: replace test_total_supply with ()
+clarity/src/vm/types/signatures.rs:503:21: replace > with == in TypeSignature::new_response
+clarity/src/vm/callables.rs:371:9: replace DefinedFunction::get_span -> Span with Default::default()
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:173:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/tests/traits.rs:2027:5: replace test_let3_trait with ()
+clarity/src/vm/mod.rs:168:43: replace || with != in lookup_variable
+clarity/src/vm/version.rs:16:9: replace <impl Display for ClarityVersion>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/database/clarity_db.rs:224:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_start_height -> u32 with 1
+clarity/src/vm/database/structures.rs:742:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v4
+clarity/src/vm/version.rs:52:21: replace == with != in <impl FromStr for ClarityVersion>::from_str
+clarity/src/vm/functions/mod.rs:773:21: replace >= with < in special_as_contract
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:63:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:175:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_height_for_block -> Option<u32> with Some(1)
+clarity/src/vm/types/mod.rs:1045:9: replace Value::expect_i128 -> i128 with 0
+clarity/src/vm/contexts.rs:481:9: replace AssetMap::get_fungible_tokens -> Option<u128> with Some(1)
+clarity/src/vm/clarity.rs:28:9: replace <impl Display for Error>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/signatures.rs:1745:9: replace ListTypeData::type_size -> Option<u32> with Some(0)
+clarity/src/vm/database/clarity_db.rs:387:9: replace <impl BurnStateDB for NullBurnStateDB>::get_v3_unlock_height -> u32 with 1
+clarity/src/vm/analysis/errors.rs:263:9: replace <impl Error for CheckError>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/contexts.rs:467:9: replace AssetMap::get_stx_burned_total -> u128 with 1
+clarity/src/vm/database/structures.rs:1240:35: replace == with != in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/database/clarity_db.rs:1977:9: replace ClarityDatabase<'a>::set_account_nonce with ()
+clarity/src/vm/contexts.rs:1831:9: replace ContractContext::is_explicitly_implementing_trait -> bool with false
+clarity/src/vm/tests/contracts.rs:296:5: replace test_tx_sponsor with ()
+clarity/src/vm/database/structures.rs:443:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::debit
+clarity/src/vm/database/clarity_store.rs:320:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_open_chain_tip_height -> u32 with 0
+clarity/src/vm/ast/errors.rs:123:9: replace ParseError::set_pre_expressions with ()
+clarity/src/vm/database/structures.rs:1308:48: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/functions/principals.rs:53:9: replace || with != in version_matches_current_network
+clarity/src/vm/test_util/mod.rs:165:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_height_for_block -> Option<u32> with None
+clarity/src/vm/database/clarity_db.rs:187:9: replace <impl HeadersDB for &dyn HeadersDB>::get_tokens_earned_for_block -> Option<u128> with None
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![]))
+clarity/src/vm/contexts.rs:492:9: replace AssetMap::get_nonfungible_tokens -> Option<&Vec<Value>> with None
+clarity/src/vm/types/signatures.rs:434:16: replace > with == in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/database/clarity_db.rs:1040:9: replace ClarityDatabase<'a>::get_stx_btc_ops_processed -> u64 with 1
+clarity/src/vm/costs/mod.rs:1200:9: replace ExecutionCost::add_runtime -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:193:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v1_unlock_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:154:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_time_for_block -> Option<u64> with Some(1)
+clarity/src/vm/database/clarity_db.rs:482:9: replace ClarityDatabase<'a>::put_with_size -> u64 with 0
+clarity/src/vm/database/clarity_db.rs:843:9: replace ClarityDatabase<'a>::get_v2_unlock_height -> u32 with 1
+clarity/src/vm/costs/mod.rs:818:9: replace LimitedCostTracker::set_total with ()
+clarity/src/vm/database/clarity_db.rs:1007:25: replace == with != in ClarityDatabase<'a>::get_miner_spend_total
+clarity/src/vm/types/mod.rs:1493:9: replace TupleData::is_empty -> bool with true
+clarity/src/vm/database/structures.rs:554:9: replace STXBalanceSnapshot<'db, 'conn>::extend_lock_v2 with ()
+clarity/src/vm/database/clarity_store.rs:252:9: replace <impl ClarityBackingStore for NullBackingStore>::get_current_block_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:192:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(0)
+clarity/src/vm/database/clarity_db.rs:1072:9: replace ClarityDatabase<'a>::get_cc_special_cases_handler -> Option<SpecialCaseHandler> with None
+clarity/src/vm/ast/parser/v1.rs:659:27: replace > with < in parse_lexed
+clarity/src/vm/database/clarity_db.rs:172:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_time_for_block -> Option<u64> with None
+clarity/src/vm/database/clarity_db.rs:666:9: replace ClarityDatabase<'a>::load_contract_analysis -> Option<ContractAnalysis> with None
+clarity/src/vm/types/serialization.rs:1340:9: replace <impl Hash for Value>::hash with ()
+clarity/src/vm/database/clarity_store.rs:156:9: replace ClarityBackingStore::get_metadata_manual -> Result<Option<String>> with Ok(None)
+clarity/src/vm/database/clarity_db.rs:309:20: replace == with != in <impl HeadersDB for NullHeadersDB>::get_burn_block_time_for_block
+clarity/src/vm/contexts.rs:1527:9: replace Environment<'a, 'b, 'hooks>::register_ft_transfer_event -> Result<()> with Ok(())
+clarity/src/vm/representations.rs:85:34: replace > with < in <impl StacksMessageCodec for ClarityName>::consensus_serialize
+clarity/src/vm/costs/mod.rs:310:21: replace && with || in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/database/structures.rs:621:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v3
+clarity/src/vm/database/clarity_db.rs:787:9: replace ClarityDatabase<'a>::decrement_ustx_liquid_supply -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_db.rs:1007:9: replace ClarityDatabase<'a>::get_miner_spend_total -> u128 with 0
+clarity/src/vm/test_util/mod.rs:203:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_block_height -> Option<u32> with Some(1)
+clarity/src/vm/ast/errors.rs:297:9: replace <impl DiagnosableError for ParseErrors>::suggestion -> Option<String> with None
+clarity/src/vm/contexts.rs:463:9: replace AssetMap::get_stx_burned -> Option<u128> with Some(0)
+clarity/src/vm/analysis/errors.rs:444:9: replace <impl DiagnosableError for CheckErrors>::suggestion -> Option<String> with Some(String::new())
+clarity/src/vm/tests/traits.rs:1894:5: replace test_pass_embedded_trait_to_subtrait_option_list with ()
+clarity/src/vm/analysis/read_only_checker/mod.rs:412:58: replace && with == in ReadOnlyChecker<'a, 'b>::check_native_function_is_read_only
+clarity/src/vm/database/clarity_db.rs:175:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_height_for_block -> Option<u32> with Some(0)
+clarity/src/vm/database/clarity_store.rs:256:9: replace <impl ClarityBackingStore for NullBackingStore>::put_all with ()
+clarity/src/vm/types/serialization.rs:1171:9: replace <impl Write for WriteCounter>::flush -> std::io::Result<()> with Ok(())
+clarity/src/vm/tests/traits.rs:1292:5: replace test_return_trait_with_contract_of_wrapped_in_let with ()
+clarity/src/vm/database/clarity_db.rs:977:9: replace ClarityDatabase<'a>::get_burnchain_block_height -> Option<u32> with Some(1)
+clarity/src/vm/costs/mod.rs:1236:13: replace || with && in ExecutionCost::exceeds
+clarity/src/vm/types/mod.rs:1375:9: replace <impl Display for CallableData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/mod.rs:1302:9: replace PrincipalData::version -> u8 with 0
+clarity/src/vm/database/structures.rs:505:9: replace STXBalanceSnapshot<'db, 'conn>::is_v2_locked -> bool with false
+clarity/src/vm/database/clarity_db.rs:403:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_reward_cycle_length -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:306:9: replace <impl HeadersDB for NullHeadersDB>::get_consensus_hash_for_block -> Option<ConsensusHash> with None
+clarity/src/vm/database/key_value_wrapper.rs:521:36: replace && with || in RollbackWrapper<'a>::has_entry
+clarity/src/vm/ast/parser/v2/mod.rs:639:31: replace > with == in Parser<'a>::read_principal
+clarity/src/vm/database/structures.rs:891:9: replace STXBalanceSnapshot<'db, 'conn>::unlock_available_tokens_if_any -> u128 with 1
+clarity/src/vm/types/signatures.rs:861:9: replace TupleTypeSignature::is_empty -> bool with false
+clarity/src/vm/database/clarity_db.rs:552:9: replace ClarityDatabase<'a>::make_key_for_trip -> String with "xyzzy".into()
+clarity/src/vm/costs/mod.rs:739:9: replace TrackerData::load_costs -> Result<()> with Ok(())
+clarity/src/vm/events.rs:250:9: replace NFTMintEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/database/clarity_db.rs:751:9: replace ClarityDatabase<'a>::set_clarity_epoch_version with ()
+clarity/src/vm/types/mod.rs:1072:9: replace Value::expect_list -> Vec<Value> with vec![]
+clarity/src/vm/database/structures.rs:466:9: replace STXBalanceSnapshot<'db, 'conn>::lock_tokens_v1 with ()
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with None
+clarity/src/vm/test_util/mod.rs:233:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v2_unlock_height -> u32 with 0
+clarity/src/vm/representations.rs:140:36: replace > with < in <impl StacksMessageCodec for ContractName>::consensus_deserialize
+clarity/src/vm/costs/mod.rs:938:5: replace add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/types/signatures.rs:71:9: replace AssetIdentifier::sugared -> String with "xyzzy".into()
+clarity/src/vm/test_util/mod.rs:154:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_time_for_block -> Option<u64> with None
+clarity/src/vm/tests/principals.rs:141:5: replace test_simple_is_standard_mainnet_cases with ()
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![0]))
+clarity/src/vm/database/clarity_db.rs:414:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 0))
+clarity/src/vm/database/clarity_db.rs:837:9: replace ClarityDatabase<'a>::get_pox_4_activation_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:1985:9: replace ClarityDatabase<'a>::get_burn_block_height -> Option<u32> with None
+clarity/src/vm/functions/principals.rs:278:34: replace < with == in special_principal_construct
+clarity/src/vm/database/clarity_db.rs:251:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_stacks_epoch_by_epoch_id -> Option<StacksEpoch> with None
+clarity/src/vm/analysis/errors.rs:213:9: replace CheckError::set_expression with ()
+clarity/src/vm/ast/parser/v2/mod.rs:168:9: replace Parser<'a>::skip_to_end with ()
+clarity/src/vm/database/clarity_db.rs:832:9: replace ClarityDatabase<'a>::get_pox_3_activation_height -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:1972:9: replace ClarityDatabase<'a>::get_account_nonce -> u64 with 1
+clarity/src/vm/analysis/read_only_checker/mod.rs:450:54: replace && with == in ReadOnlyChecker<'a, 'b>::check_expression_application_is_read_only
+clarity/src/vm/contexts.rs:911:9: replace <impl CostTracker for GlobalContext<'_, '_>>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/clarity_db.rs:328:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with None
+clarity/src/vm/database/clarity_db.rs:853:9: replace ClarityDatabase<'a>::get_v3_unlock_height -> u32 with 0
+clarity/src/vm/costs/mod.rs:309:21: replace && with || in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/contexts.rs:1460:9: replace Environment<'a, 'b, 'hooks>::register_stx_burn_event -> Result<()> with Ok(())
+clarity/src/vm/test_util/mod.rs:245:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_4_activation_height -> u32 with 1
+clarity/src/vm/database/structures.rs:1198:9: replace STXBalance::has_locked_tokens_at_burn_block -> bool with true
+clarity/src/vm/test_util/mod.rs:249:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_prepare_length -> u32 with 1
+clarity/src/vm/ast/parser/v2/mod.rs:1111:5: replace parse_collect_diagnostics -> (Vec<PreSymbolicExpression>, Vec<Diagnostic>, bool) with (vec![], vec![], false)
+clarity/src/vm/costs/mod.rs:1223:9: replace ExecutionCost::multiply -> Result<()> with Ok(())
+clarity/src/vm/database/structures.rs:1290:48: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/database/clarity_db.rs:166:9: replace <impl HeadersDB for &dyn HeadersDB>::get_consensus_hash_for_block -> Option<ConsensusHash> with None
+clarity/src/vm/test_util/mod.rs:245:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_4_activation_height -> u32 with 0
+clarity/src/vm/ast/errors.rs:118:9: replace ParseError::set_pre_expression with ()
+clarity/src/vm/database/clarity_db.rs:248:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_rejection_fraction -> u64 with 1
+clarity/src/vm/types/signatures.rs:1758:9: replace TupleTypeSignature::type_size -> Option<u32> with Some(1)
+clarity/src/vm/costs/mod.rs:955:17: replace > with < in add_memory
+clarity/src/vm/database/structures.rs:580:9: replace STXBalanceSnapshot<'db, 'conn>::lock_tokens_v2 with ()
+clarity/src/vm/database/clarity_db.rs:450:9: replace ClarityDatabase<'a>::is_stack_empty -> bool with true
+clarity/src/vm/test_util/mod.rs:165:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_height_for_block -> Option<u32> with Some(1)
+clarity/src/vm/representations.rs:139:32: replace < with == in <impl StacksMessageCodec for ContractName>::consensus_deserialize
+clarity/src/vm/representations.rs:98:21: replace > with == in <impl StacksMessageCodec for ClarityName>::consensus_deserialize
+clarity/src/vm/tests/assets.rs:986:5: replace test_simple_naming_system with ()
+clarity/src/vm/contexts.rs:1990:9: replace CallStack::make_stack_trace -> StackTrace with Default::default()
+clarity/src/vm/database/clarity_store.rs:248:9: replace <impl ClarityBackingStore for NullBackingStore>::get_open_chain_tip_height -> u32 with 0
+clarity/src/vm/costs/mod.rs:955:17: replace > with == in add_memory
+clarity/src/vm/database/structures.rs:1286:35: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/types/signatures.rs:1129:53: replace > with == in TypeSignature::least_supertype_v2_0
+clarity/src/vm/types/serialization.rs:1219:67: replace || with == in Value::sanitize_value
+clarity/src/vm/tests/traits.rs:1675:5: replace test_pass_embedded_trait_to_subtrait_err with ()
+clarity/src/vm/database/structures.rs:1275:9: replace STXBalance::has_unlockable_tokens_at_burn_block -> bool with true
+clarity/src/vm/costs/mod.rs:1004:9: replace <impl CostTracker for LimitedCostTracker>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/clarity_db.rs:599:9: replace ClarityDatabase<'a>::get_contract_src -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/database/key_value_wrapper.rs:521:36: replace && with != in RollbackWrapper<'a>::has_entry
+clarity/src/vm/types/signatures.rs:921:9: replace FunctionSignature::total_type_size -> Result<u64> with Ok(1)
+clarity/src/vm/database/clarity_db.rs:399:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_prepare_length -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:853:9: replace ClarityDatabase<'a>::get_v3_unlock_height -> u32 with 1
+clarity/src/vm/ast/errors.rs:174:9: replace <impl DiagnosableError for ParseErrors>::message -> String with "xyzzy".into()
+clarity/src/vm/types/mod.rs:1488:9: replace TupleData::len -> u64 with 0
+clarity/src/vm/ast/parser/v2/mod.rs:813:25: replace || with != in Parser<'a>::parse_node
+clarity/src/vm/database/clarity_db.rs:996:9: replace ClarityDatabase<'a>::get_miner_spend_winner -> u128 with 1
+clarity/src/vm/costs/mod.rs:1074:9: replace <impl CostTracker for &mut LimitedCostTracker>::short_circuit_contract_call -> Result<bool> with Ok(true)
+clarity/src/vm/ast/errors.rs:114:9: replace ParseError::has_pre_expression -> bool with true
+clarity/src/vm/representations.rs:124:38: replace > with < in <impl StacksMessageCodec for ContractName>::consensus_serialize
+clarity/src/vm/contexts.rs:878:9: replace <impl CostTracker for Environment<'_, '_, '_>>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/costs/mod.rs:311:47: replace == with != in <impl PartialEq for LimitedCostTracker>::eq
+clarity/src/vm/database/structures.rs:1118:9: replace STXBalance::get_locked_balance_at_burn_block -> (u128, u64) with (0, 0)
+clarity/src/vm/costs/mod.rs:1141:9: replace ExecutionCost::proportion_largest_dimension -> u64 with 0
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:108:9: replace <impl CostTracker for TypeChecker<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(false)
+clarity/src/vm/database/structures.rs:921:9: replace STXBalance::unlock_height -> u64 with 1
+clarity/src/vm/costs/mod.rs:1141:9: replace ExecutionCost::proportion_largest_dimension -> u64 with 1
+clarity/src/vm/database/clarity_db.rs:867:51: replace == with != in ClarityDatabase<'a>::get_current_burnchain_block_height
+clarity/src/vm/test_util/mod.rs:165:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_block_height_for_block -> Option<u32> with Some(0)
+clarity/src/vm/database/clarity_db.rs:1018:9: replace ClarityDatabase<'a>::get_block_reward -> Option<u128> with None
+clarity/src/vm/events.rs:225:9: replace NFTTransferEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/tests/traits.rs:966:5: replace test_good_call_2_with_trait with ()
+clarity/src/vm/database/structures.rs:1180:9: replace STXBalance::was_locked_by_v1 -> bool with false
+clarity/src/vm/database/structures.rs:1180:9: replace STXBalance::was_locked_by_v1 -> bool with true
+clarity/src/vm/contexts.rs:881:9: replace <impl CostTracker for Environment<'_, '_, '_>>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/costs/mod.rs:1234:9: replace ExecutionCost::exceeds -> bool with true
+clarity/src/vm/tests/contracts.rs:891:5: replace test_factorial_contract with ()
+clarity/src/vm/tests/traits.rs:1103:5: replace test_contract_of_value with ()
+clarity/src/vm/tests/sequences.rs:1161:5: replace test_construct_bad_list with ()
+clarity/src/vm/ast/parser/v1.rs:110:5: replace get_lines_at -> Vec<usize> with vec![]
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:66:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/sqlite.rs:73:5: replace sqlite_has_entry -> bool with false
+clarity/src/vm/database/key_value_wrapper.rs:421:9: replace RollbackWrapper<'a>::get_current_block_height -> u32 with 1
+clarity/src/vm/mod.rs:549:5: replace execute_against_version -> Result<Option<Value>> with Ok(None)
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![1]))
+clarity/src/vm/docs/mod.rs:2627:5: replace make_json_api_reference -> String with String::new()
+clarity/src/vm/database/clarity_store.rs:228:9: replace <impl ClarityBackingStore for NullBackingStore>::get -> Option<String> with Some(String::new())
+clarity/src/vm/test_util/mod.rs:253:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_reward_cycle_length -> u32 with 1
+clarity/src/vm/database/structures.rs:1326:48: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/database/clarity_db.rs:1057:9: replace ClarityDatabase<'a>::make_microblock_poison_key -> String with "xyzzy".into()
+clarity/src/vm/types/mod.rs:1202:9: replace ListData::is_empty -> bool with true
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:96:9: replace <impl CostTracker for TypeChecker<'_, '_>>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/key_value_wrapper.rs:175:9: replace RollbackWrapperPersistedLog::nest with ()
+clarity/src/vm/types/serialization.rs:1247:64: replace || with != in Value::sanitize_value
+clarity/src/vm/database/clarity_db.rs:201:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v3_unlock_height -> u32 with 1
+clarity/src/vm/test_util/mod.rs:130:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burn_header_hash_for_block -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/database/clarity_db.rs:160:9: replace <impl HeadersDB for &dyn HeadersDB>::get_stacks_block_header_hash_for_block -> Option<BlockHeaderHash> with None
+clarity/src/vm/costs/mod.rs:836:9: replace LimitedCostTracker::get_memory_limit -> u64 with 1
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:91:9: replace <impl CostTracker for TypeChecker<'_, '_>>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/clarity.rs:43:9: replace <impl Error for Error>::cause -> Option<&dyn std::error::Error> with None
+clarity/src/vm/types/serialization.rs:557:35: replace > with == in Value::deserialize_read_count
+clarity/src/vm/database/clarity_db.rs:317:20: replace == with != in <impl HeadersDB for NullHeadersDB>::get_burn_block_height_for_block
+clarity/src/vm/contexts.rs:459:9: replace AssetMap::get_stx -> Option<u128> with Some(1)
+clarity/src/vm/database/clarity_db.rs:1026:64: replace >= with < in ClarityDatabase<'a>::get_block_reward
+clarity/src/vm/database/structures.rs:734:9: replace STXBalanceSnapshot<'db, 'conn>::lock_tokens_v4 with ()
+clarity/src/vm/representations.rs:390:9: replace PreSymbolicExpression::match_placeholder -> Option<&str> with Some("xyzzy")
+clarity/src/vm/tests/contracts.rs:459:5: replace test_simple_naming_system with ()
+clarity/src/vm/database/structures.rs:683:9: replace STXBalanceSnapshot<'db, 'conn>::increase_lock_v3 with ()
+clarity/src/vm/test_util/mod.rs:95:54: replace && with || in is_err_code_i128
+clarity/src/vm/types/mod.rs:555:9: replace <impl Debug for CharType>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/types/signatures.rs:1700:9: replace TypeSignature::type_size -> Result<u32> with Ok(1)
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![1]))
+clarity/src/vm/database/structures.rs:555:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::extend_lock_v2
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:65:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:1119:9: replace ClarityDatabase<'a>::get_microblock_poison_report -> Option<(StandardPrincipalData, u16)> with None
+clarity/src/vm/database/clarity_db.rs:197:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v2_unlock_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:450:9: replace ClarityDatabase<'a>::is_stack_empty -> bool with false
+clarity/src/vm/types/mod.rs:1569:5: replace byte_len_of_serialization -> u64 with 0
+clarity/src/vm/tests/traits.rs:1235:5: replace test_return_trait_with_contract_of_wrapped_in_begin with ()
+clarity/src/vm/database/key_value_wrapper.rs:97:5: replace rollback_check_pre_bottom_commit -> Vec<(T, String)> with vec![]
+clarity/src/vm/ast/parser/v2/lexer/error.rs:68:9: replace <impl DiagnosableError for LexerError>::suggestion -> Option<String> with None
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:100:9: replace <impl CostTracker for TypeChecker<'_, '_>>::reset_memory with ()
+clarity/src/vm/database/structures.rs:1356:9: replace STXBalance::can_transfer_at_burn_block -> bool with false
+clarity/src/vm/database/structures.rs:940:9: replace STXBalance::effective_unlock_height -> u64 with 0
+clarity/src/vm/costs/mod.rs:166:9: replace <impl Display for ClarityCostFunctionReference>::fmt -> ::std::fmt::Result with Ok(Default::default())
+clarity/src/vm/costs/mod.rs:536:25: replace || with && in load_cost_functions
+clarity/src/vm/database/clarity_db.rs:414:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with Some((vec![], 1))
+clarity/src/vm/database/structures.rs:1184:9: replace STXBalance::was_locked_by_v2 -> bool with true
+clarity/src/vm/costs/mod.rs:535:55: replace == with != in load_cost_functions
+clarity/src/vm/callables.rs:106:5: replace cost_input_sized_vararg -> Result<u64> with Ok(1)
+clarity/src/vm/database/structures.rs:414:9: replace STXBalanceSnapshot<'db, 'conn>::has_locked_tokens -> bool with true
+clarity/src/vm/coverage.rs:105:9: replace CoverageReporter::executable_lines -> Vec<u32> with vec![1]
+clarity/src/vm/database/clarity_db.rs:309:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_time_for_block -> Option<u64> with Some(1)
+clarity/src/vm/ast/errors.rs:142:9: replace <impl Error for ParseError>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/types/signatures.rs:1939:9: replace <impl Display for FunctionArg>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/database/structures.rs:49:9: replace <impl ClarityDeserializable for String>::deserialize -> String with String::new()
+clarity/src/vm/tests/assets.rs:936:5: replace test_overlapping_nfts with ()
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:68:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/database/structures.rs:276:30: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/database/structures.rs:1188:9: replace STXBalance::was_locked_by_v3 -> bool with true
+clarity/src/vm/types/mod.rs:1269:9: replace <impl Debug for BuffData>::fmt -> fmt::Result with Ok(Default::default())
+clarity/src/vm/costs/mod.rs:1237:32: replace > with == in ExecutionCost::exceeds
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:347:18: replace > with == in FunctionType::clarity2_principal_to_callable_type
+clarity/src/vm/database/key_value_wrapper.rs:85:5: replace rollback_edits_push with ()
+clarity/src/vm/mod.rs:289:49: replace >= with < in apply
+clarity/src/vm/database/clarity_db.rs:407:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_rejection_fraction -> u64 with 1
+clarity/src/vm/types/serialization.rs:589:28: replace > with == in Value::inner_deserialize_read
+clarity/src/vm/functions/sequences.rs:139:36: replace > with == in special_map
+clarity/src/vm/contracts.rs:58:9: replace Contract::canonicalize_types with ()
+clarity/src/vm/database/clarity_db.rs:187:9: replace <impl HeadersDB for &dyn HeadersDB>::get_tokens_earned_for_block -> Option<u128> with Some(0)
+clarity/src/vm/database/structures.rs:1282:35: replace == with != in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/test_util/mod.rs:229:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v1_unlock_height -> u32 with 0
+clarity/src/vm/database/structures.rs:1226:35: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/ast/definition_sorter/mod.rs:259:60: replace == with != in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/tests/contracts.rs:248:5: replace tx_sponsor_contract_asserts with ()
+clarity/src/vm/test_util/mod.rs:87:54: replace && with || in is_err_code
+clarity/src/vm/ast/parser/v1.rs:265:42: replace > with == in inner_lex
+clarity/src/vm/database/clarity_db.rs:375:9: replace <impl BurnStateDB for NullBurnStateDB>::get_stacks_epoch_by_epoch_id -> Option<StacksEpoch> with None
+clarity/src/vm/costs/mod.rs:272:9: replace LimitedCostTracker::cost_function_references -> HashMap<&'static ClarityCostFunction, ClarityCostFunctionReference> with HashMap::new()
+clarity/src/vm/database/clarity_db.rs:184:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with None
+clarity/src/vm/ast/types.rs:64:9: replace ContractAST::add_implemented_trait with ()
+clarity/src/lib.rs:109:5: replace version_string -> String with String::new()
+clarity/src/vm/database/clarity_db.rs:653:9: replace ClarityDatabase<'a>::fetch_metadata_manual -> Result<Option<T>> with Ok(None)
+clarity/src/vm/ast/definition_sorter/mod.rs:238:60: replace > with == in DefinitionSorter::probe_for_dependencies
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:51:9: replace TraitContext::is_name_used -> bool with false
+clarity/src/vm/database/clarity_db.rs:395:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_4_activation_height -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:560:9: replace ClarityDatabase<'a>::clarity_state_epoch_key -> &'static str with ""
+clarity/src/vm/database/clarity_db.rs:599:9: replace ClarityDatabase<'a>::get_contract_src -> Option<String> with Some(String::new())
+clarity/src/vm/costs/mod.rs:141:9: replace <impl CostTracker for ()>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/clarity_db.rs:1920:9: replace ClarityDatabase<'a>::make_key_for_account_unlock_height -> String with "xyzzy".into()
+clarity/src/vm/contexts.rs:1880:9: replace LocalContext<'a>::depth -> u16 with 0
+clarity/src/vm/coverage.rs:55:9: replace CoverageReporter::report_eval with ()
+clarity/src/vm/types/signatures.rs:420:16: replace > with == in <impl TryFrom for StringUTF8Length>::try_from
+clarity/src/vm/events.rs:274:9: replace NFTBurnEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![]))
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:174:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/test_util/mod.rs:253:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_reward_cycle_length -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:213:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_block_height -> Option<u32> with None
+clarity/src/vm/database/clarity_db.rs:175:9: replace <impl HeadersDB for &dyn HeadersDB>::get_burn_block_height_for_block -> Option<u32> with None
+clarity/src/vm/database/structures.rs:684:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::increase_lock_v3
+clarity/src/vm/types/signatures.rs:1776:9: replace TupleTypeSignature::size -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:1057:9: replace ClarityDatabase<'a>::make_microblock_poison_key -> String with String::new()
+clarity/src/vm/types/signatures.rs:1781:9: replace TupleTypeSignature::max_depth -> u8 with 1
+clarity/src/vm/database/clarity_db.rs:209:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_4_activation_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:169:9: replace <impl HeadersDB for &dyn HeadersDB>::get_vrf_seed_for_block -> Option<VRFSeed> with None
+clarity/src/vm/database/clarity_db.rs:1985:9: replace ClarityDatabase<'a>::get_burn_block_height -> Option<u32> with Some(1)
+clarity/src/vm/tests/contracts.rs:1019:5: replace test_as_max_len with ()
+clarity/src/vm/database/clarity_db.rs:718:9: replace ClarityDatabase<'a>::has_contract -> bool with false
+clarity/src/vm/database/clarity_db.rs:282:20: replace == with != in <impl HeadersDB for NullHeadersDB>::get_burn_header_hash_for_block
+clarity/src/vm/analysis/types.rs:180:9: replace ContractAnalysis::get_variable_type -> Option<&TypeSignature> with None
+clarity/src/vm/database/clarity_db.rs:366:9: replace <impl BurnStateDB for NullBurnStateDB>::get_stacks_epoch -> Option<StacksEpoch> with None
+clarity/src/vm/tests/defines.rs:192:5: replace test_recursive_panic with ()
+clarity/src/vm/tests/contracts.rs:370:5: replace test_fully_qualified_contract_call with ()
+clarity/src/vm/tests/traits.rs:1349:5: replace test_return_trait_with_contract_of with ()
+clarity/src/vm/docs/mod.rs:810:5: replace get_signature -> Option<String> with Some(String::new())
+clarity/src/vm/database/key_value_wrapper.rs:151:9: replace <impl From for RollbackWrapperPersistedLog>::from -> RollbackWrapperPersistedLog with Default::default()
+clarity/src/vm/database/clarity_db.rs:678:9: replace ClarityDatabase<'a>::get_contract_size -> Result<u64> with Ok(1)
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:69:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/contexts.rs:104:9: replace AssetMap::to_json -> serde_json::Value with Default::default()
+clarity/src/vm/types/signatures.rs:845:26: replace > with == in <impl TryFrom for TupleTypeSignature>::try_from
+clarity/src/vm/database/clarity_store.rs:300:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some(("xyzzy".into(), vec![0]))
+clarity/src/vm/events.rs:317:9: replace FTMintEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/types/signatures.rs:1706:9: replace TypeSignature::inner_type_size -> Option<u32> with Some(0)
+clarity/src/vm/costs/mod.rs:1016:9: replace <impl CostTracker for LimitedCostTracker>::reset_memory with ()
+clarity/src/vm/tests/traits.rs:2095:5: replace test_pass_principal_literal_to_trait with ()
+clarity/src/vm/representations.rs:604:9: replace SymbolicExpression::match_trait_reference -> Option<&ClarityName> with None
+clarity/src/vm/database/clarity_store.rs:328:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_cc_special_cases_handler -> Option<SpecialCaseHandler> with None
+clarity/src/vm/test_util/mod.rs:276:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with None
+clarity/src/vm/types/mod.rs:1202:9: replace ListData::is_empty -> bool with false
+clarity/src/vm/tests/defines.rs:31:5: replace assert_eq_err with ()
+clarity/src/vm/database/key_value_wrapper.rs:533:9: replace RollbackWrapper<'a>::has_metadata_entry -> bool with false
+clarity/src/vm/database/structures.rs:443:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::debit
+clarity/src/vm/database/clarity_db.rs:678:9: replace ClarityDatabase<'a>::get_contract_size -> Result<u64> with Ok(0)
+clarity/src/vm/types/mod.rs:1045:9: replace Value::expect_i128 -> i128 with -1
+clarity/src/vm/contexts.rs:928:9: replace <impl CostTracker for GlobalContext<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(true)
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:172:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/database/clarity_db.rs:213:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_block_height -> Option<u32> with Some(0)
+clarity/src/vm/costs/mod.rs:1063:9: replace <impl CostTracker for &mut LimitedCostTracker>::drop_memory with ()
+clarity/src/vm/database/clarity_db.rs:1053:9: replace ClarityDatabase<'a>::make_microblock_pubkey_height_key -> String with "xyzzy".into()
+clarity/src/vm/database/structures.rs:957:35: replace >= with < in STXBalance::effective_unlock_height
+clarity/src/vm/contexts.rs:463:9: replace AssetMap::get_stx_burned -> Option<u128> with Some(1)
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:613:14: replace > with == in clarity2_inner_type_check_type
+clarity/src/vm/database/clarity_db.rs:1106:9: replace ClarityDatabase<'a>::get_microblock_pubkey_hash_height -> Option<u32> with Some(1)
+clarity/src/vm/ast/parser/v2/lexer/error.rs:68:9: replace <impl DiagnosableError for LexerError>::suggestion -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/database/clarity_store.rs:232:9: replace <impl ClarityBackingStore for NullBackingStore>::get_with_proof -> Option<(String, Vec<u8>)> with Some((String::new(), vec![]))
+clarity/src/vm/costs/mod.rs:305:9: replace <impl PartialEq for LimitedCostTracker>::eq -> bool with false
+clarity/src/vm/database/structures.rs:588:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v2
+clarity/src/vm/database/structures.rs:1340:35: replace <= with > in STXBalance::has_unlockable_tokens_at_burn_block
+clarity/src/vm/contexts.rs:467:9: replace AssetMap::get_stx_burned_total -> u128 with 0
+clarity/src/vm/test_util/mod.rs:203:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_block_height -> Option<u32> with None
+clarity/src/vm/types/mod.rs:1493:9: replace TupleData::is_empty -> bool with false
+clarity/src/vm/test_util/mod.rs:237:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v3_unlock_height -> u32 with 0
+clarity/src/vm/test_util/mod.rs:211:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_burn_header_hash -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/test_util/mod.rs:187:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with None
+clarity/src/vm/database/clarity_db.rs:347:9: replace <impl BurnStateDB for NullBurnStateDB>::get_burn_start_height -> u32 with 1
+clarity/src/vm/tests/traits.rs:207:5: replace test_dynamic_dispatch_intra_contract_call with ()
+clarity/src/vm/representations.rs:612:9: replace SymbolicExpression::match_field -> Option<&TraitIdentifier> with None
+clarity/src/vm/costs/mod.rs:360:5: replace store_state_summary -> Result<()> with Ok(())
+clarity/src/vm/types/signatures.rs:1768:26: replace > with == in TupleTypeSignature::type_size
+clarity/src/vm/test_util/mod.rs:130:20: replace == with != in <impl HeadersDB for UnitTestHeaderDB>::get_burn_header_hash_for_block
+clarity/src/vm/database/key_value_wrapper.rs:262:9: replace RollbackWrapper<'a>::depth -> usize with 0
+clarity/src/vm/database/clarity_store.rs:178:5: replace make_contract_hash_key -> String with "xyzzy".into()
+clarity/src/vm/database/key_value_wrapper.rs:518:9: replace RollbackWrapper<'a>::has_entry -> bool with true
+clarity/src/vm/analysis/analysis_db.rs:85:9: replace AnalysisDatabase<'a>::has_contract -> bool with true
+clarity/src/vm/errors.rs:164:9: replace <impl Error for RuntimeErrorType>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/mod.rs:168:43: replace || with && in lookup_variable
+clarity/src/vm/costs/mod.rs:595:54: replace != with == in load_cost_functions
+clarity/src/vm/database/clarity_db.rs:309:9: replace <impl HeadersDB for NullHeadersDB>::get_burn_block_time_for_block -> Option<u64> with None
+clarity/src/vm/database/structures.rs:1205:35: replace == with != in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/types/signatures.rs:1776:9: replace TupleTypeSignature::size -> u32 with 0
+clarity/src/vm/database/structures.rs:414:9: replace STXBalanceSnapshot<'db, 'conn>::has_locked_tokens -> bool with false
+clarity/src/vm/ast/parser/v1.rs:639:27: replace > with < in parse_lexed
+clarity/src/vm/test_util/mod.rs:197:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_tokens_earned_for_block -> Option<u128> with None
+clarity/src/vm/costs/mod.rs:718:9: replace LimitedCostTracker::default_cost_contract_for_epoch -> String with String::new()
+clarity/src/vm/costs/mod.rs:1238:13: replace || with && in ExecutionCost::exceeds
+clarity/src/vm/docs/mod.rs:2533:5: replace make_keyword_reference -> Option<KeywordAPI> with None
+clarity/src/vm/database/clarity_db.rs:894:9: replace ClarityDatabase<'a>::get_block_time -> u64 with 1
+clarity/src/vm/database/clarity_db.rs:1972:9: replace ClarityDatabase<'a>::get_account_nonce -> u64 with 0
+clarity/src/vm/representations.rs:390:9: replace PreSymbolicExpression::match_placeholder -> Option<&str> with None
+clarity/src/vm/ast/errors.rs:297:9: replace <impl DiagnosableError for ParseErrors>::suggestion -> Option<String> with Some("xyzzy".into())
+clarity/src/vm/database/clarity_db.rs:611:9: replace ClarityDatabase<'a>::set_metadata with ()
+clarity/src/vm/representations.rs:85:9: replace <impl StacksMessageCodec for ClarityName>::consensus_serialize -> Result<(), codec_error> with Ok(())
+clarity/src/vm/database/structures.rs:943:35: replace >= with < in STXBalance::effective_unlock_height
+clarity/src/vm/types/mod.rs:1302:9: replace PrincipalData::version -> u8 with 1
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:94:9: replace <impl CostTracker for TypeChecker<'_, '_>>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/structures.rs:289:24: replace != with == in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/database/structures.rs:426:9: replace STXBalanceSnapshot<'db, 'conn>::has_unlockable_tokens -> bool with true
+clarity/src/vm/database/clarity_db.rs:552:9: replace ClarityDatabase<'a>::make_key_for_trip -> String with String::new()
+clarity/src/vm/costs/mod.rs:1236:33: replace > with < in ExecutionCost::exceeds
+clarity/src/vm/contexts.rs:1447:9: replace Environment<'a, 'b, 'hooks>::register_stx_transfer_event -> Result<()> with Ok(())
+clarity/src/vm/database/clarity_store.rs:240:9: replace <impl ClarityBackingStore for NullBackingStore>::get_block_at_height -> Option<StacksBlockId> with None
+clarity/src/vm/callables.rs:106:5: replace cost_input_sized_vararg -> Result<u64> with Ok(0)
+clarity/src/vm/ast/parser/v2/mod.rs:844:55: replace > with == in Parser<'a>::parse_node
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:61:9: replace <impl Error for Error>::source -> Option<&(dyn std::error::Error +'static)> with None
+clarity/src/vm/ast/errors.rs:297:9: replace <impl DiagnosableError for ParseErrors>::suggestion -> Option<String> with Some(String::new())
+clarity/src/vm/types/signatures.rs:1706:9: replace TypeSignature::inner_type_size -> Option<u32> with Some(1)
+clarity/src/vm/database/structures.rs:581:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v2
+clarity/src/vm/analysis/errors.rs:444:9: replace <impl DiagnosableError for CheckErrors>::suggestion -> Option<String> with None
+clarity/src/vm/costs/mod.rs:305:9: replace <impl PartialEq for LimitedCostTracker>::eq -> bool with true
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:108:9: replace <impl CostTracker for TypeChecker<'_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(true)
+clarity/src/vm/representations.rs:85:34: replace > with == in <impl StacksMessageCodec for ClarityName>::consensus_serialize
+clarity/src/vm/types/signatures.rs:703:29: replace && with == in TypeSignature::admits_type_v2_1
+clarity/src/vm/representations.rs:123:9: replace <impl StacksMessageCodec for ContractName>::consensus_serialize -> Result<(), codec_error> with Ok(())
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:67:9: replace <impl Display for Error>::fmt -> std::fmt::Result with Ok(Default::default())
+clarity/src/vm/test_util/mod.rs:187:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(0)
+clarity/src/vm/ast/parser/v1.rs:649:27: replace > with < in parse_lexed
+clarity/src/vm/tests/traits.rs:596:5: replace test_dynamic_dispatch_mismatched_returned with ()
+clarity/src/vm/types/mod.rs:275:9: replace SequenceData::is_empty -> bool with false
+clarity/src/vm/database/structures.rs:315:31: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/coverage.rs:105:9: replace CoverageReporter::executable_lines -> Vec<u32> with vec![]
+clarity/src/vm/types/mod.rs:257:9: replace SequenceData::element_size -> u32 with 0
+clarity/src/vm/database/clarity_db.rs:209:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_4_activation_height -> u32 with 0
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:67:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/costs/mod.rs:1238:33: replace > with == in ExecutionCost::exceeds
+clarity/src/vm/analysis/analysis_db.rs:71:9: replace AnalysisDatabase<'a>::storage_key -> &'static str with "xyzzy"
+clarity/src/vm/database/clarity_db.rs:1916:9: replace ClarityDatabase<'a>::make_key_for_account_stx_locked -> String with String::new()
+clarity/src/vm/database/structures.rs:950:35: replace >= with < in STXBalance::effective_unlock_height
+clarity/src/vm/errors.rs:158:9: replace <impl Error for Error>::source -> Option<&(dyn error::Error +'static)> with None
+clarity/src/vm/analysis/arithmetic_checker/mod.rs:268:9: replace ArithmeticOnlyChecker<'a>::check_all -> Result<(), Error> with Ok(())
+clarity/src/vm/costs/mod.rs:1237:13: replace || with && in ExecutionCost::exceeds
+clarity/src/vm/database/clarity_store.rs:228:9: replace <impl ClarityBackingStore for NullBackingStore>::get -> Option<String> with None
+clarity/src/vm/database/clarity_store.rs:252:9: replace <impl ClarityBackingStore for NullBackingStore>::get_current_block_height -> u32 with 1
+clarity/src/vm/types/serialization.rs:537:59: replace && with != in Value::deserialize_read_count
+clarity/src/vm/test_util/mod.rs:241:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_pox_3_activation_height -> u32 with 1
+clarity/src/vm/costs/mod.rs:1237:32: replace > with < in ExecutionCost::exceeds
+clarity/src/vm/representations.rs:224:9: replace PreSymbolicExpression::cons -> PreSymbolicExpression with Default::default()
+clarity/src/vm/database/structures.rs:735:21: replace > with < in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v4
+clarity/src/vm/costs/mod.rs:1234:22: replace > with == in ExecutionCost::exceeds
+clarity/src/vm/test_util/mod.rs:225:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_stacks_epoch_by_epoch_id -> Option<StacksEpoch> with None
+clarity/src/vm/database/clarity_db.rs:1985:9: replace ClarityDatabase<'a>::get_burn_block_height -> Option<u32> with Some(0)
+clarity/src/vm/tests/traits.rs:1603:5: replace test_pass_embedded_trait_to_subtrait_ok with ()
+clarity/src/vm/database/clarity_store.rs:90:9: replace ClarityBackingStore::get_cc_special_cases_handler -> Option<SpecialCaseHandler> with None
+clarity/src/vm/ast/parser/v1.rs:209:28: replace > with == in inner_lex
+clarity/src/vm/tests/traits.rs:1400:5: replace test_pass_trait_to_subtrait with ()
+clarity/src/vm/test_util/mod.rs:177:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_consensus_hash_for_block -> Option<ConsensusHash> with None
+clarity/src/vm/types/signatures.rs:71:9: replace AssetIdentifier::sugared -> String with String::new()
+clarity/src/vm/database/clarity_db.rs:248:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_rejection_fraction -> u64 with 0
+clarity/src/vm/database/clarity_db.rs:232:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_header_hash -> Option<BurnchainHeaderHash> with None
+clarity/src/vm/database/clarity_store.rs:324:9: replace <impl ClarityBackingStore for MemoryBackingStore>::get_current_block_height -> u32 with 1
+clarity/src/vm/database/structures.rs:1230:48: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/database/structures.rs:847:9: replace STXBalanceSnapshot<'db, 'conn>::accelerate_unlock with ()
+clarity/src/vm/database/key_value_wrapper.rs:521:36: replace && with == in RollbackWrapper<'a>::has_entry
+clarity/src/vm/costs/mod.rs:604:46: replace != with == in load_cost_functions
+clarity/src/vm/coverage.rs:79:9: replace CoverageReporter::to_file -> std::io::Result<()> with Ok(())
+clarity/src/vm/ast/parser/v1.rs:659:27: replace > with == in parse_lexed
+clarity/src/vm/types/mod.rs:1091:9: replace Value::expect_bool -> bool with true
+clarity/src/vm/database/clarity_db.rs:599:9: replace ClarityDatabase<'a>::get_contract_src -> Option<String> with None
+clarity/src/vm/types/signatures.rs:141:9: replace SequenceSubtype::is_list_type -> bool with true
+clarity/src/vm/tests/traits.rs:898:5: replace test_good_call_with_trait with ()
+clarity/src/vm/database/clarity_db.rs:403:9: replace <impl BurnStateDB for NullBurnStateDB>::get_pox_reward_cycle_length -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:996:25: replace == with != in ClarityDatabase<'a>::get_miner_spend_winner
+clarity/src/vm/contexts.rs:1413:9: replace Environment<'a, 'b, 'hooks>::push_to_event_batch with ()
+clarity/src/vm/types/mod.rs:275:20: replace == with != in SequenceData::is_empty
+clarity/src/vm/representations.rs:505:9: replace SymbolicExpression::copy_span with ()
+clarity/src/vm/representations.rs:260:9: replace PreSymbolicExpression::copy_span with ()
+clarity/src/vm/database/structures.rs:659:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::extend_lock_v3
+clarity/src/vm/events.rs:350:9: replace SmartContractEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/analysis/type_checker/v2_05/natives/options.rs:360:29: replace || with != in check_special_match_resp
+clarity/src/vm/database/clarity_db.rs:827:9: replace ClarityDatabase<'a>::get_v1_unlock_height -> u32 with 1
+clarity/src/vm/tests/traits.rs:1168:5: replace test_contract_of_no_impl with ()
+clarity/src/vm/database/key_value_wrapper.rs:78:5: replace rollback_value_check with ()
+clarity/src/vm/types/signatures.rs:141:9: replace SequenceSubtype::is_list_type -> bool with false
+clarity/src/vm/database/clarity_db.rs:832:9: replace ClarityDatabase<'a>::get_pox_3_activation_height -> u32 with 1
+clarity/src/vm/database/key_value_wrapper.rs:97:5: replace rollback_check_pre_bottom_commit -> Vec<(T, String)> with vec![(Default::default(), String::new())]
+clarity/src/vm/database/structures.rs:1247:48: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/database/structures.rs:1356:9: replace STXBalance::can_transfer_at_burn_block -> bool with true
+clarity/src/vm/database/clarity_db.rs:334:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with None
+clarity/src/vm/database/clarity_db.rs:560:9: replace ClarityDatabase<'a>::clarity_state_epoch_key -> &'static str with "xyzzy"
+clarity/src/vm/database/clarity_db.rs:263:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_pox_payout_addrs -> Option<(Vec<TupleData>, u128)> with None
+clarity/src/vm/costs/mod.rs:261:9: replace LimitedCostTracker::contract_call_circuits -> HashMap<(QualifiedContractIdentifier, ClarityName), ClarityCostFunctionReference> with HashMap::new()
+clarity/src/vm/representations.rs:466:9: replace SymbolicExpression::cons -> SymbolicExpression with Default::default()
+clarity/src/vm/database/clarity_store.rs:248:9: replace <impl ClarityBackingStore for NullBackingStore>::get_open_chain_tip_height -> u32 with 1
+clarity/src/vm/contexts.rs:1985:9: replace CallStack::make_stack_trace -> StackTrace with Default::default()
+clarity/src/vm/database/clarity_db.rs:1912:9: replace ClarityDatabase<'a>::make_key_for_account_nonce -> String with String::new()
+clarity/src/vm/contexts.rs:1837:13: replace || with != in ContractContext::is_name_used
+clarity/src/vm/ast/parser/v2/lexer/error.rs:68:9: replace <impl DiagnosableError for LexerError>::suggestion -> Option<String> with Some(String::new())
+clarity/src/vm/analysis/type_checker/v2_05/mod.rs:97:9: replace <impl CostTracker for TypeChecker<'_, '_>>::drop_memory with ()
+clarity/src/vm/costs/mod.rs:144:9: replace <impl CostTracker for ()>::add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/representations.rs:124:38: replace > with == in <impl StacksMessageCodec for ContractName>::consensus_serialize
+clarity/src/vm/contexts.rs:481:9: replace AssetMap::get_fungible_tokens -> Option<u128> with None
+clarity/src/vm/ast/parser/v2/mod.rs:825:51: replace > with == in Parser<'a>::parse_node
+clarity/src/vm/costs/mod.rs:954:5: replace add_memory -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/clarity_db.rs:843:45: replace >= with < in ClarityDatabase<'a>::get_v2_unlock_height
+clarity/src/vm/contexts.rs:1597:9: replace GlobalContext<'a, 'hooks>::is_top_level -> bool with true
+clarity/src/vm/test_util/mod.rs:215:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_stacks_epoch -> Option<StacksEpoch> with None
+clarity/src/vm/database/clarity_db.rs:193:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_v1_unlock_height -> u32 with 1
+clarity/src/vm/database/clarity_db.rs:1106:9: replace ClarityDatabase<'a>::get_microblock_pubkey_hash_height -> Option<u32> with Some(0)
+clarity/src/vm/database/clarity_db.rs:292:9: replace <impl HeadersDB for NullHeadersDB>::get_vrf_seed_for_block -> Option<VRFSeed> with None
+clarity/src/vm/test_util/mod.rs:187:9: replace <impl HeadersDB for UnitTestHeaderDB>::get_burnchain_tokens_spent_for_block -> Option<u128> with Some(1)
+clarity/src/vm/events.rs:299:9: replace FTTransferEventData::json_serialize -> serde_json::Value with Default::default()
+clarity/src/vm/database/structures.rs:287:31: replace == with != in <impl ClarityDeserializable for STXBalance>::deserialize
+clarity/src/vm/database/clarity_db.rs:1018:9: replace ClarityDatabase<'a>::get_block_reward -> Option<u128> with Some(1)
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:165:9: replace ContractContext::is_contract -> bool with false
+clarity/src/vm/costs/mod.rs:963:5: replace drop_memory with ()
+clarity/src/vm/costs/mod.rs:633:34: replace > with < in load_cost_functions
+clarity/src/vm/database/structures.rs:474:31: replace <= with > in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v1
+clarity/src/vm/tests/traits.rs:265:5: replace test_dynamic_dispatch_by_implementing_imported_trait with ()
+clarity/src/vm/costs/mod.rs:1235:13: replace || with && in ExecutionCost::exceeds
+clarity/src/vm/database/structures.rs:722:9: replace STXBalanceSnapshot<'db, 'conn>::is_v3_locked -> bool with true
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:175:13: replace || with != in ContractContext::check_name_used
+clarity/src/vm/costs/mod.rs:1236:33: replace > with == in ExecutionCost::exceeds
+clarity/src/vm/costs/mod.rs:1234:22: replace > with < in ExecutionCost::exceeds
+clarity/src/vm/tests/traits.rs:713:5: replace test_readwrite_dynamic_dispatch with ()
+clarity/src/vm/analysis/analysis_db.rs:71:9: replace AnalysisDatabase<'a>::storage_key -> &'static str with ""
+clarity/src/vm/costs/mod.rs:998:9: replace <impl CostTracker for LimitedCostTracker>::add_cost -> std::result::Result<(), CostErrors> with Ok(())
+clarity/src/vm/database/structures.rs:581:21: replace > with == in STXBalanceSnapshot<'db, 'conn>::lock_tokens_v2
+clarity/src/vm/database/clarity_db.rs:1053:9: replace ClarityDatabase<'a>::make_microblock_pubkey_height_key -> String with String::new()
+clarity/src/vm/database/key_value_wrapper.rs:355:9: replace RollbackWrapper<'a>::get_with_proof -> Option<(T, Vec<u8>)> with None
+clarity/src/vm/analysis/type_checker/v2_1/mod.rs:347:18: replace > with < in FunctionType::clarity2_principal_to_callable_type
+clarity/src/vm/representations.rs:98:21: replace > with < in <impl StacksMessageCodec for ClarityName>::consensus_deserialize
+clarity/src/vm/database/structures.rs:1260:35: replace <= with > in STXBalance::has_locked_tokens_at_burn_block
+clarity/src/vm/analysis/type_checker/v2_1/contexts.rs:176:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/costs/mod.rs:830:9: replace LimitedCostTracker::get_memory -> u64 with 1
+clarity/src/vm/tests/traits.rs:150:5: replace test_dynamic_dispatch_pass_trait with ()
+clarity/src/vm/types/mod.rs:1027:9: replace Value::expect_ascii -> String with "xyzzy".into()
+clarity/src/vm/database/structures.rs:772:9: replace STXBalanceSnapshot<'db, 'conn>::extend_lock_v4 with ()
+clarity/src/vm/ast/mod.rs:72:25: replace == with != in parse_in_epoch
+clarity/src/vm/types/mod.rs:1091:9: replace Value::expect_bool -> bool with false
+clarity/src/vm/database/clarity_db.rs:334:9: replace <impl HeadersDB for NullHeadersDB>::get_burnchain_tokens_spent_for_winning_block -> Option<u128> with Some(1)
+clarity/src/vm/types/serialization.rs:537:59: replace && with == in Value::deserialize_read_count
+clarity/src/vm/costs/mod.rs:91:5: replace analysis_typecheck_cost -> Result<()> with Ok(())
+clarity/src/vm/test_util/mod.rs:233:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v2_unlock_height -> u32 with 1
+clarity/src/vm/types/mod.rs:960:72: replace && with == in Value::string_ascii_from_bytes
+clarity/src/vm/test_util/mod.rs:237:9: replace <impl BurnStateDB for UnitTestBurnStateDB>::get_v3_unlock_height -> u32 with 1
+clarity/src/vm/docs/mod.rs:810:5: replace get_signature -> Option<String> with None
+clarity/src/vm/types/signatures.rs:910:9: replace FixedFunction::total_type_size -> Result<u64> with Ok(1)
+clarity/src/vm/ast/errors.rs:174:9: replace <impl DiagnosableError for ParseErrors>::message -> String with String::new()
+clarity/src/vm/analysis/type_checker/v2_05/contexts.rs:66:13: replace || with && in ContractContext::check_name_used
+clarity/src/vm/contexts.rs:895:9: replace <impl CostTracker for Environment<'_, '_, '_>>::short_circuit_contract_call -> std::result::Result<bool, CostErrors> with Ok(false)
+clarity/src/vm/representations.rs:268:9: replace PreSymbolicExpression::span -> &Span with &Default::default()
+clarity/src/vm/database/clarity_db.rs:213:9: replace <impl BurnStateDB for &dyn BurnStateDB>::get_burn_block_height -> Option<u32> with Some(1)
+clarity/src/vm/database/structures.rs:1188:9: replace STXBalance::was_locked_by_v3 -> bool with false

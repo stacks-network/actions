@@ -1,0 +1,5 @@
+clarity/src/vm/ast/parser/v1.rs:204:21: replace && with || in inner_lex
+clarity/src/vm/ast/parser/v2/mod.rs:132:9: replace Parser<'a>::next_token -> Option<PlacedToken> with None
+clarity/src/vm/ast/parser/v2/mod.rs:132:28: replace >= with < in Parser<'a>::next_token
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:37:5: replace is_separator -> bool with false
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:44:5: replace is_string_terminator -> bool with false

@@ -1,0 +1,43 @@
+stacks-signer/src/stacks_client.rs:416:9: replace StacksClient::read_only_path -> String with "xyzzy".into()
+stacks-signer/src/runloop.rs:143:9: replace RunLoop<C>::process_next_command with ()
+stacks-signer/src/utils.rs:21:5: replace build_signer_config_tomls -> Vec<String> with vec![]
+stacks-signer/src/stacks_client.rs:213:9: replace StacksClient::get_next_possible_nonce -> Result<u64, ClientError> with Ok(0)
+stacks-signer/src/stacks_client.rs:213:9: replace StacksClient::get_next_possible_nonce -> Result<u64, ClientError> with Ok(1)
+stacks-signer/src/runloop.rs:309:28: replace > with == in <impl SignerRunLoop for RunLoop<C>>::run_one_pass
+stacks-signer/src/cli.rs:167:5: replace parse_data -> Result<Vec<u8>, String> with Ok(vec![])
+stacks-signer/src/cli.rs:167:5: replace parse_data -> Result<Vec<u8>, String> with Ok(vec![0])
+stacks-signer/src/main.rs:254:24: replace == with != in handle_generate_files
+stacks-signer/src/main.rs:109:5: replace process_dkg_result with ()
+stacks-signer/src/utils.rs:21:5: replace build_signer_config_tomls -> Vec<String> with vec![String::new()]
+stacks-signer/src/main.rs:184:5: replace handle_dkg with ()
+stacks-signer/src/stacks_client.rs:190:9: replace StacksClient::get_current_reward_cycle -> Result<u64, ClientError> with Ok(1)
+stacks-signer/src/config.rs:73:9: replace Network::to_chain_id -> u32 with 1
+stacks-signer/src/stacks_client.rs:246:9: replace StacksClient::parse_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(None)
+stacks-signer/src/stacks_client.rs:185:9: replace StacksClient::slots_per_user -> u32 with 1
+stacks-signer/src/main.rs:229:5: replace handle_run with ()
+stacks-signer/src/runloop.rs:92:9: replace RunLoop<C>::execute_command -> bool with false
+stacks-signer/src/stacks_client.rs:246:9: replace StacksClient::parse_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(Some(Default::default()))
+stacks-signer/src/runloop.rs:278:9: replace <impl SignerRunLoop for RunLoop<C>>::run_one_pass -> Option<Vec<OperationResult>> with None
+stacks-signer/src/stacks_client.rs:190:9: replace StacksClient::get_current_reward_cycle -> Result<u64, ClientError> with Ok(0)
+stacks-signer/src/runloop.rs:197:67: replace == with != in RunLoop<C>::process_event
+stacks-signer/src/main.rs:76:18: replace < with == in write_chunk_to_stdout
+stacks-signer/src/stacks_client.rs:407:9: replace StacksClient::transaction_path -> String with "xyzzy".into()
+stacks-signer/src/utils.rs:109:5: replace build_stackerdb_contract -> String with "xyzzy".into()
+stacks-signer/src/stacks_client.rs:445:5: replace slot_id -> u32 with 0
+stacks-signer/src/stacks_client.rs:165:9: replace StacksClient::get_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(None)
+stacks-signer/src/main.rs:132:5: replace process_sign_result with ()
+stacks-signer/src/main.rs:237:5: replace handle_generate_files with ()
+stacks-signer/src/main.rs:298:5: replace main with ()
+stacks-signer/src/stacks_client.rs:407:9: replace StacksClient::transaction_path -> String with String::new()
+stacks-signer/src/stacks_client.rs:165:9: replace StacksClient::get_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(Some(Default::default()))
+stacks-signer/src/runloop.rs:309:28: replace > with < in <impl SignerRunLoop for RunLoop<C>>::run_one_pass
+stacks-signer/src/stacks_client.rs:403:9: replace StacksClient::pox_path -> String with "xyzzy".into()
+stacks-signer/src/stacks_client.rs:359:9: replace StacksClient::read_only_contract_call_with_retry -> Result<String, ClientError> with Ok(String::new())
+stacks-signer/src/runloop.rs:269:9: replace <impl SignerRunLoop for RunLoop<C>>::get_event_timeout -> Duration with Default::default()
+stacks-signer/src/utils.rs:21:5: replace build_signer_config_tomls -> Vec<String> with vec!["xyzzy".into()]
+stacks-signer/src/cli.rs:167:5: replace parse_data -> Result<Vec<u8>, String> with Ok(vec![1])
+stacks-signer/src/stacks_client.rs:403:9: replace StacksClient::pox_path -> String with String::new()
+stacks-signer/src/config.rs:73:9: replace Network::to_chain_id -> u32 with 0
+stacks-signer/src/config.rs:81:9: replace Network::to_address_version -> u8 with 0
+stacks-signer/src/stacks_client.rs:416:9: replace StacksClient::read_only_path -> String with String::new()
+stacks-signer/src/stacks_client.rs:359:9: replace StacksClient::read_only_contract_call_with_retry -> Result<String, ClientError> with Ok("xyzzy".into())

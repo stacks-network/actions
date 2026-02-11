@@ -1,0 +1,3 @@
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:37:5: replace is_separator -> bool with false
+clarity/src/vm/ast/parser/v1.rs:207:21: replace && with || in inner_lex
+clarity/src/vm/ast/parser/v2/lexer/mod.rs:44:5: replace is_string_terminator -> bool with false

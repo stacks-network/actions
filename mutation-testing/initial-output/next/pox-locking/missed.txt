@@ -1,0 +1,127 @@
+pox-locking/src/lib.rs:85:75: replace >= with < in handle_contract_call_special_cases
+pox-locking/src/events.rs:77:5: replace create_event_info_aggregation_code -> String with "xyzzy".into()
+pox-locking/src/pox_3.rs:394:75: replace == with != in handle_contract_call
+pox-locking/src/pox_1.rs:129:39: replace || with && in handle_contract_call
+pox-locking/src/events.rs:77:5: replace create_event_info_aggregation_code -> String with String::new()
+pox-locking/src/pox_2.rs:34:5: replace is_read_only -> bool with true
+pox-locking/src/pox_3.rs:80:5: replace pox_lock_extend_v3 -> Result<u128, LockingError> with Ok(1)
+pox-locking/src/pox_1.rs:129:56: replace == with != in handle_contract_call
+pox-locking/src/pox_1.rs:73:9: replace || with && in is_read_only
+pox-locking/src/lib.rs:84:28: replace == with != in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:49:28: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:396:47: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:56:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:350:5: replace handle_stack_lockup_extension_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_2.rs:41:34: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:475:5: replace handle_contract_call -> Result<(), ClarityError> with Ok(())
+pox-locking/src/pox_2.rs:41:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:281:5: replace handle_stack_lockup_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_2.rs:54:9: replace || with && in is_read_only
+pox-locking/src/events.rs:48:5: replace create_event_info_stack_or_delegate_code -> String with "xyzzy".into()
+pox-locking/src/pox_1.rs:77:22: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:182:21: replace < with == in pox_lock_increase_v2
+pox-locking/src/pox_2.rs:516:49: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:514:29: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:38:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:78:22: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:357:5: replace handle_contract_call -> Result<(), ClarityError> with Ok(())
+pox-locking/src/pox_2.rs:34:5: replace is_read_only -> bool with false
+pox-locking/src/pox_3.rs:80:5: replace pox_lock_extend_v3 -> Result<u128, LockingError> with Ok(0)
+pox-locking/src/pox_2.rs:52:34: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:44:41: replace == with != in is_read_only
+pox-locking/src/lib.rs:69:17: replace <= with > in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:512:75: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:46:37: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:50:36: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:54:47: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:51:27: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:46:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:76:22: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:44:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:186:28: replace > with == in pox_lock_increase_v2
+pox-locking/src/events.rs:352:5: replace synthesize_pox_2_or_3_event_info -> Result<Option<Value>, ClarityError> with Ok(None)
+pox-locking/src/pox_1.rs:70:5: replace is_read_only -> bool with false
+pox-locking/src/pox_2.rs:38:39: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:43:5: replace pox_lock_v3 -> Result<(), LockingError> with Ok(())
+pox-locking/src/events.rs:104:5: replace create_event_info_data_code -> String with "xyzzy".into()
+pox-locking/src/pox_2.rs:36:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:45:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:79:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:73:22: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:297:5: replace handle_stack_lockup_increase_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_1.rs:79:22: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:186:28: replace > with < in pox_lock_increase_v2
+pox-locking/src/pox_2.rs:45:35: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:129:21: replace < with > in pox_lock_increase_v3
+pox-locking/src/pox_2.rs:34:25: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:53:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:42:41: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:233:5: replace handle_stack_lockup_extension_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_2.rs:40:35: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:398:49: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:43:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:47:9: replace || with && in is_read_only
+pox-locking/src/pox_3.rs:162:5: replace handle_stack_lockup_pox_v3 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_2.rs:39:31: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:55:43: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:39:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:52:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:129:5: replace handle_contract_call -> Result<(), ClarityError> with Ok(())
+pox-locking/src/pox_1.rs:77:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:37:42: replace == with != in is_read_only
+pox-locking/src/pox_3.rs:394:43: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:35:28: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:512:43: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:218:5: replace pox_lock_extend_v2 -> Result<u128, LockingError> with Ok(1)
+pox-locking/src/lib.rs:68:13: replace && with || in handle_contract_call_special_cases
+pox-locking/src/pox_1.rs:74:22: replace == with != in is_read_only
+pox-locking/src/pox_1.rs:75:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:72:9: replace || with && in is_read_only
+pox-locking/src/lib.rs:66:5: replace handle_contract_call_special_cases -> Result<(), ClarityError> with Ok(())
+pox-locking/src/pox_1.rs:129:24: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:56:38: replace == with != in is_read_only
+pox-locking/src/lib.rs:85:48: replace && with || in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:49:9: replace || with && in is_read_only
+pox-locking/src/pox_3.rs:133:28: replace > with < in pox_lock_increase_v3
+pox-locking/src/pox_1.rs:72:22: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:51:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:47:39: replace == with != in is_read_only
+pox-locking/src/lib.rs:107:28: replace == with != in handle_contract_call_special_cases
+pox-locking/src/pox_2.rs:55:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:182:21: replace < with > in pox_lock_increase_v2
+pox-locking/src/pox_1.rs:74:9: replace || with && in is_read_only
+pox-locking/src/pox_3.rs:396:64: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:414:5: replace handle_stack_lockup_increase_pox_v2 -> Result<Option<StacksTransactionEvent>, ClarityError> with Ok(None)
+pox-locking/src/pox_2.rs:514:64: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:48:36: replace == with != in is_read_only
+pox-locking/src/pox_1.rs:71:22: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:48:9: replace || with && in is_read_only
+pox-locking/src/lib.rs:66:21: replace == with != in handle_contract_call_special_cases
+pox-locking/src/pox_3.rs:133:28: replace > with == in pox_lock_increase_v3
+pox-locking/src/pox_1.rs:70:5: replace is_read_only -> bool with true
+pox-locking/src/pox_1.rs:78:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:512:58: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:50:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:249:5: replace pox_lock_v2 -> Result<(), LockingError> with Ok(())
+pox-locking/src/pox_2.rs:40:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:37:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:71:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:70:15: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:53:45: replace == with != in is_read_only
+pox-locking/src/pox_1.rs:76:9: replace || with && in is_read_only
+pox-locking/src/pox_2.rs:514:47: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:516:29: replace == with != in handle_contract_call
+pox-locking/src/pox_3.rs:398:66: replace == with != in handle_contract_call
+pox-locking/src/pox_3.rs:398:29: replace == with != in handle_contract_call
+pox-locking/src/pox_2.rs:43:37: replace == with != in is_read_only
+pox-locking/src/pox_2.rs:35:9: replace || with && in is_read_only
+pox-locking/src/events.rs:104:5: replace create_event_info_data_code -> String with String::new()
+pox-locking/src/events.rs:48:5: replace create_event_info_stack_or_delegate_code -> String with String::new()
+pox-locking/src/pox_2.rs:218:5: replace pox_lock_extend_v2 -> Result<u128, LockingError> with Ok(0)
+pox-locking/src/pox_2.rs:42:9: replace || with && in is_read_only
+pox-locking/src/pox_1.rs:75:22: replace == with != in is_read_only
+pox-locking/src/pox_1.rs:91:5: replace pox_lock_v1 -> Result<(), LockingError> with Ok(())
+pox-locking/src/pox_3.rs:394:58: replace || with && in handle_contract_call
+pox-locking/src/pox_2.rs:516:66: replace == with != in handle_contract_call
+pox-locking/src/pox_3.rs:129:21: replace < with == in pox_lock_increase_v3
+pox-locking/src/pox_2.rs:36:42: replace == with != in is_read_only

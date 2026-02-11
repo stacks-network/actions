@@ -1,0 +1,4 @@
+stacks-signer/src/config.rs:265:28: replace == with != in <impl TryFrom for Config>::try_from
+stacks-signer/src/stacks_client.rs:247:9: replace StacksClient::parse_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(None)
+stacks-signer/src/stacks_client.rs:247:9: replace StacksClient::parse_aggregate_public_key -> Result<Option<Point>, ClientError> with Ok(Some(Default::default()))
+stacks-signer/src/stacks_client.rs:252:42: replace != with == in StacksClient::parse_aggregate_public_key
