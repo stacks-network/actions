@@ -44,7 +44,7 @@ runs:
       shell: bash
       run: |
         SANITIZED_TESTNAME=$(echo "${{ inputs.test-name }}" | sed 's/[\\/:\*\?"<>|]/_/g')
-        echo "sanitized::$SANITIZED_TESTNAME" >> $GITHUB_OUTPUT
+        echo "sanitized=$SANITIZED_TESTNAME" >> $GITHUB_OUTPUT
   
     ## Generate code coverage using grcov
     ## Resulting coverage filenames must be unique, so use test-name input to name the file
