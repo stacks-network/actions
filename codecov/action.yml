@@ -12,15 +12,10 @@ inputs:
   test-name:
     description: "Test Name for codecov"
     required: true
-    default: ""
   verbose:
     description: "codecov upload verbosity"
     required: false
     default: "false"
-  filename:
-    description: "codecov filename to generate"
-    required: false
-    default: "./lcov.info"
   fail_ci_if_error:
     description: "Fail on error"
     required: false
@@ -41,25 +36,37 @@ inputs:
 runs:
   using: "composite"
   steps:
+    ## Modify test-name input to be a valid filename, since we use it to name the coverage file
+    - name: Sanitize test-name for grcov filename usage
+      if : |
+        inputs.upload-only != true
+      id: sanitize_testname
+      shell: bash
+      run: |
+        SANITIZED_TESTNAME=$(echo "${{ inputs.test-name }}" | sed 's/[\\/:\*\?"<>|]/_/g')
+        echo "sanitized=$SANITIZED_TESTNAME" >> $GITHUB_OUTPUT
+  
     ## Generate code coverage using grcov
+    ## Resulting coverage filenames must be unique, so use test-name input to name the file
     - name: Run grcov
       if: |
         inputs.upload-only != 'true'
       id: run_grcov
       shell: bash
       run: |
-        grcov . --binary-path ${{ inputs.binary-path }} -s . -t lcov --branch --ignore-not-existing --ignore "/*" -o ${{ inputs.filename }} || exit 1
+        grcov . --binary-path ${{ inputs.binary-path }} -s . -t lcov --branch --ignore-not-existing --ignore "/*" -o ./lcov-${{ steps.sanitize_testname.outputs.sanitized }}.info || exit 1
         echo "created=true\n" >> $GITHUB_OUTPUT
 
     ## Upload coverage to codecov
-    ##   - use wretry action, to retry on a failed upload
+    ## Uses wretry.action to retry on a failed upload
     - name: Upload Code Coverage
       id: code_coverage
       uses: Wandalen/wretry.action@e68c23e6309f2871ca8ae4763e7629b9c258e1ea # v3.8.0
       with:
-        action: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4.6.0
+        action: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
         with: |
-          files: ${{ inputs.filename }}
+          files: ./*.info
+          flags: 
           name: ${{ inputs.test-name }}
           fail_ci_if_error: ${{ inputs.fail_ci_if_error }}
           verbose: ${{ inputs.verbose }}

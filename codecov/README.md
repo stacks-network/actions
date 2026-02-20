@@ -11,7 +11,6 @@
 | `test-name` | Test name that is being uploaded | true | null |
 | `binary-path` | Used when generating a report, it's the binary path used by grcov | false | `./target/debug/` |
 | `verbose` | Output verbosity when uploading a report | false | null |
-| `filename` | Filename created by grcov and uploaded | false | `/lcov.info` |
 | `fail_ci_if_error` | Fail the workflow on an error | false | `false` |
 | `retries` | Number of times to retry codecov | false | `3` |
 | `retry-delay` | Time in ms between upload retries | false | `10000` |
@@ -52,5 +51,4 @@ jobs:
         with:
           upload-only: true
           test-name: sample_test
-          filename: ./coverage.lcov
 ```
