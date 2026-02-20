@@ -58,17 +58,12 @@ runs:
         echo "created=true\n" >> $GITHUB_OUTPUT
 
     ## Upload coverage to codecov
-    ## Uses wretry.action to retry on a failed upload
     - name: Upload Code Coverage
       id: code_coverage
-      uses: Wandalen/wretry.action@e68c23e6309f2871ca8ae4763e7629b9c258e1ea # v3.8.0
-      with:
-        action: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
-        with: |
-          files: ./*.info
-          flags: 
-          name: ${{ inputs.test-name }}
-          fail_ci_if_error: ${{ inputs.fail_ci_if_error }}
-          verbose: ${{ inputs.verbose }}
-        attempt_limit: ${{ inputs.retries }}
-        attempt_delay: ${{ inputs.retry-delay }}
+      uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
+      with: |
+        files: ./*.info
+        name: ${{ inputs.test-name }}
+        fail_ci_if_error: ${{ inputs.fail_ci_if_error }}
+        verbose: ${{ inputs.verbose }}
+      
