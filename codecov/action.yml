@@ -62,7 +62,7 @@ runs:
       id: code_coverage
       uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
       with: |
-        files: ./lcov-${{ steps.sanitize_testname.outputs.sanitized }}.info
+        directory: ./
         name: ${{ inputs.test-name }}
         fail_ci_if_error: ${{ inputs.fail_ci_if_error }}
         verbose: ${{ inputs.verbose }}
