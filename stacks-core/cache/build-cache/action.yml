@@ -68,6 +68,7 @@ runs:
       id: archive_tests
       shell: bash
       run: |
+        export RUSTFLAGS="-C instrument-coverage" && \
         cargo nextest archive \
           --build-jobs 8 \
           --workspace \
@@ -86,6 +87,7 @@ runs:
       id: archive_genesis_tests
       shell: bash
       run: |
+        export RUSTFLAGS="-C instrument-coverage" && \
         cd stacks-node && \
         cargo nextest archive \
           --build-jobs 8 \
