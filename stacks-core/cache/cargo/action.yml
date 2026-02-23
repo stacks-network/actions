@@ -90,6 +90,13 @@ runs:
       uses: taiki-e/install-action@d12e869b89167df346dd0ff65da342d1fb1202fb # v2.53.2
       with:
         tool: grcov # can be versioned, ex: tool@1.1.1.1
+        
+    - name: Configure test instrumentation ENV vars (always)
+      id: configure_test_env_vars
+      shell: bash
+      run: |
+        echo RUSTFLAGS="-C instrument-coverage" >> "$GITHUB_ENV"
+        echo LLVM_PROFILE_FILE="archive-tests-%p-%m.profraw" >> "$GITHUB_ENV"
 
     ## Use wretry action to retry on a failed upload
     - name: Save Cache

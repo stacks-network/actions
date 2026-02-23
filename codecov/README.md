@@ -12,8 +12,6 @@
 | `binary-path` | Used when generating a report, it's the binary path used by grcov | false | `./target/debug/` |
 | `verbose` | Output verbosity when uploading a report | false | null |
 | `fail_ci_if_error` | Fail the workflow on an error | false | `false` |
-| `retries` | Number of times to retry codecov | false | `3` |
-| `retry-delay` | Time in ms between upload retries | false | `10000` |
 | `upload-only` | Skips grcov step and uploads an existing file | false | `false` |
 
 ## Usage

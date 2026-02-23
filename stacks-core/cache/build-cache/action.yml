@@ -86,7 +86,8 @@ runs:
       id: archive_genesis_tests
       shell: bash
       run: |
-        cd stacks-node && cargo nextest archive \
+        cd stacks-node && \
+        cargo nextest archive \
           --build-jobs 8 \
           --workspace \
           --tests \
