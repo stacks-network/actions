@@ -20,14 +20,6 @@ inputs:
     description: "Fail on error"
     required: false
     default: "false"
-  retries:
-    description: "Number of attempts"
-    required: false
-    default: "3"
-  retry-delay:
-    description: "Time to wait to retry"
-    required: false
-    default: "10000"
   upload-only:
     description: "Skip grcov, and upload existing coverage file"
     required: false
@@ -54,15 +46,29 @@ runs:
       id: run_grcov
       shell: bash
       run: |
-        grcov . --binary-path ${{ inputs.binary-path }} -s . -t lcov --branch --ignore-not-existing --ignore "/*" -o ./lcov-${{ steps.sanitize_testname.outputs.sanitized }}.info || exit 1
-        echo "created=true\n" >> $GITHUB_OUTPUT
+        grcov . \
+          -b ${{ inputs.binary-path }} \
+          -s . \
+          -t lcov \
+          --branch \
+          --ignore-not-existing \
+          --ignore "../*" \
+          --ignore "/*" \
+          --ignore "**/.cargo/*" \
+          --ignore "**/tests/*.rs" \
+          --ignore "*.clar" \
+          --ignore "*.json" \
+          --ignore "*.md" \
+          --ignore "*.toml" \
+          -o ./lcov_${{ steps.sanitize_testname.outputs.sanitized }}.info \
+        || exit 1
 
     ## Upload coverage to codecov
     - name: Upload Code Coverage
       id: code_coverage
       uses: codecov/codecov-action@671740ac38dd9b0130fbe1cec585b89eea48d3de # v5.5.2
       with:
-        files: ./lcov-*.info
+        files: ./*.info
         name: ${{ inputs.test-name }}
         fail_ci_if_error: ${{ inputs.fail_ci_if_error }}
         verbose: ${{ inputs.verbose }}
