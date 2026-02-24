@@ -63,6 +63,7 @@ runs:
           --ignore "*.json" \
           --ignore "*.md" \
           --ignore "*.sha256" \
+          --ignore "*.snap" \
           --ignore "*.toml" \
           --ignore "*.txt" \
           --ignore "*.yml" \
