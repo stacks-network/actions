@@ -54,21 +54,21 @@ runs:
           --ignore-not-existing \
           --ignore "../*" \
           --ignore "/*" \
-          --ignore "/.github/**/*" \
-          --ignore "/.vscode/**/*" \
-          --ignore "/contrib/**/*" \
+          --ignore ".github/**/*" \
+          --ignore ".vscode/**/*" \
+          --ignore "contrib/**/*" \
           --ignore "**/.cargo/**/*" \
           --ignore "**/benches/**/*" \
           --ignore "**/tests/**/*.rs" \
           --ignore "**/*tests.rs" \
-          --ignore "*.clar" \
-          --ignore "*.json" \
-          --ignore "*.md" \
-          --ignore "*.sha256" \
-          --ignore "*.snap" \
-          --ignore "*.toml" \
-          --ignore "*.txt" \
-          --ignore "*.yml" \
+          --ignore "**/*.clar" \
+          --ignore "**/*.json" \
+          --ignore "**/*.md" \
+          --ignore "**/*.sha256" \
+          --ignore "**/*.snap" \
+          --ignore "**/*.toml" \
+          --ignore "**/*.txt" \
+          --ignore "**/*.yml" \
           -o ./lcov_${{ steps.sanitize_testname.outputs.sanitized }}.info \
         || exit 1
 
