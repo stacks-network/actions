@@ -51,7 +51,6 @@ runs:
         key: ${{ inputs.cache-key }}-${{ inputs.btc-version }}
 
     ## Restore cache data
-    ## Use wretry action, to retry on a failed upload
     - name: Restore Cache
       if: |
         inputs.action == 'restore'
@@ -78,7 +77,6 @@ runs:
         curl -LSf -# https://github.com/stacks-network/bitcoin/releases/download/v${{ inputs.btc-version }}/bitcoin-${{ inputs.btc-version }}-x86_64-linux-gnu.tar.gz | tar zxf - -C ~
         mv ~/bitcoin-${{ inputs.btc-version }} ~/bitcoin
 
-    ## Use wretry action to retry on a failed upload
     - name: Save Cache
       if: |
         inputs.action == 'save' &&
