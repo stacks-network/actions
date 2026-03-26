@@ -1,0 +1,16 @@
+stacks-common/src/util/chunked_encoding.rs:374:9: replace HttpChunkedTransferWriter<'a, 'state, W>::flush_chunk -> io::Result<usize> with Ok(0)
+stacks-common/src/util/chunked_encoding.rs:235:9: replace HttpChunkedTransferReaderState::read_chunk_trailer -> io::Result<usize> with Ok(1)
+stacks-common/src/util/hash.rs:311:9: replace Sha256Sum::from_data -> Sha256Sum with Default::default()
+stacks-common/src/util/vrf.rs:421:28: replace > with == in VRF::hash_to_curve
+stacks-common/src/deps_common/httparse/mod.rs:122:9: replace Bytes<'a>::bump with ()
+stacks-common/src/util/vrf.rs:566:20: replace == with != in VRF::verify
+stacks-common/src/codec/mod.rs:138:18: replace > with == in read_next_vec
+stacks-common/src/util/chunked_encoding.rs:384:77: replace < with == in HttpChunkedTransferWriter<'a, 'state, W>::buf_chunk
+stacks-common/src/types/mod.rs:86:9: replace StacksEpochId::value_sanitizing -> bool with true
+stacks-common/src/deps_common/bech32/mod.rs:321:9: replace <impl Base32Len for T>::base32_len -> usize with 1
+stacks-common/src/types/net.rs:369:9: replace PeerHost::to_host_port -> (String, u16) with (String::new(), 0)
+stacks-common/src/util/vrf.rs:112:9: replace <impl Hash for VRFPublicKey>::hash with ()
+stacks-common/src/util/chunked_encoding.rs:406:9: replace <impl Write for HttpChunkedTransferWriter<'a, 'state, W>>::write -> io::Result<usize> with Ok(0)
+stacks-common/src/types/chainstate.rs:317:9: replace <impl StacksMessageCodec for StacksWorkScore>::consensus_serialize -> Result<(), CodecError> with Ok(())
+stacks-common/src/util/vrf.rs:92:34: replace == with != in <impl PartialEq for VRFPublicKey>::eq
+stacks-common/src/util/pipe.rs:191:9: replace PipeWrite::write_or_buffer -> io::Result<usize> with Ok(0)
