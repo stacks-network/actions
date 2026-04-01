@@ -45,10 +45,14 @@ runs:
           jq -r --arg TS "$TS" '
             ## Loop over the items in the workflow_runs array
             .workflow_runs[]
-            ## Retrieve the keys: id (used for deleting), updated_at (used for comparison), status (used for comparison), conclusion (unused)
-            | { id, updated_at,status,conclusion } 
-            ## Filter out the id based on (updated_at < TS and is completed) 
+            ## Retrieve the keys: id (used for deleting), updated_at (used for comparison), status (used for comparison), conclusion (used for comparison), head_branch (branch the action is from), name (name of the workflow)
+            | { id,updated_at,status,conclusion,head_branch,name }
+            ## Filter out the id based on (updated_at < TS and is completed)
             | select((.updated_at < $TS) and .status == "completed")
+            # ## Filter out release branches
+            # | select(.head_branch | test("release/") | not)
+            ## Filter out release branches (include any PRs etc made against a release branch)
+            | select((.head_branch | test("release/")) and (.name | test("release/") | not) or (.head_branch | test("release/") | not) )
             ## If an item matches our conditional, store the id as ID in the for loop
             | {id}
             | .[]
@@ -84,10 +88,14 @@ runs:
           jq -r --arg TS "$TS" '
             ## Loop over the items in the workflow_runs array
             .workflow_runs[]
-            ## Retrieve the keys: id (used for deleting), updated_at (used for comparison), status (used for comparison), conclusion (used for comparison)
-            | { id, updated_at,status,conclusion } 
-            ## Filter out the id based on (updated_at < TS and (action was unsuccessful and is completed) 
+            ## Retrieve the keys: id (used for deleting), updated_at (used for comparison), status (used for comparison), conclusion (used for comparison), head_branch (branch the action is from), name (name of the workflow)
+            | { id,updated_at,status,conclusion,head_branch,name }
+            ## Filter out the id based on (updated_at < TS and (action was unsuccessful and is completed)
             | select((.updated_at < $TS) and (.conclusion != "success" and .status == "completed"))
+            # ## Filter out release branches
+            # | select(.head_branch | test("release/") | not)
+            ## Filter out release branches (include any PRs etc made against a release branch)
+            | select((.head_branch | test("release/")) and (.name | test("release/") | not) or (.head_branch | test("release/") | not) )
             ## If an item matches our conditional, store the id as ID in the for loop
             | {id}
             | .[]
@@ -128,8 +136,8 @@ runs:
             .actions_caches[]
             ## Retrieve the keys: id (used for deleting), last_accessed_at (used for comparison) and key (used for comparison)
             | { id, last_accessed_at, key }
-            ## Filter out the id based on (last_accessed_at < TS and key is not stacks-core-bitcoin-binaries
-            | select((.last_accessed_at < $TS) and (.key != "stacks-core-bitcoin-binaries" ))
+            ## Filter out the id based on (last_accessed_at < TS )
+            | select(.last_accessed_at < $TS)
             ## If an item matches our conditional, store the id as ID in the for loop
             | {id}
             | .[]
